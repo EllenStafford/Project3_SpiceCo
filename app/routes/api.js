@@ -1,5 +1,7 @@
 var User = require('../models/user');
 
+
+//
 module.exports = function(router){
     router.post('/users', function (req,res){
         var user = new User();
@@ -26,3 +28,34 @@ module.exports = function(router){
     });
     return router;
 }
+var Contact = require('../models/contact');
+ module.exports = function(router){
+    router.post('/contacts', function (req,res){
+        var contact = new Contact();
+        contact.name = req.body.name;
+        contact.email = req.body.email;
+        contact.phone = req.body.phone;
+        contact.message = req.body.message;
+        if (req.body.name === null || req.body.name === ""){
+            res.send('A contact name is required');
+        }else if (req.body.email === null || req.body.email === ""){
+            res.send('An email address is required');
+        }else if (req.body.phone === null || req.body.phone === ""){
+            res.send('A phone number is required');
+        }else if (req.body.message === null || req.body.message === ""){
+            res.send('This field can not be left blank');
+        }else if (req.body.message.length < 12){
+            res.send('Message can not be less than 12 characters');
+        }else{
+            user.save(function(err){
+                if (err){
+                    res.send('An account under that username or email already exists');
+                }else{
+                    res.send('Thank you for contacting us!');
+                }
+            });
+        }
+    });
+
+    return router;
+ }
