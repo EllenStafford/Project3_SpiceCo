@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 //
 var ContactSchema =new Schema ({
-    name: {
+    firstname: {
         type: String, 
         lowercase: true, 
         required: true, 
