@@ -28,16 +28,19 @@ module.exports = function(router){
     });
     return router;
 }
-var Contact = require('../models/contact');
+var Contact = require('../models/contact.js');
  module.exports = function(router){
     router.post('/contacts', function (req,res){
         var contact = new Contact();
         contact.name = req.body.name;
+        contact.lastname = req.body.lastname;
         contact.email = req.body.email;
         contact.phone = req.body.phone;
         contact.message = req.body.message;
         if (req.body.name === null || req.body.name === ""){
             res.send('A contact name is required');
+        }else if (req.body.lastname === null || req.body.lastname === ""){
+            res.send('A lastname is required');
         }else if (req.body.email === null || req.body.email === ""){
             res.send('An email address is required');
         }else if (req.body.phone === null || req.body.phone === ""){
