@@ -7,7 +7,12 @@ var ContactSchema =new Schema ({
         type: String, 
         lowercase: true, 
         required: true, 
-        unique:true
+
+    },
+    lastname: {
+        type: String,
+        lowercase: true,
+        required: true,
     },
     email: {
         type: String,
