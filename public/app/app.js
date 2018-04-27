@@ -1,2 +1,2 @@
-angular.module("angularUser", ["angularRoutes"]);
+angular.module("angularUser", ["angularRoutes", "userCrtl"]);
 //userApp ... appRoutes
