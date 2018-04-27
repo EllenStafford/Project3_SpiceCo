@@ -24,6 +24,8 @@ var UserSchema =new Schema({
     }
 });
 
+
+
 // this encrypts the passwords on the DB so no one, including the admin, has access to users passwords
 UserSchema.pre('save', function(next){
     var user = this;
