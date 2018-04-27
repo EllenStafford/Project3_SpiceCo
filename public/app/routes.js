@@ -14,9 +14,12 @@ angular.module("angularRoutes", ["ngRoute"])
     })
 
     .when("/register",{
-        templateUrl: "../../app/views/pages//users/register.html"
+        templateUrl: "../../app/views/pages/users/register.html",
+        controller: "reg",
+        controllerAs: "register"
     })
     .otherwise({redirectTo: "/"});
+
 
     // having issues with <base> had to use !
     // $locationProvider
