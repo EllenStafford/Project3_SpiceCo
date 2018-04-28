@@ -1,12 +1,12 @@
-<form ng-submit="register.reg(data);">
+<form ng-submit="register.regUser(regData);">
     <label>Email:</label>
-    <input type="text" name = "email" ng-model="register.data.email">
+    <input type="text" name = "email" ng-model="register.regData.email">
     <br>
     <label>Username:</label>
-    <input type = "text" name = "username" ng-model="register.data.username">
+    <input type = "text" name = "username" ng-model="register.regData.username">
     <br>
     <label>Password:</label>
-    <input type = "password" name = "password" ng-model="register.data.password">
+    <input type = "password" name = "password" ng-model="register.regData.password">
     <br>
     <button type ="submit">Register</button>
 </form>
