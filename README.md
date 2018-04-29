@@ -1,2 +1,3 @@
 # Project3_SpiceCo
-Prototype website for a spice company
+Prototype website for Love Valley Wholesale Spice Company
+
