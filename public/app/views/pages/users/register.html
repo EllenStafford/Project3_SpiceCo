@@ -10,3 +10,10 @@
     <br>
     <button type ="submit">Register</button>
 </form>
+
+<div class "row show-hide-message" ng-show="register.successMsg">
+    <div class="alert alert-success">{{register.successMsg}}</div>
+</div>
+<div class "row show-hide-message" ng-show="register.errorMsg">
+    <div class="alert alert-danger">{{register.errorMsg}}</div>
+</div>
