@@ -1,14 +1,20 @@
 <form ng-submit="register.regUser(regData);">
-    <label>Email:</label>
-    <input type="text" name = "email" ng-model="register.regData.email">
+    <label>Business Name:</label>
+    <input type = "text" name = "business" ng-model="register.regData.business">
     <br>
     <label>Username:</label>
     <input type = "text" name = "username" ng-model="register.regData.username">
     <br>
+    <label>Phone Number:</label>
+    <input type = "text" name = "phone" ng-model="register.regData.phone">
+    <br>
+    <label>Email Address:</label>
+    <input type="text" name = "email" ng-model="register.regData.email">
+    <br>
     <label>Password:</label>
     <input type = "password" name = "password" ng-model="register.regData.password">
     <br>
-    <button type ="submit">Register</button>
+    <button type ="submit">Register a New Client</button>
 </form>
 
 <div class "row show-hide-message" ng-show="register.successMsg">

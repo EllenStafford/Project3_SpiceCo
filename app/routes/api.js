@@ -11,17 +11,17 @@ module.exports = function(router){
 //user registration
     router.post('/users', function (req,res){
         var user = new User();
+        user.business = req.body.business;
         user.username = req.body.username;
+        user.phone = req.body.phone;
         user.password = req.body.password;
         user.email = req.body.email;
+
         if (req.body.username === null || req.body.username === ""){
             res.json({success: false, message: "A username is required'"});
         }else if (req.body.password === null || req.body.password === ""){
             res.json({success: false, message: "A password is required"});
         }
-// else if (user.password.length < 6){
-//     res.send('Password needs to be 6 characters or longer');
-// }
         else if (req.body.email === null || req.body.email === ""){
             res.json({success: false, message: "An email is required"});
         }else{

@@ -4,11 +4,25 @@ var bcrypt = require('bcrypt-nodejs');
 
 //unique so 'it' cannot be taken twice
 var UserSchema =new Schema({
+    business: {
+        type: String, 
+        required: true, 
+        lowercase: true, 
+        unique:true 
+    },
+
     username: {
         type: String, 
         lowercase: true, 
         required: true, 
         unique:true
+    },
+
+    phone: {
+        type: String, 
+        required: true, 
+        lowercase: true, 
+        unique:true 
     },
 
     password: {
