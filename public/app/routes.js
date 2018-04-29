@@ -30,6 +30,18 @@ angular.module("angularRoutes", ["ngRoute"])
     .when("/profile",{
         templateUrl: "../../app/views/pages/users/profile.html"
     })
+
+    .when("/spices",{
+        templateUrl: "../../app/views/pages/users/spices.html"
+    })
+
+    .when("/order",{
+        templateUrl: "../../app/views/pages/users/order.html"
+    })
+
+    .when("/contact",{
+        templateUrl: "../../app/views/pages/users/contact.html"
+    })
     .otherwise({redirectTo: "/"});
 
 
