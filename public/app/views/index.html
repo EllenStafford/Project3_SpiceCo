@@ -17,16 +17,14 @@
     <script src="../../app/routes.js"></script>
 
     <!-- Angular Controllers -->
-    <script src="../../app/controllers/user.js"></script>
+    <script src="../../app/controllers/userController.js"></script>
     <script src="../../app/controllers/main.js"></script>
     <script src="../../app/controllers/email.js"></script>
     <script src="../../app/controllers/management.js"></script>
 
     <!-- Angular Services -->
-    <script src="../../app/services/userServices.js"></script>
-    <script src="../../app/services/authServices.js"></script>
-
-    
+    <script src="../../app/services/user.js"></script>
+    <script src="../../app/services/auth.js"></script>
     
     
     
@@ -47,16 +45,22 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#!/about">About</a>
                 </li>
-                <li class="nav-item active">
-                <a class="nav-link" href="#!/register">Register</a>
+                <li class="nav-item">
+                  <a class="nav-link" ng-show = "!main.isLoggedIn" href="#!/login">Log in</a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" ng-show = "!main.isLoggedIn" href="#!/register">Register</a>
+                <li class="nav-item active">
+                  <a class="nav-link" ng-show = "main.isLoggedIn" href="#" ng-click="main.logout();">Log out</a>
+                </li>
+                <li><a ng-show = "main.isLoggedIn" href="#!/profile"> {{main.username}}</a></li>
               </ul>
             </div>
           </nav> 
  </head> 
- <!-- front end team... DO NOT delete these next two lines of code
+ <!-- front end team... DO NOT delete these next TWO lines of code
 you can code around them and move them, but do not delete -Melissa  -->
-<body ng-app="angularUser">
+<body ng-app="angularUser" ng-controller="mainCtrl as main">
 <div ng-view></div>
 
 
