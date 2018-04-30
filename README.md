@@ -1,2 +1,7 @@
 # Project3_SpiceCo
-Prototype website for a spice company in NC
+
+Website for Love Valley Wholesale Spice Company
+
+Team LVS
+Team Leader: Ellen Stafford
+

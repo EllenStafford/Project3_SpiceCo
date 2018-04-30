@@ -1,0 +1,30 @@
+.navbar:hover {
+    color: white;
+    background-color: black;
+    
+}
+
+.footer {
+    text-align: center;
+    border-top: #FBE104;
+    border-top-style: solid;
+    border-top-width: 20px;
+    position: fixed;
+    background-color: #FA3905;
+    color: #000000;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+/* Styling for Contact.html */
+
+#ContactForm{
+margin-left:10%;
+}
