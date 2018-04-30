@@ -1,5 +1,6 @@
 var User = require('../models/user');
 var jwt = require("jsonwebtoken");
+var Contact = require('../models/contact');
 //extra security for the token
 var secret = "spongebob"
 
@@ -40,7 +41,37 @@ module.exports = function(router){
             });
         }
     });
+    router.post('/contacts', function (req, res) {
+        console.log(req.body);
+        var contact = new Contact({
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            phone: req.body.phone,
+            message: req.body.message
+        });
+        if (req.body.firstname === null || req.body.firstname === "") {
+            res.send('A contact name is required');
+        } else if (req.body.lastname === null || req.body.lastname === "") {
+            res.send('A lastname is required');
+        } else if (req.body.email === null || req.body.email === "") {
+            res.send('An email address is required');
+        } else if (req.body.phone === null || req.body.phone === "") {
+            res.send('A phone number is required');
+        } else if (req.body.message === null || req.body.message === "") {
+            res.send('This field can not be left blank');
+        } else {
+            contact.save(function (err) {
+                if (err) {
+                    console.log(err);
+                    res.json({ success: false, message: "An account error exists" });
+                } else {
+                    res.json({ success: true, message: "Thank you for contacting us" });
+                }
+            });
+        }
 
+    });
 //user login 
     router.post('/authenticate', function (req,res){
         User.findOne({ username: req.body.username}).select("address business phone email username password ")
@@ -88,42 +119,6 @@ router.post("/me", function(req,res){
 });
 
 
-
-
-
     return router;
 }
-// var Contact = require('../models/contact.js');
-//  module.exports = function(router){
-//     router.post('/contacts', function (req,res){
-//         var contact = new Contact();
-//         contact.name = req.body.name;
-//         contact.lastname = req.body.lastname;
-//         contact.email = req.body.email;
-//         contact.phone = req.body.phone;
-//         contact.message = req.body.message;
-//         if (req.body.name === null || req.body.name === ""){
-//             res.send('A contact name is required');
-//         }else if (req.body.lastname === null || req.body.lastname === ""){
-//             res.send('A lastname is required');
-//         }else if (req.body.email === null || req.body.email === ""){
-//             res.send('An email address is required');
-//         }else if (req.body.phone === null || req.body.phone === ""){
-//             res.send('A phone number is required');
-//         }else if (req.body.message === null || req.body.message === ""){
-//             res.send('This field can not be left blank');
-//         }else if (req.body.message.length < 12){
-//             res.send('Message can not be less than 12 characters');
-//         }else{
-//             user.save(function(err){
-//                 if (err){
-//                     res.send('An account under that username or email already exists');
-//                 }else{
-//                     res.send('Thank you for contacting us!');
-//                 }
-//             });
-//         }
-//     });
 
-//     return router;
-//  }
