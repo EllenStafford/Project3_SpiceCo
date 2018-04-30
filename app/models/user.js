@@ -8,7 +8,6 @@ var UserSchema =new Schema({
         type: String, 
         required: true, 
         lowercase: true, 
-        unique:true 
     },
 
     username: {
@@ -22,7 +21,12 @@ var UserSchema =new Schema({
         type: String, 
         required: true, 
         lowercase: true, 
-        unique:true 
+    },
+
+    address: {
+        type: String, 
+        required: true, 
+        lowercase: true, 
     },
 
     password: {

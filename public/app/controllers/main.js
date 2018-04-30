@@ -15,7 +15,11 @@ angular.module("mainController", ["authServices"])
             Auth.getUser().then(function(data){
                 console.log(data.data.username);
                 app.username = data.data.username;
-                app.useremail = data.data.email;
+                app.email = data.data.email;
+                app.business = data.data.business;
+                app.address = data.data.address;
+                app.phone = data.data.phone;
+                
             });
         }else{
             console.log("User is not logged in");

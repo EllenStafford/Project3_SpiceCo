@@ -14,15 +14,21 @@ module.exports = function(router){
         user.business = req.body.business;
         user.username = req.body.username;
         user.phone = req.body.phone;
+        user.address = req.body.address;
         user.password = req.body.password;
         user.email = req.body.email;
 
-        if (req.body.username === null || req.body.username === ""){
+        if (req.body.business === null || req.body.business === ""){
+            res.json({success: false, message: "A business name is required'"});
+        }else if (req.body.username === null || req.body.username === ""){
             res.json({success: false, message: "A username is required'"});
+        }else if (req.body.phone === null || req.body.phone === ""){
+            res.json({success: false, message: "A phone is required'"});
+        }else if (req.body.address === null || req.body.address === ""){
+            res.json({success: false, message: "An address is required'"});
         }else if (req.body.password === null || req.body.password === ""){
             res.json({success: false, message: "A password is required"});
-        }
-        else if (req.body.email === null || req.body.email === ""){
+        }else if (req.body.email === null || req.body.email === ""){
             res.json({success: false, message: "An email is required"});
         }else{
             user.save(function(err){
@@ -37,7 +43,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("email username password")
+        User.findOne({ username: req.body.username}).select("address business phone email username password ")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -53,8 +59,8 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email }, secret, { expiresIn: "24h" });
-                   res.json({ success: true, message: "Loging In", token: token});
+                var token = jwt.sign({ username: user.username, email: user.email, business: user.business, address: user.address, phone: user.phone}, secret, { expiresIn: "24h" });
+                   res.json({ success: true, message: "Logged in", token: token});
                }
             }
         })
