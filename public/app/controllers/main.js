@@ -15,7 +15,11 @@ angular.module("mainController", ["authServices"])
             Auth.getUser().then(function(data){
                 console.log(data.data.username);
                 app.username = data.data.username;
-                app.useremail = data.data.email;
+                app.email = data.data.email;
+                app.business = data.data.business;
+                app.address = data.data.address;
+                app.phone = data.data.phone;
+                
             });
         }else{
             console.log("User is not logged in");
@@ -33,8 +37,8 @@ angular.module("mainController", ["authServices"])
         if (data.data.success){
             app.successMsg = data.data.message;
             $timeout(function(){
-                $location.path("/");
-                app.loginData = "";
+                $location.path("/profile");
+                app.loginData = {};
                 app.successMsg = false;
             }, 1500);
 
@@ -48,8 +52,5 @@ angular.module("mainController", ["authServices"])
     this.logout = function(){
         Auth.logout();
         $location.path("/logout");
-        $timeout(function(){
-            $location.path("/");
-        }, 1500);
     }
 });
