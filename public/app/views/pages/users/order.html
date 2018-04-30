@@ -1,3 +1,97 @@
+<!-- TODO Remove Bootstrap link for final push -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+
 <div class "page-header">
     <h1>Hello {{main.username}} from order</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h2>
+                    <bold> Review Order</bold>
+                </h2>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h3 class="col-md-8 offset-md-2 text-center"> Current Order </h3>
+            <br>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Line #</th>
+                        <th scope="col">Spice Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Peppercorn</td>
+                        <td>1</td>
+                        <td>$19.99</td>
+                        <td>
+                            <button type="button" class="btn btn-dark">Remove</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Salt</td>
+                        <td>2</td>
+                        <td>$9.99</td>
+                        <td>
+                            <button type="button" class="btn btn-dark">Remove</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Onion Powder</td>
+                        <td>10</td>
+                        <td>$109.99</td>
+                        <td>
+                            <button type="button" class="btn btn-dark">Remove</button>
+                        </td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row justify-content-between">
+
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Total: </span>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row justify-content-between">
+
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark">Place Order</button>
+            </div>
+            <div class="col-sm"></div>
+
+        </div>
+
+    </div>
+</div>
 </div>
