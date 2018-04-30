@@ -43,7 +43,8 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     })
 
     .when("/contact",{
-        templateUrl: "../../app/views/pages/users/contact.html"
+        templateUrl: "../../app/views/pages/users/contact.html",
+        authenticated: false
     })
     .when("/management",{
         templateUrl: "../../app/views/pages/admin/management.html",

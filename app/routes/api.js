@@ -41,6 +41,7 @@ module.exports = function(router){
             });
         }
     });
+
     router.post('/contacts', function (req, res) {
         console.log(req.body);
         var contact = new Contact({
@@ -69,9 +70,10 @@ module.exports = function(router){
                     res.json({ success: true, message: "Thank you for contacting us" });
                 }
             });
-        }
+        };
 
     });
+
 //user login 
     router.post('/authenticate', function (req,res){
         User.findOne({ username: req.body.username}).select("address business phone email username password ")
@@ -98,22 +100,22 @@ module.exports = function(router){
     })
 //loging user out
 //decoded takes the token combines it with the secret, once verified it sends it back decoded as username and email.
-router.use(function(req,res,next){
-    //request url headers
-    var token = req.body.token || req.body.query || req.headers["x-access-token"];
-    if (token){
-        jwt.verify(token, secret, function(err, decoded){
-            if (err) {
-                res.json({ success: false, message: "token expired"});
-            }else{
-                req.decoded = decoded;
-                next();
-            }
-        })
-    }else{
-        res.json({success: false, message: "no token"})
-    }
-})
+// router.use(function(req,res,next){
+//     //request url headers
+//     var token = req.body.token || req.body.query || req.headers["x-access-token"];
+//     if (token){
+//         jwt.verify(token, secret, function(err, decoded){
+//             if (err) {
+//                 res.json({ success: false, message: "token expired"});
+//             }else{
+//                 req.decoded = decoded;
+//                 next();
+//             }
+//         })
+//     }else{
+//         res.json({success: false, message: "no token"})
+//     };
+// });
 router.post("/me", function(req,res){
     res.send(req.decoded);
 });
