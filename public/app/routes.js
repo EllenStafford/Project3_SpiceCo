@@ -41,10 +41,14 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     .when("/order",{
         templateUrl: "../../app/views/pages/users/order.html"
     })
+    .when("/messages",{
+        templateUrl: "../../app/views/pages/admin/messages.html"
+    })
 
     .when("/contact",{
         templateUrl: "../../app/views/pages/users/contact.html",
-        authenticated: false
+        controller: "conCtrl",
+        controllerAs: "contact"
     })
     .when("/management",{
         templateUrl: "../../app/views/pages/admin/management.html",
