@@ -1,17 +1,23 @@
-<form ng-submit="main.doLogin(loginData);">
-    <label>Username:</label>
-    <input type = "text" name = "username" ng-model="main.loginData.username">
-    <br>
-    <label>Password:</label>
-    <input type = "password" name = "password" ng-model="main.loginData.password">
-    <br>
-    <button type ="submit">Log In</button>
-</form>
+<div class="loginContainer">
 
-<div class "row show-hide-message" ng-show="main.successMsg">
-    <div class="alert alert-success">{{main.successMsg}}</div>
-</div>
-<div class "row show-hide-message" ng-show="main.errorMsg">
-    <div class="alert alert-danger">{{main.errorMsg}}</div>
+<div class ="formbkgd">
+    <form id= "formbg" ng-submit="main.doLogin(loginData);">
+        <label>Username:</label>
+        <input type="text" name="username" ng-model="main.loginData.username">
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" ng-model="main.loginData.password">
+        <br>
+        <button type="submit">Log In</button>
+    </form>
 </div>
 
+    <div class "row show-hide-message" ng-show="main.successMsg">
+        <div class="alert alert-success">{{main.successMsg}}</div>
+    </div>
+    <div class "row show-hide-message" ng-show="main.errorMsg">
+        <div class="alert alert-danger">{{main.errorMsg}}</div>
+    </div>
+</div>
+
+<!--  <img src = "./assets/imgs/heartdishspices.jpg" alt="heart dishes of spices">  -->

@@ -75,6 +75,37 @@ p{
 
 
 
-#formContainer{
-    margin:auto;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loginContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    width: 80%;
+    /* background-color: deeppink; */
+    background-image: url("../../assets/imgs/heartdishspices.jpg");
+}
+
+.formbkgd{
+    background-color: deeppink;
+    opacity: .5;
 }
