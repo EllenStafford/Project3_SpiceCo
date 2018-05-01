@@ -1,3 +1,11 @@
+.navbar{
+    font-size: .5em;
+}
+
+.navbar-brand{
+    font-size: .5em;
+}
+
 .navbar:hover {
     color: white;
     background-color: black;
@@ -8,8 +16,7 @@
     text-align: center;
     border-top: #FBE104;
     border-top-style: solid;
-    border-top-width: 20px;
-    position: fixed;
+    border-top-width: 10px;
     background-color: #FA3905;
     color: #000000;
     width: 100%;
@@ -19,8 +26,8 @@
     font-weight: bold;
 }
 
-h4 {
-    margin-bottom: 10px;
+h6 {
+    margin-bottom: 4px;
 }
 
 /* Styling for Contact.html */
