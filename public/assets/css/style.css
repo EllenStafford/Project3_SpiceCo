@@ -37,6 +37,7 @@ h6 {
 
 .email:hover {
     color: white;
+    text-decoration: none;
 }
 
 h1{
@@ -58,3 +59,7 @@ p{
     width: 100%;
     height: auto;
 }
+#one, #two, #three{
+    text-decoration: none;
+}
+
