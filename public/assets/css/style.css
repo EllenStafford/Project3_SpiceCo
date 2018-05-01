@@ -73,8 +73,18 @@ p{
     background-position: top center;
 }
 
-
-
-#formContainer{
-    margin:auto;
+.container {
+    text-align: right;
+    width: 40%;
+    /* background-color: aqua; */
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+   
 }
+
+.contactRow {
+    /* text-align: center; */
+    
+}
+

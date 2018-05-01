@@ -4,66 +4,80 @@
 
 
 
-<div class = "container">
-    <form id="gcontactbodyform" ng-submit="contact.regContact(regCon);">
-        <div class="form-group">
-
+<div class="container">
+    <!-- <div class="row"> -->
+        <form id="gcontactbodyform" ng-submit="contact.regContact(regCon);">
             <div class="form-group">
-                <label for="CompanyName">Company Name</label>
-                <input type="text" class="form-control-sm" id="CompanyName" placeholder="Company Name" ng-model="contact.regCon.companyName">
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="CompanyName">Company Name</label>
+                        <input type="text" class="form-control-xl" id="CompanyName" placeholder="Company Name" ng-model="contact.regCon.companyName">
+                    </div>
+                </div>
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="ContactName">Contact Name</label>
+                        <input type="text" class="form-control-sm" id="ContactName" placeholder="Contact Name" ng-model="contact.regCon.contactName">
+                    </div>
+                </div>
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="StreetAddress">Street Address</label>
+                        <input type="text" class="form-control-sm" id="StreetAddress" placeholder="Street Address" ng-model="contact.regCon.streetAddress">
+                    </div>
+                </div>
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="City">City</label>
+                        <input type="text" class="form-control-sm" id="City" placeholder="City" ng-model="contact.regCon.city">
+                    </div>
+                </div>
+
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="State">State</label>
+                        <input type="text" class="form-control-sm" id="State" placeholder="State" ng-model="contact.regCon.state">
+                    </div>
+                </div>
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="Zip">Zip</label>
+                        <input type="text" class="form-control-sm" id="Zip" placeholder="Zip" ng-model="contact.regCon.zip">
+                    </div>
+                </div>
+
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="Phone">Phone</label>
+                        <input type="text" class="form-control-sm" id="Phone" placeholder="Phone" ng-model="contact.regCon.phone">
+                    </div>
+                </div>
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="Email">Email Address</label>
+                        <input type="email" class="form-control-sm" id="Email" aria-describedby="emailHelp" placeholder="Enter email" ng-model="contact.regCon.email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                </div>
+                <div class="contactRow">
+                    <div class="form-group">
+                        <label for="Questions">Questions/Comments</label>
+                        <br>
+                        <textarea class="form-control-sm" id="Questions" placeholder="Enter questions or comments here" rows="3" ng-model="contact.regCon.message"></textarea>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="ContactName">Contact Name</label>
-                <input type="text" class="form-control-sm" id="ContactName" placeholder="Contact Name" ng-model="contact.regCon.contactName">
-            </div>
-
-            <div class="form-group">
-                <label for="StreetAddress">Street Address</label>
-                <input type="text" class="form-control-sm" id="StreetAddress" placeholder="Street Address" ng-model="contact.regCon.streetAddress">
-            </div>
-
-            <div class="form-group">
-                <label for="City">City</label>
-                <input type="text" class="form-control-sm" id="City" placeholder="City" ng-model="contact.regCon.city">
-            </div>
-
-            <div class="form-group">
-                <label for="State">State</label>
-                <input type="text" class="form-control-sm" id="State" placeholder="State" ng-model="contact.regCon.state">
-            </div>
-
-            <div class="form-group">
-                <label for="Zip">Zip</label>
-                <input type="text" class="form-control-sm" id="Zip" placeholder="Zip" ng-model="contact.regCon.zip">
-            </div>
-
-            <div class="form-group">
-                <label for="Phone">Phone</label>
-                <input type="text" class="form-control-sm" id="Phone" placeholder="Phone" ng-model="contact.regCon.phone">
-            </div>
-
-            <div class="form-group">
-                <label for="Email">Email Address</label>
-                <input type="email" class="form-control-sm" id="Email" aria-describedby="emailHelp" placeholder="Enter email" ng-model="contact.regCon.email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-
-            <div class="form-group">
-                <label for="Questions">Questions/Comments</label>
-                <br>
-                <textarea class="form-control-sm" id="Questions" placeholder="Enter questions or comments here" rows="3" ng-model="contact.regCon.message"></textarea>
-            </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
-</div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    <!-- </div> -->
 
 
 
-<div class "row show-hide-message" ng-show="contact.successMessage">
-    <div class="alert alert-success">{{contact.successMessage}}</div>
-</div>
-<div class "row show-hide-message" ng-show="contact.errorMessage">
-    <div class="alert alert-danger">{{contact.errorMessage}}</div>
+
+    <div class "row show-hide-message" ng-show="contact.successMessage">
+        <div class="alert alert-success">{{contact.successMessage}}</div>
+    </div>
+    <div class "row show-hide-message" ng-show="contact.errorMessage">
+        <div class="alert alert-danger">{{contact.errorMessage}}</div>
+    </div>
 </div>
