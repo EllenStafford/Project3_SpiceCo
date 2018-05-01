@@ -1,6 +1,7 @@
 var User = require('../models/user');
 var jwt = require("jsonwebtoken");
 var Contact = require('../models/contact');
+var Inquiry = require('../models/inquiry');
 //extra security for the token
 var secret = "spongebob"
 
@@ -79,6 +80,32 @@ module.exports = function(router){
                 if (err) {
                     console.log(err);
                     res.json({ success: false, message: "An account error exists" });
+                } else {
+                    res.json({ success: true, message: "Thank you for contacting us" });
+                }
+            });
+        };
+
+    });
+
+    router.post('/inquiry', function (req, res) {
+        console.log(req.body);
+        var inquiry = new Inquiry({
+            inquiryName: req.body.inquiryName,
+            inquiryEmail: req.body.inquiryEmail,
+            inquiryMessage: req.body.inquiryMessage
+        });
+        if (req.body.inquiryName === null || req.body.inquiryName === "") {
+            res.send({success: false, message:'A name is required'});
+        } else if (req.body.inquiryEmail === null || req.body.inquiryEmail === "") {
+            res.send({success: false, message:'An email address is required'});
+        } else if (req.body.inquiryMessage === null || req.body.inquiryMessage === "") {
+            res.send({success: false, message:'A message is required'});
+        } else {
+            inquiry.save(function (err) {
+                if (err) {
+                    console.log(err);
+                    res.json({ success: false, message: "Cannot submit form, contact Tony directly at 704 941-0012" });
                 } else {
                     res.json({ success: true, message: "Thank you for contacting us" });
                 }
