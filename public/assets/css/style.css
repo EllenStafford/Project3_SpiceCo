@@ -1,15 +1,15 @@
+/* Styling for index.html */
 .navbar{
-    font-size: .5em;
+    font-size: .7em;
 }
 
 .navbar-brand{
-    font-size: .5em;
+    font-size: 1.2em;
 }
 
 .navbar:hover {
     color: white;
-    background-color: black;
-    
+    background-color: black;  
 }
 
 .footer {
@@ -27,11 +27,55 @@
 }
 
 h6 {
-    margin-bottom: 4px;
+    font-size: .7em;
+    margin-bottom: .1em;
 }
 
-/* Styling for Contact.html */
+.email{
+    color:#000000;
+}
 
-#ContactForm{
-margin-left:10%;
+.email:hover {
+    color: white;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    color:#FA3905;
+    font-size: 1em;
+}
+
+p{
+    font-size: .7em;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+#one, #two, #three{
+    text-decoration: none;
+}
+
+/* #gcontactbodyform { */
+    .form-group{
+    /*background: url("./assets/imgs/477727257_hearts_1024px.jpg");*/
+    background-color: deeppink;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/imgs/477727257_hearts_1024px.jpg") no-repeat center;    
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+
+
+#formContainer{
+    margin:auto;
 }
