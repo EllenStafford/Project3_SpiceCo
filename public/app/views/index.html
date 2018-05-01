@@ -59,22 +59,22 @@ you can code around them and move them, but do not delete -Melissa  -->
           <a class="nav-link" href="#!/spices">Spices</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#!/contact">Contact</a>
+          <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#!/order">Order</a>
+          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/inquiry">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#!/messages">Messages</a>
+          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/order">Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#!/inquiry">Inquiry</a>
+          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/messages">Messages</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">Log in</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/register">Register</a>
+          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/register">Register</a>
           <li class="nav-item active">
             <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">Log out</a>
           </li>
