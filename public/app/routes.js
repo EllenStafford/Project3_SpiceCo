@@ -17,11 +17,12 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         templateUrl: "../../app/views/pages/users/register.html",
         controller: "regCtrl",
         controllerAs: "register",
-        authenticated: false
+        authenticated: true
     })
 
     .when("/login",{
         templateUrl: "../../app/views/pages/users/login.html",
+        authenticate: false
     })
 
     .when("/logout",{
@@ -35,20 +36,29 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     })
 
     .when("/spices",{
-        templateUrl: "../../app/views/pages/users/spices.html"
+        templateUrl: "../../app/views/pages/users/spices.html",
+        authenticate: false
     })
-
+    .when("/inquiry",{
+        templateUrl: "../../app/views/pages/users/inquiry.html",
+        controller: "reqInq",
+        controllerAs: "inquiry",
+        authenticated: true
+    })
     .when("/order",{
-        templateUrl: "../../app/views/pages/users/order.html"
+        templateUrl: "../../app/views/pages/users/order.html",
+        authenticated: true
     })
     .when("/messages",{
-        templateUrl: "../../app/views/pages/admin/messages.html"
+        templateUrl: "../../app/views/pages/admin/messages.html",
+        authenticated: true
     })
 
     .when("/contact",{
         templateUrl: "../../app/views/pages/users/contact.html",
         controller: "conCtrl",
-        controllerAs: "contact"
+        controllerAs: "contact",
+        authenticated: false
     })
     .when("/management",{
         templateUrl: "../../app/views/pages/admin/management.html",
