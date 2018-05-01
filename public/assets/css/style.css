@@ -64,12 +64,11 @@ p{
 }
 
 /* #gcontactbodyform { */
-    .form-group{
+    body {
     /*background: url("./assets/imgs/477727257_hearts_1024px.jpg");*/
-    background-color: deeppink;
+    background-image:"477727257_hearts_1024px.jpg";
     width: 100%;
     height: 100%;
-    background-image: url("./assets/imgs/477727257_hearts_1024px.jpg") no-repeat center;    
     background-size: 100% 100%;
     background-position: top center;
 }
