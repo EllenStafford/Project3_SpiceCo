@@ -38,7 +38,9 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         templateUrl: "../../app/views/pages/users/spices.html"
     })
     .when("/inquiry",{
-        templateUrl: "../../app/views/pages/users/inquiry.html"
+        templateUrl: "../../app/views/pages/users/inquiry.html",
+        controller: "reqInq",
+        controllerAs: "inquiry"
     })
     .when("/order",{
         templateUrl: "../../app/views/pages/users/order.html"

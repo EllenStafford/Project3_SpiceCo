@@ -96,11 +96,11 @@ module.exports = function(router){
             inquiryMessage: req.body.inquiryMessage
         });
         if (req.body.inquiryName === null || req.body.inquiryName === "") {
-            res.send({success: false, message:'A name is required'});
+            res.json({success: false, message:'A name is required'});
         } else if (req.body.inquiryEmail === null || req.body.inquiryEmail === "") {
-            res.send({success: false, message:'An email address is required'});
+            res.json({success: false, message:'An email address is required'});
         } else if (req.body.inquiryMessage === null || req.body.inquiryMessage === "") {
-            res.send({success: false, message:'A message is required'});
+            res.json({success: false, message:'A message is required'});
         } else {
             inquiry.save(function (err) {
                 if (err) {
