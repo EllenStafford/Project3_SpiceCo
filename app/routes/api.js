@@ -42,25 +42,38 @@ module.exports = function(router){
         }
     });
 
+    
     router.post('/contacts', function (req, res) {
         console.log(req.body);
         var contact = new Contact({
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
+            companyName: req.body.companyName,
+            contactName: req.body.contactName,
+            streetAddress: req.body.streetAddress,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
             email: req.body.email,
-            phone: req.body.phone,
             message: req.body.message
         });
-        if (req.body.firstname === null || req.body.firstname === "") {
-            res.send('A contact name is required');
-        } else if (req.body.lastname === null || req.body.lastname === "") {
-            res.send('A lastname is required');
-        } else if (req.body.email === null || req.body.email === "") {
-            res.send('An email address is required');
-        } else if (req.body.phone === null || req.body.phone === "") {
-            res.send('A phone number is required');
-        } else if (req.body.message === null || req.body.message === "") {
-            res.send('This field can not be left blank');
+        if (req.body.companyName === null || req.body.companyName === "") {
+            res.send({success: false, message:'A company name is required'});
+        } else if (req.body.contactName === null || req.body.contactName === "") {
+            res.send({success: false, message:'A contact name is required'});
+        } else if (req.body.streetAddress === null || req.body.streetAddress === "") {
+            res.send({success: false, message:'An address is required'});
+        } else if (req.body.city === null || req.body.city === "") {
+            res.send({success: false, message:'A city is required'});
+        } else if (req.body.state === null || req.body.state === "") {
+            res.send({success: false, message:'A state is required'});
+        }else if (req.body.zip === null || req.body.zip === "") {
+            res.send({success: false, message:'A zip code is required'});
+        }else if (req.body.phone === null || req.body.phone === "") {
+            res.send({success: false, message:'A phone is required'});
+        }else if (req.body.email === null || req.body.email === "") {
+            res.send({success: false, message:'An email is required'});
+        }
+        else if (req.body.message === null || req.body.message === "") {
+            res.send({success: false, message:'A message is required'});
         } else {
             contact.save(function (err) {
                 if (err) {
@@ -76,7 +89,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("address business phone email username password ")
+        User.findOne({ username: req.body.username}).select("username address phone email password")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -92,7 +105,7 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email, business: user.business, address: user.address, phone: user.phone}, secret, { expiresIn: "24h" });
+                var token = jwt.sign({ username: user.username, email: user.email, address: user.address}, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
                }
             }

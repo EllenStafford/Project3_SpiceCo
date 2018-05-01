@@ -3,31 +3,51 @@ var Schema = mongoose.Schema;
 
 //
 var ContactSchema = new Schema ({
-    firstname: {
+    companyName: {
         type: String, 
         lowercase: true, 
         required: true, 
 
     },
-    lastname: {
+    contactName: {
         type: String,
         lowercase: true,
         required: true,
     },
-    email: {
+    streetAddress: {
         type: String,
-        unique: true,
+
+
+    },
+    city: {
+        type: String,
+        required: true
+    },
+    state: {
+        type: String,
+        lowercase: true,
+
+    },
+    zip: {
+        type: String,
+        lowercase: true,
 
     },
     phone: {
         type: String,
-        required: true
+        lowercase: true,
+
+    },
+    email: {
+        type: String,
+        lowercase: true,
+
     },
     message: {
         type: String,
         lowercase: true,
 
     }
-})
+});
 //exports to server
 module.exports = mongoose.model('Contact', ContactSchema);
