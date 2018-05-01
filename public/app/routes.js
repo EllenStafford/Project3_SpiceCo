@@ -35,7 +35,10 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     })
 
     .when("/spices",{
-        templateUrl: "../../app/views/pages/users/spices.html"
+        templateUrl: "../../app/views/pages/users/spices.html",
+        controller: "spicesCtrl",
+        controllerAs: "spicesCtrl",
+        authenticated: false
     })
 
     .when("/order",{
