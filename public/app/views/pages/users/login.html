@@ -2,11 +2,14 @@
 
 <div class ="formbkgd">
     <form id= "formbg" ng-submit="main.doLogin(loginData);">
-        <label>Username:</label>
-        <input type="text" name="username" ng-model="main.loginData.username">
+        <label class = "username">Username:</label>
+        <input type="text" name="username" ng-model="main.loginData.username" placeholder="Enter User Name">
         <br>
-        <label>Password:</label>
-        <input type="password" name="password" ng-model="main.loginData.password">
+        <br>
+        <label class = "password">Password:</label>
+        <input type="password" name="password" ng-model="main.loginData.password" placeholder="Enter Password">
+        <br>
+        <br>
         <br>
         <button type="submit">Log In</button>
     </form>
