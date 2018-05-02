@@ -95,7 +95,7 @@ p{
 
 
 
-
+/* LOGIN page */
 #loginContainer{
     margin: auto;
     padding: 10%;
@@ -123,6 +123,7 @@ p{
     opacity: 1;
 }
 
+/* LOGOUT page */
 .logoutContainer{
     margin: auto;
     padding: 10%;
@@ -130,4 +131,17 @@ p{
     width: 100%;
     /* background-color: deeppink; */
     background-image: url("../../assets/imgs/chiliPepper.jpg");
+}
+
+.logoutDiv{
+    margin: auto;
+    background-color: #000000;
+    opacity: .7;
+    width: 50%;
+    padding: 5%;
+}
+
+.logoutText{
+    color: #FA3905;
+    opacity: 1;
 }
