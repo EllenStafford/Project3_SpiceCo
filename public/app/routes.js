@@ -69,6 +69,12 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         authenticated: true,
         permission: ["admin"]
     })
+    .when("/spices",{
+        templateUrl: "../../app/views/pages/users/spices.html",
+        controller: "spicesCtrl",
+        controllerAs: "spicesCtrl",
+        authenticated: false
+    })
     .otherwise({redirectTo: "/"});
 
 });
