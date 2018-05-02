@@ -96,12 +96,11 @@ p{
 
 
 
-.loginContainer{
+#loginContainer{
     margin: auto;
     padding: 10%;
     text-align: center;
     width: 100%;
-    /* background-color: deeppink; */
     background-image: url("../../assets/imgs/heartdishspices.jpg");
 }
 
@@ -122,4 +121,13 @@ p{
 .placeholder{
     background-color: white;
     opacity: 1;
+}
+
+.logoutContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    width: 100%;
+    /* background-color: deeppink; */
+    background-image: url("../../assets/imgs/chiliPepper.jpg");
 }
