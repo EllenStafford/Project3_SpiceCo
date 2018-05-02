@@ -51,6 +51,11 @@ h2{
     font-size: 1em;
 }
 
+h3 {
+    text-align: center;
+    padding-top: 25px;
+}
+
 p{
     font-size: .7em;
 }
@@ -71,16 +76,34 @@ p{
     height: 100%;
     background-size: 100% 100%;
     background-position: top center;
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .container {
-    text-align: right;
-    width: 40%;
+    text-align: left;
+    /* width: 40%; */
     /* background-color: aqua; */
-    padding-right: 15%;
+    /* padding-right: 15%; */
     padding-top: 5%;
     padding-bottom: 5%;
+   margin-left: 12.5%;
+   margin-right: 12.5%;
+    
+  
    
+}
+
+input {
+    padding: 15px;
+    align-self: center;
+    min-width: 100px;
+    /* max-width: 500px; */
+}
+
+textarea {
+    width: 73%;
 }
 
 
