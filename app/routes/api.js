@@ -2,6 +2,7 @@ var User = require('../models/user');
 var jwt = require("jsonwebtoken");
 var Contact = require('../models/contact');
 var Inquiry = require('../models/inquiry');
+var Spice = require('../models/spices');
 //extra security for the token
 var secret = "spongebob"
 
@@ -138,6 +139,19 @@ module.exports = function(router){
             }
         })
     })
+
+    router.get('/spices', function(req, res) {
+        const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        const range = (req.query.paginate || 'A-Z').split('-')
+        const left = range[0].toUpperCase()
+        const right = alphabet[range[1] === 'Z' ? alphabet.indexOf('Z') : alphabet.indexOf(range[1].toUpperCase()) + 1]
+        Spice.find({productName: { $gte: left, $lte: right }}, (err, document)=> {
+            res.json(document)   
+        })
+    })
+
+
+
 //loging user out
 //decoded takes the token combines it with the secret, once verified it sends it back decoded as username and email.
 router.use(function(req,res,next){
