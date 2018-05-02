@@ -3,9 +3,8 @@
     background-color: black;
       
 }
-.nav-container {
-    margin-top: 200%;
-}
+
+
 .footer {
     text-align: center;
     border-top: #FBE104;
@@ -91,15 +90,15 @@ margin-left:10%;
         background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/79/36/9357c2995ef39f5.jpg);
     }
     60.1% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/59/35/7157a435404e062.jpg);
+        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/54/2457a5e775643b1.jpg);
     }
     80% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/59/35/7157a435404e062.jpg);
+        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/54/2457a5e775643b1.jpg);
     }
     80.1% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/65/56/6557aebaec5246a.jpg);
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/52/02/4457932011b081a.jpg);
     }
     100% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/65/56/6557aebaec5246a.jpg);
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/52/02/4457932011b081a.jpg);
     }
 }
