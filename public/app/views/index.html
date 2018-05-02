@@ -68,18 +68,18 @@ you can code around them and move them, but do not delete -Melissa  -->
           <a class="nav-link" ng-show="main.isLoggedIn" href="#!/order">Orders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" ng-show="main.isLoggedIn && main.authorized" href="#!/messages">Messages</a>
+          <a class="nav-link" ng-show="main.authorized" href="#!/messages">Messages</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">Log in</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" ng-show="main.isLoggedIn && main.authorized" href="#!/register">Register</a>
+          <a class="nav-link" ng-show="main.authorized" href="#!/register">Register</a>
           <li class="nav-item active">
             <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">Log out</a>
 
 
-            <a class="nav-link" ng-show="main.isLoggedIn && main.authorized" href="#!/management">Management</a>
+            <a class="nav-link" ng-show="main.authorized" href="#!/management">Management</a>
           </li>
           <li>
             <a ng-show="main.isLoggedIn" href="#!/profile"> {{main.username}}</a>
