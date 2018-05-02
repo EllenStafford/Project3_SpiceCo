@@ -17,7 +17,8 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         templateUrl: "../../app/views/pages/users/register.html",
         controller: "regCtrl",
         controllerAs: "register",
-        authenticated: true
+        authenticated: true,
+        permission: ["admin"]
     })
 
     .when("/login",{
@@ -51,7 +52,8 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     })
     .when("/messages",{
         templateUrl: "../../app/views/pages/management/messages.html",
-        authenticated: true
+        authenticated: true,
+        permission: ["admin"]
     })
 
     .when("/contact",{
