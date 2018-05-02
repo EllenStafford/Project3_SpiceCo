@@ -1,5 +1,4 @@
-<div class "page-header">
-<!-- <h1>Hello {{main.username}} from about</h1> -->
+<div id="aboutContainer" class="responsive">
 
     <div class="text-center">
         <img src="../../../assets/imgs/lvs_spoons_aboutpage_1800px.jpg" alt="Wooden Spoons" class="responsive">
@@ -22,11 +21,62 @@
             <br>
         </div>
     </div>
-<style>
-    .responsive {
-    width: 100%;
-    height: auto;
-}
-</style>
 
+    <h1>Chefs, Restaurant Owners, Kitchen Managers &hellip;</h1>
+
+
+
+    <!--Main Selling Points Accordion-->
+    <div class="accordionWrapper">
+    <div align="center" class="accordion" id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button id=one class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne" class="responsive">
+              <h2>When You Buy From Us</h2>
+            </button>
+          </h5>
+        </div>
+  
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <p>You buy from a person you know based locally here in North Carolina. We are as passionate about spices as you are
+              about good food.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button id=two class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+              aria-controls="collapseTwo" class="responsive">
+              <h2>Your Time is Valuable - Let Us Help!</h2>
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <p>Never worry about being out of spices again. We keep your shelf stocked.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button id=three class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+              aria-controls="collapseThree" class="responsive">
+              <h2>The Spices You Need at Prices You'll Love!</h2>
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <p>We offer unique spice blends in addition to your favorite spices. We care about quality and we are mindful of the
+              price.</p>
+          </div>
+        </div>
+
+
+</div>
 </div>
