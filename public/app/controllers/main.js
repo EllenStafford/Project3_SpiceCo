@@ -3,7 +3,7 @@
 angular.module("mainController", ["authServices"])
 
 
-.controller("mainCtrl", function(Auth, $location, $timeout, $rootScope){
+.controller("mainCtrl", function(Auth, $location, $timeout, $rootScope, User){
 
     var app= this;
 
@@ -14,11 +14,20 @@ angular.module("mainController", ["authServices"])
             app.isLoggedIn = true;
             Auth.getUser().then(function(data){
                 console.log(data.data.username);
+                app.business = data.data.business;
                 app.username = data.data.username;
                 app.email = data.data.email;
                 app.business = data.data.business;
                 app.address = data.data.address;
                 app.phone = data.data.phone;
+                User.getPermission().then(function(data){
+                    if(data.data.permission === "admin"){
+                        app.authorized = true;
+                        app.loadme = true;
+                    }else{
+                        app.loadme =true;
+                    }
+                });
                 
             });
         }else{
