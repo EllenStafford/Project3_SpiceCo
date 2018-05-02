@@ -50,7 +50,7 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         authenticated: true
     })
     .when("/messages",{
-        templateUrl: "../../app/views/pages/admin/messages.html",
+        templateUrl: "../../app/views/pages/management/messages.html",
         authenticated: true
     })
 
@@ -61,34 +61,41 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         authenticated: false
     })
     .when("/management",{
-        templateUrl: "../../app/views/pages/admin/management.html",
+        templateUrl: "../../app/views/pages/management/management.html",
         controller: "managementCtrl",
         controllerAs: "management",
-        authenticated: false,
+        authenticated: true,
         permission: ["admin"]
     })
     .otherwise({redirectTo: "/"});
 
 });
 //restricting routes
-app.run(["$rootScope", "Auth", "$location", function($rootScope, Auth, $location){
-    $rootScope.$on("$routeChangeStart", function(event, next, current){
+app.run(['$rootScope', 'Auth', '$location', 'User', function($rootScope, Auth, $location, User) {
 
-        if(next.$$route.authenticated === true){
-            if (!Auth.isLoggedIn()){
-                event.preventDefault();
-                $location.path("/");
-            } else if(next.$$route.permission){
-                //this is where I left off ......  .....  ....
+    $rootScope.$on('$routeChangeStart', function(event, next, current) {
+
+        if (next.$$route !== undefined) {
+            if (next.$$route.authenticated === true) {
+                if (!Auth.isLoggedIn()) {
+                    event.preventDefault(); 
+                    $location.path('/'); 
+                } else if (next.$$route.permission) {
+                    User.getPermission().then(function(data) {
+                        if (next.$$route.permission[0] !== data.data.permission) {
+                            if (next.$$route.permission[1] !== data.data.permission) {
+                                event.preventDefault(); 
+                                $location.path('/');
+                            }
+                        }
+                    });
+                }
+            } else if (next.$$route.authenticated === false) {
+                if (Auth.isLoggedIn()) {
+                    event.preventDefault(); 
+                    $location.path('/profile'); 
+                }
             }
-
-        }else if (next.$$route.authenticated === false){
-            if (Auth.isLoggedIn()){
-                event.preventDefault();
-                $location.path("/profile");
-            }
-
         }
-        
     });
 }]);

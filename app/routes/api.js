@@ -116,7 +116,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("username address phone email password")
+        User.findOne({ username: req.body.username}).select("username email password")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -132,7 +132,7 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email, address: user.address}, secret, { expiresIn: "24h" });
+                var token = jwt.sign({ username: user.username, email: user.email}, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
                }
             }
@@ -140,26 +140,36 @@ module.exports = function(router){
     })
 //loging user out
 //decoded takes the token combines it with the secret, once verified it sends it back decoded as username and email.
-// router.use(function(req,res,next){
-//     //request url headers
-//     var token = req.body.token || req.body.query || req.headers["x-access-token"];
-//     if (token){
-//         jwt.verify(token, secret, function(err, decoded){
-//             if (err) {
-//                 res.json({ success: false, message: "token expired"});
-//             }else{
-//                 req.decoded = decoded;
-//                 next();
-//             }
-//         })
-//     }else{
-//         res.json({success: false, message: "no token"})
-//     };
-// });
+router.use(function(req,res,next){
+    //request url headers
+    var token = req.body.token || req.body.query || req.headers["x-access-token"];
+    if (token){
+        jwt.verify(token, secret, function(err, decoded){
+            if (err) {
+                res.json({ success: false, message: "token expired"});
+            }else{
+                req.decoded = decoded;
+                next();
+            }
+        })
+    }else{
+        res.json({success: false, message: "no token"})
+    };
+});
 router.post("/me", function(req,res){
     res.send(req.decoded);
 });
 
+router.get("/permission", function(req,res){
+    User.findOne({username: req.decoded.username}, function(err,user){
+        if (err) throw err;
+        if(!user){
+            res.json({success:false, message: "this is not happening"});
+        }else{
+            res.json({success: true, permission: user.permission });
+        }
+    });
+})
 
     return router;
 }

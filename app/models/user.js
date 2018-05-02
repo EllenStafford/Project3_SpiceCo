@@ -39,6 +39,11 @@ var UserSchema =new Schema({
         required: true, 
         lowercase: true, 
         unique:true 
+    },
+    permission: {
+        type: String,
+        required: true,
+        default: "user"
     }
 });
 
