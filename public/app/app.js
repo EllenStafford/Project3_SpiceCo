@@ -1,6 +1,5 @@
-angular.module("angularUser", ["angularRoutes", "userControllers", 
-"mainController", "authServices", "managementCtrl", "contactController", "inquiryControllers"])
+angular.module("angularUser", ["angularRoutes", "userControllers", "mainController", "authServices", "inquiryControllers","contactController","managementController","userServices","spicesCtrl"])
 
 .config(function($httpProvider){
     $httpProvider.interceptors.push("AuthInterceptors");
-})
+});

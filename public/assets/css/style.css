@@ -42,6 +42,140 @@ margin-left:10%;
     width: 100%;
     height: 100vh;
     animation: slide 40s infinite;
+    height: auto;
+}
+
+#one, #two, #three{
+    text-decoration: none;
+}
+
+.content{
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba (0,0,0,0.5);
+}
+
+.principal{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; 
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.principal h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+   
+}
+
+.principal p{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOGIN page */
+#loginContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    width: 100%;
+    background-image: url("../imgs/heartdishspices.jpg");
+}
+
+
+.formbkgd{
+    margin: auto;
+    background-color: #000000;
+    opacity: .7;
+    width: 50%;
+    padding: 5%;
+}
+
+.username, .password{
+    color: #FA3905;
+    opacity: 1;
+}
+
+.placeholder{
+    background-color: white;
+    opacity: 1;
+}
+
+/* LOGOUT page */
+.logoutContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    width: 100%;
+    /* background-color: deeppink; */
+    background-image: url("../../assets/imgs/chiliPepper.jpg");
+}
+
+.logoutDiv{
+    margin: auto;
+    background-color: #000000;
+    opacity: .7;
+    width: 50%;
+    padding: 5%;
+}
+
+.logoutText{
+    color: #FA3905;
+    opacity: 1;
+}
+
+/* New About page design */
+#aboutContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    width: 100%;
+    /* background-color:deeppink; */
+    background-image: url("../imgs/scatteredSpices.jpg");
+}
+
+.accordionWrapper{
+    margin-left: 1%;
+    background-color: #000000;
+    opacity: .7;
+    width: 50%;
+    padding: 5%;
+}
+
+/* Styling for index.html */
+.load{
+    animation: slide 2s;
+}
+
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 87vh;
+    animation: slide 40s infinite;
 }
 
 .content{
@@ -72,33 +206,63 @@ margin-left:10%;
 
 @keyframes slide {
     0% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/84/19/1457ca64e20888d.jpg);
+        background-image: url("../imgs/UseSpoons.jpg");
+    }
+    10% {
+        background-image: url("../imgs/UseSpoons.jpg");
+    }
+    15% {
+        background-image: url("../imgs/UseSpiceBowls.jpg");
     }
     20% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/84/19/1457ca64e20888d.jpg);
+        background-image: url("../imgs/UseSpiceBowls.jpg");
     }
-    20.1% {
-        background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/02/66/83/90578b88da97312.jpg);
+    25% {
+        background-image: url("../imgs/chiliPepper.jpg");
+    }
+    30% {
+        background-image: url("../imgs/chiliPepper.jpg");
+    }
+    35% {
+        background-image: url("../imgs/UseSpoons.jpg");
     }
     40% {
-        background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/02/66/83/90578b88da97312.jpg);
+        background-image: url("../imgs/UseSpoons.jpg");
     }
-    40.1% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/79/36/9357c2995ef39f5.jpg);
+    45% {
+        background-image: url("../imgs/UseSpiceBowls.jpg");
+    }
+    50% {
+        background-image: url("../imgs/UseSpiceBowls.jpg");
+    }
+    55% {
+        background-image: url("../imgs/chiliPepper.jpg");
     }
     60% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/79/36/9357c2995ef39f5.jpg);
+        background-image: url("../imgs/chiliPepper.jpg");
     }
-    60.1% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/54/2457a5e775643b1.jpg);
+    65% {
+        background-image: url("../imgs/UseSpoons.jpg");
+    }
+    70% {
+        background-image: url("../imgs/UseSpoons.jpg");
+    }
+    75% {
+        background-image: url("../imgs/UseSpiceBowls.jpg");
     }
     80% {
-        background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/54/2457a5e775643b1.jpg);
+        background-image: url("../imgs/UseSpiceBowls.jpg");
     }
-    80.1% {
-        background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/52/02/4457932011b081a.jpg);
+    85% {
+        background-image: url("../imgs/chiliPepper.jpg");
+    }
+    90% {
+        background-image: url("../imgs/chiliPepper.jpg");
+    }
+    95% {
+        background-image: url("../imgs/UseSpoons.jpg");
     }
     100% {
-        background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/52/02/4457932011b081a.jpg);
+        background-image: url("../imgs/UseSpoons.jpg");
     }
 }
