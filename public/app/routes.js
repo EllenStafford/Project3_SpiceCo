@@ -35,11 +35,6 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         templateUrl: "../../app/views/pages/users/profile.html",
         authenticated: true
     })
-
-    .when("/spices",{
-        templateUrl: "../../app/views/pages/users/spices.html",
-        authenticate: false
-    })
     .when("/inquiry",{
         templateUrl: "../../app/views/pages/users/inquiry.html",
         controller: "reqInq",
@@ -72,8 +67,7 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     .when("/spices",{
         templateUrl: "../../app/views/pages/users/spices.html",
         controller: "spicesCtrl",
-        controllerAs: "spicesCtrl",
-        authenticated: false
+        controllerAs: "spicesCtrl"
     })
     .otherwise({redirectTo: "/"});
 

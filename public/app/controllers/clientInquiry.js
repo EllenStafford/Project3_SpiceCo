@@ -6,11 +6,8 @@ angular.module("inquiryControllers", [])
 
 this.inqUser = function(inqData){
     inq.errorMessages = false;
-    console.log("form submitted");
     $http.post("/api/inquiry", this.inqData )
     .then(function(data){
-        console.log(data.data.success);
-        console.log(data.data.message);
         if(data.data.success){
             inq.successMessages = data.data.message;
             $timeout(function(){

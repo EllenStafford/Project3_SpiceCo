@@ -117,7 +117,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("username email password business phone address")
+        User.findOne({ username: req.body.username}).select("username email password business phone address message")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
