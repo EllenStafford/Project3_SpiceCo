@@ -55,25 +55,23 @@ p{
     font-size: .7em;
 }
 
+/* Apply to any class that needs to be responsive */
 .responsive {
     width: 100%;
     height: auto;
 }
 
-#one, #two, #three{
-    text-decoration: none;
-}
 
 /* #gcontactbodyform { */
-    body {
+   /* body {
     /*background: url("./assets/imgs/477727257_hearts_1024px.jpg");*/
-    background-image:"477727257_hearts_1024px.jpg";
+   /* background-image:"477727257_hearts_1024px.jpg";
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
     background-position: top center;
 }
-
+Check to see if this is attached to anything and then delete the above style*/
 
 
 
@@ -124,45 +122,86 @@ p{
     opacity: 1;
 }
 
-/* LOGOUT page */
-.logoutContainer{
-    margin: auto;
-    padding: 10%;
-    text-align: center;
-    width: 100%;
-    /* background-color: deeppink; */
-    background-image: url("../../assets/imgs/chiliPepper.jpg");
-}
 
-.logoutDiv{
-    margin: auto;
-    background-color: #000000;
-    opacity: .7;
-    width: 50%;
-    padding: 5%;
-}
-
-.logoutText{
-    color: #FA3905;
-    opacity: 1;
-}
 
 /* New About page design */
 #aboutContainer{
     margin: auto;
-    padding: 10%;
     text-align: center;
     width: 100%;
-    /* background-color:deeppink; */
-    background-image: url("../imgs/scatteredSpices.jpg");
+}
+
+
+
+.LVSTitle1{
+    color:#FA3905;
+    font-size: 1.5em;
+}
+
+.LVSTitle2{
+    color: #FA3905;
+    font-size: 1.2em;
+}
+
+.LVSTitle3{
+    color:#FFFFFF;
+    text-shadow:2px 2px #000000;
+    font-size: 1.5em;
+    padding: 1%;
+}
+
+.LVSText{
+    margin:auto;
+    margin-bottom: 1%;
+    text-align: left;
+    width: 50%;
+}
+
+#truck{
+    background-color: #888888;
+    padding-bottom: 3%;
+    background-image: url("../imgs/UseTruck3.jpg");
 }
 
 .accordionWrapper{
-    margin-left: 1%;
+    margin-left: 5%;
     background-color: #000000;
-    opacity: .7;
-    width: 50%;
-    padding: 5%;
+    opacity: .9;
+    width: 40%;
+    padding: 2%;
+}
+
+
+/*.aInteriorWrapper{
+    background-color: #FFFFFF;
+    padding: 1%;
+}*/
+
+.card-header{
+    background-color: #FFFFFF;
+}
+
+.card-body{
+    background-color: #FFFFFF;
+}
+
+/*
+#headingOne{
+    background-color: #FFFFFF;
+}
+*/
+#one, #two, #three{
+    text-decoration: none;
+}
+
+#accordionTitle{
+    color: #FA3905;
+    text-align: center;
+    white-space: normal;
+}
+
+#accordionText{
+    text-align: left;
 }
 
 /* Styling for index.html */
