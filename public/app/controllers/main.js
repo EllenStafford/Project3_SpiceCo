@@ -16,10 +16,10 @@ angular.module("mainController", ["authServices"])
                 console.log(data.data.username);
                 app.business = data.data.business;
                 app.username = data.data.username;
-                app.email = data.data.email;
-                app.business = data.data.business;
-                app.address = data.data.address;
                 app.phone = data.data.phone;
+                app.address = data.data.address;
+                app.email = data.data.email;
+                app.password = data.data.password;
                 User.getPermission().then(function(data){
                     if(data.data.permission === "admin"){
                         app.authorized = true;

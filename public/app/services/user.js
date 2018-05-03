@@ -7,5 +7,10 @@ angular.module("userServices", [])
         return $http.get('/api/permission');
     };
 
+    //getFactory for users
+    userFactory.getUsers = function() {
+        return $http.get('/api/management');
+    };
+
     return userFactory;
 });

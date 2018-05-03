@@ -117,7 +117,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("username email password")
+        User.findOne({ username: req.body.username}).select("username email password business phone address")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -133,7 +133,7 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email}, secret, { expiresIn: "24h" });
+                var token = jwt.sign({ username: user.username, email: user.email, password: user.password, business: user.business, phone: user.phone, address: user.address}, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
                }
             }
@@ -147,9 +147,8 @@ module.exports = function(router){
         const right = alphabet[range[1] === 'Z' ? alphabet.indexOf('Z') : alphabet.indexOf(range[1].toUpperCase()) + 1]
         Spice.find({productName: { $gte: left, $lte: right }}, (err, document)=> {
             res.json(document)   
-        })
-    })
-
+        });
+    });
 
 
 //loging user out
@@ -181,10 +180,38 @@ router.get("/permission", function(req,res){
             res.json({success:false, message: "this is not happening"});
         }else{
             res.json({success: true, permission: user.permission });
-        }
+        };
     });
-})
+});
+
+router.get("/management", function(req,res){
+    User.find({}, function(err,users){
+        if(err) throw err;
+        User.findOne({ username: req.decoded.username}, function(err,mainUser){
+            if (err) throw err;
+                if(!mainUser){
+                    res.json({success: false, message: "nope"})
+                }else{
+                    if (mainUser.permission === "admin"){
+                        if (!users){
+                            res.json({success:false, message:"you have to be admin"})
+                        }else{
+                            res.json({success:true, users:users, permissions: users.permission})
+                        }
+
+
+
+                    }else{
+                        res.json({success: false, message:"you have to be admin"});
+                    }
+                }
+        });
+    });
+});
+
+
+
 
     return router;
-}
+};
 
