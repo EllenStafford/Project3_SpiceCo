@@ -6,7 +6,7 @@ var bcrypt = require('bcrypt-nodejs');
 var SpiceSchema =new Schema({
     productName: {type: String},
     productSize: {type: String},
-    weightSize: {type: String}
+    weightSize: {type: Number}
 });
 
 

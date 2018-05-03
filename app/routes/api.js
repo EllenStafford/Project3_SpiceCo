@@ -117,7 +117,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("username email password")
+        User.findOne({ username: req.body.username}).select("username email password business")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -133,7 +133,7 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email}, secret, { expiresIn: "24h" });
+                var token = jwt.sign({ username: user.username, email: user.email, password: user.password, business: user.business}, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
                }
             }
@@ -147,9 +147,8 @@ module.exports = function(router){
         const right = alphabet[range[1] === 'Z' ? alphabet.indexOf('Z') : alphabet.indexOf(range[1].toUpperCase()) + 1]
         Spice.find({productName: { $gte: left, $lte: right }}, (err, document)=> {
             res.json(document)   
-        })
-    })
-
+        });
+    });
 
 
 //loging user out
@@ -195,7 +194,7 @@ router.get("/management", function(req,res){
                 }else{
                     if (mainUser.permission === "admin"){
                         if (!users){
-                            res.json({success:false, message:"no2"})
+                            res.json({success:false, message:"you have to be admin"})
                         }else{
                             res.json({success:true, users:users, permissions: users.permission})
                         }
@@ -203,7 +202,7 @@ router.get("/management", function(req,res){
 
 
                     }else{
-                        res.json({success: false, message:"no3"});
+                        res.json({success: false, message:"you have to be admin"});
                     }
                 }
         });
