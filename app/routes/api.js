@@ -94,12 +94,15 @@ module.exports = function(router){
         var inquiry = new Inquiry({
             inquiryName: req.body.inquiryName,
             inquiryEmail: req.body.inquiryEmail,
+            inquirySubject: req.body.inquirySubject,
             inquiryMessage: req.body.inquiryMessage
         });
         if (req.body.inquiryName === null || req.body.inquiryName === "") {
             res.json({success: false, message:'A name is required'});
         } else if (req.body.inquiryEmail === null || req.body.inquiryEmail === "") {
             res.json({success: false, message:'An email address is required'});
+        }else if (req.body.inquirySubject === null || req.body.inquirySubject === "") {
+            res.json({success: false, message:'An subject line is required'});
         } else if (req.body.inquiryMessage === null || req.body.inquiryMessage === "") {
             res.json({success: false, message:'A message is required'});
         } else {
