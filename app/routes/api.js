@@ -117,7 +117,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("username email password business")
+        User.findOne({ username: req.body.username}).select("username email password business phone address")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -133,7 +133,7 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email, password: user.password, business: user.business}, secret, { expiresIn: "24h" });
+                var token = jwt.sign({ username: user.username, email: user.email, password: user.password, business: user.business, phone: user.phone, address: user.address}, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
                }
             }
