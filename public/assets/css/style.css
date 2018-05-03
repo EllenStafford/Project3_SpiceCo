@@ -78,31 +78,17 @@ p{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* LOGIN page */
 #loginContainer{
     margin: auto;
     padding: 10%;
     text-align: center;
     width: 100%;
-    background-image: url("../imgs/heartdishspices.jpg");
+}
+
+.banner{
+    width: 100%;
+    height: auto;
 }
 
 
@@ -110,19 +96,40 @@ p{
     margin: auto;
     background-color: #000000;
     opacity: .7;
-    width: 50%;
+    width: 40%;
     padding: 5%;
+    border: solid 8px #FA3905;
+
+    
 }
 
 .username, .password{
     color: #FA3905;
-    opacity: 1;
+    font-weight: bold;
+    
+}
+
+#formbkgd-btn {
+    color:  #000000;
+    font-weight: bold;
+    background-color: #FA3905;
+
 }
 
 .placeholder{
     background-color: white;
     opacity: 1;
 }
+
+/* Styling for Inquiry.html */
+#inquiryContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    width: 100%;
+    background-image: url("../imgs/LoginGraphic.jpg");
+}
+
 
 
 
@@ -144,7 +151,7 @@ p{
     padding: 5%;
 }
 
-/* Styling for index.html */
+/* Styling for slider on home.html */
 .load{
     animation: slide 2s;
 }
