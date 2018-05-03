@@ -51,6 +51,11 @@ h2{
     font-size: 1em;
 }
 
+h3 {
+    text-align: center;
+    padding-top: 35px;
+}
+
 p{
     font-size: .7em;
 }
@@ -70,8 +75,43 @@ p{
     height: 100%;
     background-size: 100% 100%;
     background-position: top center;
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
 }
-Check to see if this is attached to anything and then delete the above style*/
+
+
+.container {
+    /* margin: auto; */
+    text-align: left;
+    /* width: 40%; */
+    /* background-color: aqua; */
+    /* padding-right: 15%; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* padding-left: 12.5%;
+    padding-right: 12.5%; */
+    margin-left: 23%;
+    /* margin-right: 12.5%; */
+}
+
+input {
+    padding: 15px;
+    align-self: center;
+    min-width: 100px;
+    /* max-width: 500px; */
+}
+
+textarea {
+    width: 60%;
+    
+}
+
+.Questions {
+    text-align: center;
+}
+
+
 
 
 
@@ -196,6 +236,9 @@ Check to see if this is attached to anything and then delete the above style*/
 
 #accordionTitle{
     color: #FA3905;
+    opacity: 1;
+}
+
     text-align: center;
     white-space: normal;
 }
@@ -306,3 +349,4 @@ Check to see if this is attached to anything and then delete the above style*/
         background-image: url("../imgs/UseSpoons.jpg");
     }
 }
+
