@@ -181,10 +181,38 @@ router.get("/permission", function(req,res){
             res.json({success:false, message: "this is not happening"});
         }else{
             res.json({success: true, permission: user.permission });
-        }
+        };
     });
-})
+});
+
+router.get("/management", function(req,res){
+    User.find({}, function(err,users){
+        if(err) throw err;
+        User.findOne({ username: req.decoded.username}, function(err,mainUser){
+            if (err) throw err;
+                if(!mainUser){
+                    res.json({success: false, message: "nope"})
+                }else{
+                    if (mainUser.permission === "admin"){
+                        if (!users){
+                            res.json({success:false, message:"no2"})
+                        }else{
+                            res.json({success:true, users:users, permissions: users.permission})
+                        }
+
+
+
+                    }else{
+                        res.json({success: false, message:"no3"});
+                    }
+                }
+        });
+    });
+});
+
+
+
 
     return router;
-}
+};
 

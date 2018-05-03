@@ -1,0 +1,240 @@
+ID,productName,productSize,weightType
+1,Adobo Seasoning,36,oz
+2,"Allspice, Ground",18,oz
+3,"Allspice, Whole",12,oz
+4,Ancho Powder,16,oz
+5,Ancho Powder 5lb,80,oz
+6,"Anise Seed, Ground",16,oz
+7,"Anise Seed, Whole",16,oz
+8,Anise Star ,8,oz
+9,Annatto Seed,20,oz
+10,Apple Pie Spice,16,oz
+11,Arrowroot,18,oz
+12,"Basil, Cut & Sifted",6,oz
+13,"Basil, Cut & Sifted 1.75lb",28,oz
+14,"Basil, Ground",10,oz
+15,"Bay Leaves, Premium",2,oz
+16,"Bay Leaves, Premium",10,oz
+17,Blackening Seasoning,24,oz
+18,Blackening Seasoning 6lb,96,oz
+19,"Blackening Seasoning, HOT",20,oz
+20,Buttermilk Powder 5lb,80,oz
+21,Cajun Seasoning,22,oz
+22,Cajun Seasoning 25lb,400,oz
+23,Cajun Seasoning 6lb,96,oz
+24,"Caraway, Whole",12,oz
+25,"Cardamon, Ground",16,oz
+26,"Cardamon, Whole",24,oz
+27,Caribbean Jerk,16,oz
+28,Caribbean Jerk 5lb,80,oz
+29,Celery Salt,31,oz
+30,Celery Salt 8lb,128,oz
+31,Celery Seed 1lb,16,oz
+32,Celery Seed 25lb,400,oz
+33,Celery Seed 5lb,80,oz
+34,Chervil,3,oz
+35,Chili Powder,18,oz
+36,Chili Powder 25lb,400,oz
+37,Chili Powder 6lb,96,oz
+38,Chipolte Powder Pure '5',16,oz
+39,Chipolte Powder Pure '5' 5lb,80,oz
+40,"Chives, Freeze-Dried",3,oz
+41,"Chives, Freeze-Dried",12,oz
+42,Cilantro,4,oz
+43,Cinnamon,18,oz
+44,Cinnamon 25lb,400,oz
+45,Cinnamon 5lb,80,oz
+46,Cinnamon Sticks,9,oz
+47,Cinnamon Sticks 3lb,48,oz
+48,"Cloves, Ground",20,oz
+49,"Cloves, Whole",14,oz
+50,"Coriander, Ground",16,oz
+51,"Coriander, Whole",9,oz
+52,"Coriander, Whole 3lb",48,oz
+53,Cream of Tartar,36,oz
+54,Creole Seasoning,24,oz
+55,"Cumin, Ground",18,oz
+56,"Cumin, Ground 25lb",400,oz
+57,"Cumin, Ground 5lb",80,oz
+58,"Cumin, Whole",16,oz
+59,"Cumin, Whole 4lb",64,oz
+60,Curry Powder,18,oz
+61,Curry Powder 5lb,80,oz
+62,"Curry Powder, Jamaican",22,oz
+63,Dill Seed,16,oz
+64,Dill Weed,6,oz
+65,Dill Weed 1.5lb,24,oz
+66,Fajita Seasoning,24,oz
+67,"Fennel, Ground",14,oz
+68,"Fennel, Whole",15,oz
+69,"Fennel, Whole 4lb",64,oz
+70,Fenugreek,18,oz
+71,Five Spice,16,oz
+72,Garam Masala,18,oz
+73,Garlic Minced 7lb,112,oz
+74,Garlic Powder ,20,oz
+75,Garlic Powder 25lb,400,oz
+76,Garlic Powder 6lb,96,oz
+77,Garlic Salt,35,oz
+78,Garlic Salt 10lb,160,oz
+79,"Garlic, Granulated ",22,oz
+80,"Garlic, Granulated 25lb",400,oz
+81,"Garlic, Granulated 7lb",112,oz
+82,"Garlic, Roasted",24,oz
+83,"Garlic, Roasted",96,oz
+84,"Ghost Pepper, Ground ",4,oz
+85,"Ghost Pepper, Ground ",16,oz
+86,"Ghost Pepper, Whole ",3,oz
+87,"Ginger, Ground",16,oz
+88,Greek Seasoning,16,oz
+89,Greek Seasoning 5lb,80,oz
+90,"Grits, Linney's Mill Stone Ground White 25lb",400,oz
+91,"Grits, Linney's Mill Stone Ground White 2lb",32,oz
+92,"Grits, Linney's Mill Stone Ground White 50lb",800,oz
+93,"Grits, Linney's Mill Stone Ground Yellow 25lb",400,oz
+94,"Grits, Linney's Mill Stone Ground Yellow 2lb",32,oz
+95,"Grits, Linney's Mill Stone Ground Yellow 50lb",800,oz
+96,Gumbo File Love Valley,14,oz
+97,Gumbo File Love Valley 4lb,64,oz
+98,"Habanero Peppers, Whole",6,oz
+99,Habanero Powder,16,oz
+100,Habanero Powder 3lb,48,oz
+101,Herb Seasoning,20,oz
+102,Herb Seasoning 6lb,96,oz
+103,Herbs de Provence,10,oz
+104,Herbs de Provence 2.5lb,40,oz
+105,Italian Seasoning,8,oz
+106,Italian Seasoning 2lb,32,oz
+107,Juniper Berries,12,oz
+108,Lavender,5,oz
+109,Lavender,24,oz
+110,Lemon Herb Seasoning,20,oz
+111,Lemon Herb Seasoning 7lb,112,oz
+112,Love Valley Bay Seasoning,24,oz
+113,Love Valley Bay Seasoning 6lb,96,oz
+114,Love Valley BBQ Spice,20,oz
+115,Love Valley BBQ Spice 6lb,96,oz
+116,"Mace, Ground",3,oz
+117,Maple Extract 1qt,32,oz
+118,"Marjoram, Ground",16,oz
+119,"Marjoram, Leaf",6,oz
+120,"Marjoram, Leaf",16,oz
+121,Mesquite Seasoning,24,oz
+122,Mesquite Seasoning 7lb,112,oz
+123,"Mint Leaves, Crushed",5,oz
+124,"Mint Leaves, Crushed 2lb",32,oz
+125,Miso Paste 2.2lb,35,oz
+126,Montana Mountain Rub,22,oz
+127,Montana Mountain Rub 7lb,112,oz
+128,Mrs. K 17 Blend Salt Free,18,oz
+129,"Mustard Seed, Brown",24,oz
+130,"Mustard Seed, Brown 7lb",112,oz
+131,"Mustard Seed, Yellow",24,oz
+132,"Mustard Seed, Yellow 7lb",112,oz
+133,"Mustard, Dry English",16,oz
+134,"Mustard, Dry English 5lb",80,oz
+135,"Nutmeg, Ground",16,oz
+136,"Nutmeg, Whole",20,oz
+137,Onion Powder,22,oz
+138,Onion Powder 5lb,80,oz
+139,Onion Salt,32,oz
+140,Onion Salt 10lb,160,oz
+141,"Onion, Chopped",12,oz
+142,"Onion, Chopped 4lb",64,oz
+143,"Onion, Granulated",22,oz
+144,"Onion, Granulated 7lb",112,oz
+145,Orange Peel,16,oz
+146,Orange Peel 5lb,80,oz
+147,"Oregano, Cut & Sifted",5,oz
+148,"Oregano, Cut & Sifted 1.25lb",20,oz
+149,"Oregano, Mexican",4,oz
+150,"Oregano, Mexican 1lb",16,oz
+151,"Paprika, Hungarian",22,oz
+152,"Paprika, Hungarian 25lb",400,oz
+153,"Paprika, Smoked - Hot",22,oz
+154,"Paprika, Smoked - Sweet",22,oz
+155,"Paprika, Smoked - Sweet 5lb",80,oz
+156,"Paprika, Spanish",18,oz
+157,"Paprika, Spanish 25lb",400,oz
+158,"Paprika, Spanish 5lb",80,oz
+159,Parsley,12,oz
+160,Parsley 3lb,48,oz
+161,Pepper Blend 12,20,oz
+162,"Pepper, Black - Butcher (coarse)",16,oz
+163,"Pepper, Black - Butcher (coarse) 5lb",80,oz
+164,"Pepper, Black - Gourmet (café) 25lb",400,oz
+165,"Pepper, Black - Gourmet (café) 5lb",80,oz
+166,"Pepper, Black - Table (fine) 5lb",80,oz
+167,"Pepper, Cayenne",16,oz
+168,"Pepper, Cayenne 5lb",80,oz
+169,"Pepper, Cracked Black",16,oz
+170,"Pepper, Cracked Black 5lb",80,oz
+171,"Pepper, Lemon",24,oz
+172,"Pepper, Lemon 7lb",112,oz
+173,"Pepper, Red Crushed",14,oz
+174,"Pepper, Red Crushed 4lb",64,oz
+175,"Pepper, Roasted Garlic",24,oz
+176,"Pepper, Roasted Garlic 7lb",112,oz
+177,"Pepper, White Ground",18,oz
+178,"Pepper, White Ground 5lb",80,oz
+179,Peppercorn Blend,16,oz
+180,Peppercorn Blend,80,oz
+181,"Peppercorns, Pink",8,oz
+182,"Peppercorns, Szechuan",14,oz
+183,"Peppercorns, Tellicherry 5lb",80,oz
+184,"Peppercorns, Whole Black",18,oz
+185,"Peppercorns, Whole Black 25lb",400,oz
+186,"Peppercorns, Whole Black 5lb",80,oz
+187,"Peppercorns, Whole White",20,oz
+188,"Peppercorns, Whole White 6lb",96,oz
+189,Pickling Spice,15,oz
+190,Pickling Spice 4lb,64,oz
+191,Pine Nuts,16,oz
+192,Pine Nuts 5lb,80,oz
+193,Poppy Seeds,20,oz
+194,Poultry Meat Rub,26,oz
+195,Poultry Meat Rub 8lb,128,oz
+196,Poultry Seasoning,12,oz
+197,Pumpkin Pie Spice,16,oz
+198,"Rosemary, Ground",12,oz
+199,"Rosemary, Whole",6,oz
+200,"Rosemary, Whole 2lb",32,oz
+201,Saffron,1,oz
+202,"Sage, Rubbed",8,oz
+203,Savory,8,oz
+204,Seasoning Salt-No MSG,29,oz
+205,Seasoning Salt-No MSG 10lb,160,oz
+206,Seasoning Salt-No MSG 25lb,400,oz
+207,Sesame Seed Blend,20,oz
+208,Sesame Seed Blend 6lb,96,oz
+209,"Sesame Seed Blend, Toasted 5lb",80,oz
+210,"Sesame Seeds, Black",20,oz
+211,"Sesame Seeds, Black 6lb",96,oz
+212,"Sesame Seeds, White",20,oz
+213,"Sesame Seeds, White 25lb",400,oz
+214,"Sesame Seeds, White 6lb",96,oz
+215,"Smoked Sea Salt, Alderwood",40,oz
+216,"Smoked Sea Salt, Alderwood 10lb",160,oz
+217,"Smoked Sea Salt, Mesquite",40,oz
+218,"Smoked Sea Salt, Mesquite 10lb",160,oz
+219,Smokey Sweet Rub,28,oz
+220,Smokey Sweet Rub 8.5lb,136,oz
+221,Steak Seasoning,28,oz
+222,Steak Seasoning 10lb,160,oz
+223,Sumac,16,oz
+224,Taco Seasoning,16,oz
+225,Taco Seasoning 5lb,80,oz
+226,Tarragon,4,oz
+227,Tarragon,16,oz
+228,"Thyme, French",6,oz
+229,"Thyme, French 2lb",32,oz
+230,"Thyme, Ground",12,oz
+231,"Thyme, Whole",9,oz
+232,"Thyme, Whole 3lb",48,oz
+233,Turmeric,20,oz
+234,Universal Seasoning 7lb,112,oz
+235,Vanilla Beans - Madagascar Bourbon,4,oz
+236,"Vanilla, Imitation 1qt",32,oz
+237,"Vanilla, Madagascar Bourbon Extract 1qt",32,oz
+238,Wasabi Powder 2.2lb,35,oz
+239,Zahtar Seasoning,16,oz
