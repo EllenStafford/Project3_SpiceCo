@@ -1,16 +1,22 @@
-.navbar:hover {
-    color: white;
-    background-color: black;
-      
+/* Styling for index.html */
+.navbar{
+    font-size: .7em;
 }
 
+.navbar-brand{
+    font-size: 1.2em;
+}
+
+.navbar:hover {
+    color: white;
+    background-color: black;  
+}
 
 .footer {
     text-align: center;
     border-top: #FBE104;
     border-top-style: solid;
-    border-top-width: 20px;
-    position: fixed;
+    border-top-width: 10px;
     background-color: #FA3905;
     color: #000000;
     width: 100%;
@@ -20,15 +26,74 @@
     font-weight: bold;
 }
 
-h4 {
-    margin-bottom: 10px;
+h6 {
+    font-size: .7em;
+    margin-bottom: .1em;
 }
 
-/* Styling for Contact.html */
-
-#ContactForm{
-margin-left:10%;
+.email{
+    color:#000000;
 }
+
+.email:hover {
+    color: white;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    color:#FA3905;
+    font-size: 1em;
+}
+
+p{
+    font-size: .7em;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+#one, #two, #three{
+    text-decoration: none;
+}
+
+/* #gcontactbodyform { */
+    body {
+    /*background: url("./assets/imgs/477727257_hearts_1024px.jpg");*/
+    background-image:"477727257_hearts_1024px.jpg";
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* LOGIN page */
@@ -59,28 +124,7 @@ margin-left:10%;
     opacity: 1;
 }
 
-/* LOGOUT page */
-.logoutContainer{
-    margin: auto;
-    padding: 10%;
-    text-align: center;
-    width: 100%;
-    /* background-color: deeppink; */
-    background-image: url("../../assets/imgs/chiliPepper.jpg");
-}
 
-.logoutDiv{
-    margin: auto;
-    background-color: #000000;
-    opacity: .7;
-    width: 50%;
-    padding: 5%;
-}
-
-.logoutText{
-    color: #FA3905;
-    opacity: 1;
-}
 
 /* New About page design */
 #aboutContainer{
