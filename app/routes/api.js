@@ -193,17 +193,14 @@ router.get("/management", function(req,res){
         User.findOne({ username: req.decoded.username}, function(err,mainUser){
             if (err) throw err;
                 if(!mainUser){
-                    res.json({success: false, message: "nope"})
-                }else{
+                    res.json({success: false, message: "no user found"});
+                    }else{
                     if (mainUser.permission === "admin"){
                         if (!users){
                             res.json({success:false, message:"you have to be admin"})
                         }else{
-                            res.json({success:true, users:users, permissions: users.permission})
+                            res.json({success:true, users:users, permission: mainUser.permission})
                         }
-
-
-
                     }else{
                         res.json({success: false, message:"you have to be admin"});
                     }
