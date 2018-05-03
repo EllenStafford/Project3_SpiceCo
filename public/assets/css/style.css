@@ -51,28 +51,66 @@ h2{
     font-size: 1em;
 }
 
+h3 {
+    text-align: center;
+    padding-top: 35px;
+}
+
 p{
     font-size: .7em;
 }
 
+/* Apply to any class that needs to be responsive */
 .responsive {
     width: 100%;
     height: auto;
 }
 
-#one, #two, #three{
-    text-decoration: none;
-}
 
 /* #gcontactbodyform { */
-    body {
+   /* body {
     /*background: url("./assets/imgs/477727257_hearts_1024px.jpg");*/
-    background-image:"477727257_hearts_1024px.jpg";
+   /* background-image:"477727257_hearts_1024px.jpg";
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
     background-position: top center;
+    /* display: flex; */
+  /*  align-items: center;
+    /* justify-content: center; */
+/*}*/
+
+
+.container {
+    /* margin: auto; */
+    text-align: left;
+    /* width: 40%; */
+    /* background-color: aqua; */
+    /* padding-right: 15%; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* padding-left: 12.5%;
+    padding-right: 12.5%; */
+    margin-left: 23%;
+    /* margin-right: 12.5%; */
 }
+
+input {
+    padding: 15px;
+    align-self: center;
+    min-width: 100px;
+    /* max-width: 500px; */
+}
+
+textarea {
+    width: 60%;
+    
+}
+
+.Questions {
+    text-align: center;
+}
+
 
 
 
@@ -94,6 +132,7 @@ p{
 
 .formbkgd{
     margin: auto;
+    margin-top: 15%;
     background-color: #000000;
     opacity: .7;
     width: 40%;
@@ -124,7 +163,6 @@ p{
 /* Styling for Inquiry.html */
 #inquiryContainer{
     margin: auto;
-    padding: 10%;
     text-align: center;
     width: 100%;
     background-image: url("../imgs/LoginGraphic.jpg");
@@ -133,22 +171,66 @@ p{
 
 
 
-/* New About page design */
-#aboutContainer{
-    margin: auto;
-    padding: 10%;
-    text-align: center;
-    width: 100%;
-    /* background-color:deeppink; */
-    background-image: url("../imgs/scatteredSpices.jpg");
+.LVSTitle3{
+    color:#FFFFFF;
+    text-shadow:2px 2px #000000;
+    font-size: 1.5em;
+    padding: 1%;
+}
+
+.LVSText{
+    margin:auto;
+    margin-bottom: 1%;
+    text-align: left;
+    width: 50%;
+}
+
+#truck{
+    background-color: #888888;
+    padding-bottom: 3%;
+    background-image: url("../imgs/UseTruck3.jpg");
 }
 
 .accordionWrapper{
-    margin-left: 1%;
+    margin-left: 5%;
     background-color: #000000;
-    opacity: .7;
-    width: 50%;
-    padding: 5%;
+    opacity: .9;
+    width: 40%;
+    padding: 2%;
+}
+
+
+/*.aInteriorWrapper{
+    background-color: #FFFFFF;
+    padding: 1%;
+}*/
+
+.card-header{
+    background-color: #FFFFFF;
+}
+
+.card-body{
+    background-color: #FFFFFF;
+}
+
+/*
+#headingOne{
+    background-color: #FFFFFF;
+}
+*/
+#one, #two, #three{
+    text-decoration: none;
+}
+
+#accordionTitle{
+    color: #FA3905;
+    opacity: 1;
+    text-align: center;
+    white-space: normal;
+}
+
+#accordionText{
+    text-align: left;
 }
 
 /* Styling for slider on home.html */
@@ -253,3 +335,4 @@ p{
         background-image: url("../imgs/UseSpoons.jpg");
     }
 }
+
