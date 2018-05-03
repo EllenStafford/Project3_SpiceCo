@@ -53,7 +53,7 @@ h2{
 
 h3 {
     text-align: center;
-    padding-top: 25px;
+    padding-top: 35px;
 }
 
 p{
@@ -82,17 +82,17 @@ p{
 }
 
 .container {
+    /* margin: auto; */
     text-align: left;
     /* width: 40%; */
     /* background-color: aqua; */
     /* padding-right: 15%; */
     padding-top: 5%;
     padding-bottom: 5%;
-   margin-left: 12.5%;
-   margin-right: 12.5%;
-    
-  
-   
+    /* padding-left: 12.5%;
+    padding-right: 12.5%; */
+    margin-left: 23%;
+    /* margin-right: 12.5%; */
 }
 
 input {
@@ -103,7 +103,12 @@ input {
 }
 
 textarea {
-    width: 73%;
+    width: 60%;
+    
+}
+
+.Questions {
+    text-align: center;
 }
 
 
