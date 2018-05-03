@@ -76,9 +76,9 @@ p{
     background-size: 100% 100%;
     background-position: top center;
     /* display: flex; */
-    align-items: center;
+  /*  align-items: center;
     /* justify-content: center; */
-}
+/*}*/
 
 
 .container {
@@ -237,8 +237,6 @@ textarea {
 #accordionTitle{
     color: #FA3905;
     opacity: 1;
-}
-
     text-align: center;
     white-space: normal;
 }
