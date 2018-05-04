@@ -165,7 +165,7 @@ textarea {
 
 
 
-/* New About page design */
+/* New About page design 
 #aboutContainer{
     margin: auto;
     text-align: center;
@@ -195,7 +195,7 @@ textarea {
     /*margin:auto;
     margin-bottom: 1%;
     text-align: left;
-    width: 50%;*/
+    width: 50%;
     height: 100 vh;
     width: 100%;
     background-image: url(../imgs/LVS_Truck.jpg);
@@ -205,7 +205,7 @@ textarea {
     /*margin:auto;
     margin-bottom: 1%;
     text-align: left;
-    width: 50%;*/
+    width: 50%;
     height: 100 vh;
     width: 100%;
     background-image: url(../img/LVS_Board.jpg);
@@ -215,7 +215,7 @@ textarea {
     /*margin:auto;
     margin-bottom: 1%;
     text-align: left;
-    width: 50%;*/
+    width: 50%;
     height: 100 vh;
     width: 100%;
     background-image: url(../imgs/UseSpiceBowls.jpg);
@@ -233,7 +233,7 @@ textarea {
     opacity: .9;
     width: 40%;
     padding: 2%;
-}
+}*/
 
 
 /*.aInteriorWrapper{
@@ -253,7 +253,7 @@ textarea {
 #headingOne{
     background-color: #FFFFFF;
 }
-*/
+
 #one, #two, #three{
     text-decoration: none;
 }
@@ -267,6 +267,30 @@ textarea {
 
 #accordionText{
     text-align: left;
+}*/
+
+/*New Style for About page*/
+body{
+    margin: 0;
+    padding: 0;
+}
+#box1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../imgs/LVS_Truck.jpg");
+    background-size: cover;
+}
+#box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../imgs/LVS_metalspoons.jpg");
+    background-size: cover;
+}
+#box3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../imgs/LVS_SpiceBoard.jpg");
+    background-size: cover;
 }
 
 /* Styling for index.html */
