@@ -148,11 +148,16 @@ module.exports = function(router){
         const range = (req.query.paginate || 'A-Z').split('-')
         const left = range[0].toUpperCase()
         const right = alphabet[range[1] === 'Z' ? alphabet.indexOf('Z') : alphabet.indexOf(range[1].toUpperCase()) + 1]
-        Spice.find({productName: { $gte: left, $lte: right }}, (err, document)=> {
-            res.json(document)   
-        });
-    });
+        const params = right === 'Z' ? { '$gt': left } : { '$gte': left, '$lte': right }
+        const isLoggedIn = jwt.verify(req.body.token || req.headers["x-access-token"], secret, (err, decoded)=> err ? false : true)
+        const projections = {productName: 1, productSize: 1, weightType: 1, _id: 0}
+        if(isLoggedIn)
+            projections.basePrice = 1
 
+        Spice.find({productName: params}, projections, (err, document)=> {
+            res.json(document)   
+        })
+    })
 
 //loging user out
 //decoded takes the token combines it with the secret, once verified it sends it back decoded as username and email.
