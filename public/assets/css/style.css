@@ -114,6 +114,15 @@ textarea {
     text-align: center;
 }
 
+#alertMessages {
+    width: 75%;
+    padding-right: 50%;
+}
+
+#inquirycard {
+    border: thick 10px black;
+   
+}
 
 
 

@@ -1,61 +1,62 @@
 <div class "contact-header">
+    <img src="../../../assets/imgs/lvs_spoons_aboutpage_1800px.jpg" alt="Wooden Spoons" class="responsive">
     <h3>Call Tony at (704) 941-0012 or complete the form below.</h3>
 </div>
 
 
 
 <div class="container">
-    
-        <form id="gcontactbodyform" ng-submit="contact.regContact(regCon);">
-            <div class="form-group">
-                <label for="CompanyName">Company Name</label>
-                <input type="text" class="form-control-sm" size="81%" id="CompanyName" placeholder="Company Name" ng-model="contact.regCon.companyName">
-            </div>
-            <div class="contactRow">
-                <div class="form-group">
-                    <!-- <div class="col-sm-offset-2 col-sm-10"> -->
-                    <label for="ContactName"> Contact Name</label>
-                    <input type="text" class="form-control-sm" size="83%" id="ContactName" placeholder="Contact Name" ng-model="contact.regCon.contactName">
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="contactRow">
-                <div class="form-group">
-                    <!-- <div class="col-sm-offset-2 col-sm-10"> -->
-                    <label for="StreetAddress">Street Address</label>
-                    <input type="text" class="form-control-sm" size="83%" id="StreetAddress" placeholder="Street Address" ng-model="contact.regCon.streetAddress">
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="contactRow row">
-                <div class="form-group">
-                    <div class="col-sm">
-                        <label for="City">City</label>
-                        <input type="text" class="form-control-sm" size="35" id="City" placeholder="City" ng-model="contact.regCon.city">
 
-
-                        <label for="State">State</label>
-                        <input type="text" class="form-control-sm" size="15" id="State" placeholder="State" ng-model="contact.regCon.state">
-
-                        <label for="Zip">Zip</label>
-                        <input type="text" class="form-control-sm" size="17" id="Zip" placeholder="Zip" ng-model="contact.regCon.zip">
-                    </div>
-                </div>
-            </div>
-  
-
-    <div class="contactRow">
+    <form id="gcontactbodyform" ng-submit="contact.regContact(regCon);">
         <div class="form-group">
-            <!-- <div class="col-sm-offset-2 col-sm-10"> -->
-            <label for="Phone">Phone</label>
-            <input type="text" class="form-control-sm" size="30" id="Phone" placeholder="Phone" ng-model="contact.regCon.phone">
-            <label for="Email">Email Address</label>
-            <input type="email" class="form-control-sm" size="37" id="Email" aria-describedby="emailHelp" placeholder="Enter email" ng-model="contact.regCon.email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            <!-- </div> -->
+            <label for="CompanyName">Company Name</label>
+            <input type="text" class="form-control-sm" size="81%" id="CompanyName" placeholder="Company Name" ng-model="contact.regCon.companyName">
         </div>
-    </div>
-    <!-- <div class="contactRow">
+        <div class="contactRow">
+            <div class="form-group">
+                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <label for="ContactName"> Contact Name</label>
+                <input type="text" class="form-control-sm" size="83%" id="ContactName" placeholder="Contact Name" ng-model="contact.regCon.contactName">
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="contactRow">
+            <div class="form-group">
+                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <label for="StreetAddress">Street Address</label>
+                <input type="text" class="form-control-sm" size="83%" id="StreetAddress" placeholder="Street Address" ng-model="contact.regCon.streetAddress">
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="contactRow row">
+            <div class="form-group">
+                <div class="col-sm">
+                    <label for="City">City</label>
+                    <input type="text" class="form-control-sm" size="35" id="City" placeholder="City" ng-model="contact.regCon.city">
+
+
+                    <label for="State">State</label>
+                    <input type="text" class="form-control-sm" size="15" id="State" placeholder="State" ng-model="contact.regCon.state">
+
+                    <label for="Zip">Zip</label>
+                    <input type="text" class="form-control-sm" size="17" id="Zip" placeholder="Zip" ng-model="contact.regCon.zip">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contactRow">
+            <div class="form-group">
+                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <label for="Phone">Phone</label>
+                <input type="text" class="form-control-sm" size="30" id="Phone" placeholder="Phone" ng-model="contact.regCon.phone">
+                <label for="Email">Email Address</label>
+                <input type="email" class="form-control-sm" size="37" id="Email" aria-describedby="emailHelp" placeholder="Enter email" ng-model="contact.regCon.email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- <div class="contactRow">
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <label for="Email">Email Address</label>
@@ -64,28 +65,25 @@
                         </div>
                     </div>
                 </div> -->
-    <div class="contactRow">
-        <div class="form-group">
-            <!-- <div class="col-sm-offset-2 col-sm-10"> -->
-            <label class="Questions" for="Questions">Questions/Comments</label>
-            <br>
-            <textarea class="form-control-md" id="Questions" placeholder="Enter questions or comments here" rows="4" size="25" ng-model="contact.regCon.message"></textarea>
-            <!-- </div> -->
+        <div class="contactRow">
+            <div class="form-group">
+                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <label class="Questions" for="Questions">Questions/Comments</label>
+                <br>
+                <textarea class="form-control-md" id="Questions" placeholder="Enter questions or comments here" rows="4" size="25" ng-model="contact.regCon.message"></textarea>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <div id="alertMessages">
+        <div class "row show-hide-message" ng-show="contact.successMessage">
+            <div class="alert alert-success" size="100%">{{contact.successMessage}}</div>
+        </div>
+        <div class "row show-hide-message" ng-show="contact.errorMessage">
+            <div class="alert alert-danger" size="100%">{{contact.errorMessage}}</div>
         </div>
     </div>
-
-    <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
-</div>
-</div>
-
-
-
-
-<div class "row show-hide-message" ng-show="contact.successMessage">
-    <div class="alert alert-success">{{contact.successMessage}}</div>
-</div>
-<div class "row show-hide-message" ng-show="contact.errorMessage">
-    <div class="alert alert-danger">{{contact.errorMessage}}</div>
-</div>
 </div>
