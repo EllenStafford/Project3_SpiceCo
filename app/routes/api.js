@@ -36,7 +36,7 @@ module.exports = function(router){
         }else{
             user.save(function(err){
                 if (err){
-                    res.json({success: false, message: "An account under that username or email already exists"});
+                    res.json({success: false, message: "Cannot create account"});
                 }else{
                     res.json({success: true, message: "Account created!"});
                 }
@@ -209,7 +209,50 @@ router.get("/management", function(req,res){
     });
 });
 
+router.get("/management", function(req,res){
+    User.find({}, function(err,users){
+        if(err) throw err;
+        User.findOne({ username: req.decoded.username}, function(err,mainUser){
+            if (err) throw err;
+                if(!mainUser){
+                    res.json({success: false, message: "no user found"});
+                    }else{
+                    if (mainUser.permission === "admin"){
+                        if (!users){
+                            res.json({success:false, message:"you have to be admin"})
+                        }else{
+                            res.json({success:true, users:users, permission: mainUser.permission})
+                        }
+                    }else{
+                        res.json({success: false, message:"you have to be admin"});
+                    }
+                }
+        });
+    });
+});
 
+
+// router.get("/requests", function(req,res){
+//     User.find({}, function(err,users){
+//         if(err) throw err;
+//         User.findOne({ username: req.decoded.username}, function(err,mainUser){
+//             if (err) throw err;
+//                 if(!mainUser){
+//                     res.json({success: false, message: "no user found"});
+//                     }else{
+//                     if (mainUser.permission === "admin"){
+//                         if (!users){
+//                             res.json({success:false, message:"you have to be admin"})
+//                         }else{
+//                             res.json({success:true, users:users, permission: mainUser.permission})
+//                         }
+//                     }else{
+//                         res.json({success: false, message:"you have to be admin"});
+//                     }
+//                 }
+//         });
+//     });
+// });
 
 
     return router;
