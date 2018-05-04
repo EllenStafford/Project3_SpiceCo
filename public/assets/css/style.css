@@ -191,13 +191,36 @@ textarea {
     padding: 1%;
 }
 
-.LVSText{
-    margin:auto;
+#LVSText1{
+    /*margin:auto;
     margin-bottom: 1%;
     text-align: left;
-    width: 50%;
+    width: 50%;*/
+    height: 100 vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_Truck.jpg);
+    background-size: cover;
 }
-
+#LVSText2{
+    /*margin:auto;
+    margin-bottom: 1%;
+    text-align: left;
+    width: 50%;*/
+    height: 100 vh;
+    width: 100%;
+    background-image: url(../img/LVS_Board.jpg);
+    background-size: cover;
+}
+#LVSText3{
+    /*margin:auto;
+    margin-bottom: 1%;
+    text-align: left;
+    width: 50%;*/
+    height: 100 vh;
+    width: 100%;
+    background-image: url(../imgs/UseSpiceBowls.jpg);
+    background-size: cover;
+}
 #truck{
     background-color: #888888;
     padding-bottom: 3%;
