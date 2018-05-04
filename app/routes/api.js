@@ -209,7 +209,7 @@ router.get("/management", function(req,res){
     });
 });
 
-router.get("/management", function(req,res){
+router.get("/requests", function(req,res){
     User.find({}, function(err,users){
         if(err) throw err;
         User.findOne({ username: req.decoded.username}, function(err,mainUser){
