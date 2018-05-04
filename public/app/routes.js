@@ -20,6 +20,11 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         authenticated: true,
         permission: ["admin"]
     })
+    .when("/admin",{
+        templateUrl: "../../app/views/pages/management/admin.html",
+        authenticated: true,
+        permission: ["admin"]
+    })
 
     .when("/login",{
         templateUrl: "../../app/views/pages/users/login.html",

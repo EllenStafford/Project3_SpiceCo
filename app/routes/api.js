@@ -94,12 +94,15 @@ module.exports = function(router){
         var inquiry = new Inquiry({
             inquiryName: req.body.inquiryName,
             inquiryEmail: req.body.inquiryEmail,
+            inquirySubject: req.body.inquirySubject,
             inquiryMessage: req.body.inquiryMessage
         });
         if (req.body.inquiryName === null || req.body.inquiryName === "") {
             res.json({success: false, message:'A name is required'});
         } else if (req.body.inquiryEmail === null || req.body.inquiryEmail === "") {
             res.json({success: false, message:'An email address is required'});
+        }else if (req.body.inquirySubject === null || req.body.inquirySubject === "") {
+            res.json({success: false, message:'An subject line is required'});
         } else if (req.body.inquiryMessage === null || req.body.inquiryMessage === "") {
             res.json({success: false, message:'A message is required'});
         } else {
@@ -190,17 +193,14 @@ router.get("/management", function(req,res){
         User.findOne({ username: req.decoded.username}, function(err,mainUser){
             if (err) throw err;
                 if(!mainUser){
-                    res.json({success: false, message: "nope"})
-                }else{
+                    res.json({success: false, message: "no user found"});
+                    }else{
                     if (mainUser.permission === "admin"){
                         if (!users){
                             res.json({success:false, message:"you have to be admin"})
                         }else{
-                            res.json({success:true, users:users, permissions: users.permission})
+                            res.json({success:true, users:users, permission: mainUser.permission})
                         }
-
-
-
                     }else{
                         res.json({success: false, message:"you have to be admin"});
                     }
