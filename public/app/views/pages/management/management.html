@@ -1,41 +1,30 @@
-<h1>Admin Page</h1>
-
-<table>
+<div class="panel panel-primary">
+<div class="panel-heading">
+    <strong>User Management</strong>
+</div>
+<table class="table">
     <tr>
         <th>Business Name</th>
         <th>Username</th>
         <th>Phone</th>
         <th>Address</th>
-        <th>password</th>
         <th>Email</th>
     </tr>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>
+    <tr ng-repeat = "person in management.users">
+        <td>{{ person.business }}</td>
+        <td>{{ person.username }}</td>
+        <td>{{ person.phone }}</td>
+        <td>{{ person.address }}</td>
+        <td>{{ person.email }}</td>
+        <td>
             <a href="#">
                 <button type="button">Edit</button>
             </a>
             <a href="#">
                 <button type="button">Delete</button>
             </a>
-        </th>
-        
+        </td>
     </tr>
 </table>
+</div>
 
-    
-
-
-        <div class "row show-hide-message" ng-show="management.successMsg">
-            <div class="alert alert-success">{{management.successMsg}}</div>
-        </div>
-        <div class "row show-hide-message" ng-show="management.errorMsg">
-            <div class="alert alert-danger">{{management.errorMsg}}</div>
-        </div>
-
-    

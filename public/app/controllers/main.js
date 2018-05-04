@@ -1,5 +1,3 @@
-// main allows the user to stay logged in
-
 angular.module("mainController", ["authServices"])
 
 
@@ -20,6 +18,7 @@ angular.module("mainController", ["authServices"])
                 app.address = data.data.address;
                 app.email = data.data.email;
                 app.password = data.data.password;
+                app.message = data.data.message;
                 User.getPermission().then(function(data){
                     if(data.data.permission === "admin"){
                         app.authorized = true;
@@ -38,7 +37,6 @@ angular.module("mainController", ["authServices"])
         }
     
     });
-
 
     this.doLogin = function(loginData){
         app.errorMsg = false;
