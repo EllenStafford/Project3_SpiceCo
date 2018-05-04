@@ -1,28 +1,38 @@
 
 
+<div id="inquiryContainer" class="responsive">
+<br>
+<div class="row">
 
+    <div class="card text-center mx-auto border border-dark" id="inquiryCard" style="width: 24rem; padding: 4%;">
+        <div class="card-body">
+            <form ng-submit="inquiry.inqUser();">
+                <label>
+                    <b>Name:</b>
+                </label>
+                <input type="text" name="name" placeholder="Please enter name" ng-model="inquiry.inqData.inquiryName">
+                <br>
+                <label>
+                    <b>Email:</b>
+                </label>
+                <input type="text" name="email" placeholder="Please enter email" ng-model="inquiry.inqData.inquiryEmail">
+                <br>
+                <label>
+                    <b>Message:</b>
+                </label>
+                <input type="text" name="message" placeholder="Please enter message" ng-model="inquiry.inqData.inquiryMessage">
+                <hr>
+                <button type="submit">
+                    <b>Send Message</b>
+                </button>
 
-    <div class="row">
-       
-            <div class="card text-center mx-auto border border-dark" id="inquiryCard" style="width: 24rem; padding: 4%;">
-                <div class="card-body">
-                    <form ng-submit="inquiry.inqUser();">
-                        <label><b>Name:</b></label>
-                        <input type="text" name="name" placeholder="Please enter name" ng-model="inquiry.inqData.inquiryName">
-                        <br>
-                        <label><b>Email:</b></label>
-                        <input type="text" name="email" placeholder="Please enter email" ng-model="inquiry.inqData.inquiryEmail">
-                        <br>
-                        <label><b>Message:</b></label>
-                        <input type="text" name="message" placeholder="Please enter message" ng-model="inquiry.inqData.inquiryMessage">
-                        <hr>
-                        <button type="submit"><b>Send Message</b></button>
+            </form>
+        </div>
+    </div>
 
-                    </form>
-                </div>
-            </div>
-       
-    </div> <!-- End of Row-->
+</div> <!-- End of Row-->
+<br>
+</div>
 
 
 

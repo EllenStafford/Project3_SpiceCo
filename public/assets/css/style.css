@@ -124,6 +124,14 @@ textarea {
    
 }
 
+#inquiryContainer{
+    margin: auto;
+    /* padding: 10%; */
+    text-align: center;
+    background-image: url("../../../assets/imgs/scatteredSpices.jpg");
+    /* background-repeat: repeat-x; */
+}
+
 
 
 
