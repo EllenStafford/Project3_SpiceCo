@@ -1,23 +1,48 @@
-<form ng-submit="inquiry.inqUser();">
-    <label>Name:</label>
-    <input type = "text" name="name" placeholder = "Please enter name" ng-model="inquiry.inqData.inquiryName">
-    <br>
-    <label>Email:</label>
-    <input type = "text" name="email" placeholder = "Please enter email" ng-model="inquiry.inqData.inquiryEmail">
-    <br>
-    <label>Subject:</label>
-    <input type = "text" name="subject" placeholder = "Please enter subject line" ng-model="inquiry.inqData.inquirySubject">
-    <br>
-    <label>Message:</label>
-    <input type = "text" name="message" placeholder = "Please enter message" ng-model="inquiry.inqData.inquiryMessage">
-    <br>
-    <button type = "submit">Send Message</button>
 
-</form>
 
-<div class "row show-hide-message" ng-show = "inquiry.successMessages">
-    <div class = "alert alert-success">{{inquiry.successMessages}}</div>
-</div> 
-<div class "row show-hide-message" ng-show = "inquiry.errorMessages">
-    <div class = "alert alert-danger">{{inquiry.errorMessages}}</div>
+<div id="inquiryContainer" class="responsive">
+<br>
+
+<div class="row">
+
+    <div class="card text-center mx-auto border border-dark" id="inquiryCard" style="width: 24rem; padding: 4%;">
+        <div class="card-body">
+            <form ng-submit="inquiry.inqUser();">
+                <label>
+                    <b>Name:</b>
+                </label>
+                <input type="text" name="name" placeholder="Please enter name" ng-model="inquiry.inqData.inquiryName">
+                <br>
+                <label>
+                    <b>Email:</b>
+                </label>
+                <input type="text" name="email" placeholder="Please enter email" ng-model="inquiry.inqData.inquiryEmail">
+                <br>
+                <label>
+                    <b>Message:</b>
+                </label>
+                <input type="text" name="message" placeholder="Please enter message" ng-model="inquiry.inqData.inquiryMessage">
+                <hr>
+                <button type="submit">
+                    <b>Send Message</b>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</div> <!-- End of Row-->
+<br>
+
+</div>  <!-- End of Container -->
+
+
+
+
+
+<div class "row show-hide-message" ng-show="inquiry.successMessages">
+    <div class="alert alert-success">{{inquiry.successMessages}}</div>
+</div>
+<div class "row show-hide-message" ng-show="inquiry.errorMessages">
+    <div class="alert alert-danger">{{inquiry.errorMessages}}</div>
 </div>
