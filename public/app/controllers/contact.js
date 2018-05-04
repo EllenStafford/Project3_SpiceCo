@@ -10,7 +10,7 @@ angular.module("contactController", [])
             if (data.data.success){
                 app.successMessage = data.data.message;
                 $timeout(function(){
-                    $location.path("/profile");
+                    $location.path("/");
                 }, 2000);    
             }else{
                 app.errorMessage = data.data.message;
