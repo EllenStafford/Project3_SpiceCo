@@ -128,8 +128,13 @@ textarea {
     margin: auto;
     /* padding: 10%; */
     text-align: center;
+    
+    
+}
+
+#photo {
     background-image: url("../../../assets/imgs/scatteredSpices.jpg");
-    /* background-repeat: repeat-x; */
+    
 }
 
 
