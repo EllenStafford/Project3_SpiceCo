@@ -279,73 +279,94 @@ textarea {
 .principal h1{
     font-size: 70px;
     margin-bottom: 20px;
+    text-shadow:4px 4px #000000;
    
 }
 
-.principal p{
-    font-size: 20px;
+.principal h3{
+    font-size: 40px;
+    text-shadow:4px 4px #000000;
 }
 
 @keyframes slide {
     0% {
-        background-image: url("../imgs/UseSpoons.jpg");
+        background-image: url("../imgs/LVS_spicebowls.jpg");
     }
-    10% {
-        background-image: url("../imgs/UseSpoons.jpg");
+    5% {
+        background-image: url("../imgs/LVS_spicebowls.jpg");
     }
     15% {
-        background-image: url("../imgs/UseSpiceBowls.jpg");
+        background-image: url("../imgs/LVS_chilipepper.jpg");
     }
     20% {
-        background-image: url("../imgs/UseSpiceBowls.jpg");
-    }
-    25% {
-        background-image: url("../imgs/chiliPepper.jpg");
+        background-image: url("../imgs/LVS_chilipepper.jpg");
     }
     30% {
-        background-image: url("../imgs/chiliPepper.jpg");
+        background-image: url("../imgs/LVS_metalspoons.jpg");
     }
     35% {
-        background-image: url("../imgs/UseSpoons.jpg");
-    }
-    40% {
-        background-image: url("../imgs/UseSpoons.jpg");
+        background-image: url("../imgs/LVS_metalspoons.jpg");
     }
     45% {
-        background-image: url("../imgs/UseSpiceBowls.jpg");
+        background-image: url("../imgs/LVS_woodenspoons.jpg");
     }
     50% {
-        background-image: url("../imgs/UseSpiceBowls.jpg");
-    }
-    55% {
-        background-image: url("../imgs/chiliPepper.jpg");
+        background-image: url("../imgs/LVS_woodenspoons.jpg");
     }
     60% {
-        background-image: url("../imgs/chiliPepper.jpg");
+        background-image: url("../imgs/LVS_spicebowls.jpg");
     }
     65% {
-        background-image: url("../imgs/UseSpoons.jpg");
-    }
-    70% {
-        background-image: url("../imgs/UseSpoons.jpg");
+        background-image: url("../imgs/LVS_spicebowls.jpg");
     }
     75% {
-        background-image: url("../imgs/UseSpiceBowls.jpg");
+        background-image: url("../imgs/LVS_chilipepper.jpg");
     }
     80% {
-        background-image: url("../imgs/UseSpiceBowls.jpg");
-    }
-    85% {
-        background-image: url("../imgs/chiliPepper.jpg");
+        background-image: url("../imgs/LVS_chilipepper.jpg");
     }
     90% {
-        background-image: url("../imgs/chiliPepper.jpg");
-    }
-    95% {
-        background-image: url("../imgs/UseSpoons.jpg");
+        background-image: url("../imgs/LVS_metalspoons.jpg");
     }
     100% {
-        background-image: url("../imgs/UseSpoons.jpg");
+        background-image: url("../imgs/LVS_metalspoons.jpg");
     }
+
 }
+
+/* PROFILE page */
+#profileContainer{
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+    background-image: url("../imgs/LVS_heartspicesbanner.jpg");
+    background-repeat: repeat-x;
+}
+
+.heading{
+    color: #000000;
+    font-size: 2.5em;
+    font-weight: bold;  
+}
+
+
+.pTable{
+    margin: auto;
+    text-align: left;
+}
+
+th{
+    color:#FA3905;
+    font-size: 1.5em;
+    font-weight: normal; 
+}
+
+td{
+    color:#000000;
+    font-size: 1.5em;
+    font-weight: bold;  
+}
+
+
+
 
