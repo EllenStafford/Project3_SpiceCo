@@ -103,9 +103,8 @@ textarea {
     text-align: center;
 }
 
-#alertMessages {
-    width: 60%;
-    padding-right: 50%;
+#alertMessages3 {
+    width: 100%;
 }
 
 #inquirycard {
