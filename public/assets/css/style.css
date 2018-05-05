@@ -1,6 +1,6 @@
 /* Styling for index.html */
 .navbar{
-    font-size: .7em;
+    font-size: 1em;
 }
 
 .navbar-brand{
@@ -13,6 +13,7 @@
 }
 
 .footer {
+    position: fixed;
     text-align: center;
     border-top: #FBE104;
     border-top-style: solid;
@@ -28,7 +29,7 @@
 }
 
 h6 {
-    font-size: .7em;
+    font-size: .8em;
     margin-bottom: .1em;
 }
 
@@ -74,6 +75,8 @@ p{
     width: 70%;
 }
 
+
+/* Contact Page (contact.html) */
 
 .container {
     /* margin: auto; */
@@ -399,7 +402,6 @@ td{
 }
 
 .btn:focus {
-    utline: none !important;
     box-shadow: none;
 }
 
