@@ -85,7 +85,6 @@ p{
     /* padding-left: 12.5%;
     padding-right: 12.5%; */
     margin-left: 23%;
-    /* margin-right: 12.5%; */
 }
 
 input {
@@ -121,6 +120,9 @@ textarea {
        
 }
 
+#contactbutton{
+    margin-left: 45%;
+}
 
 
 
