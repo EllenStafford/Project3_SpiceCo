@@ -50,8 +50,10 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         templateUrl: "../../app/views/pages/users/order.html",
         authenticated: true
     })
-    .when("/messages",{
-        templateUrl: "../../app/views/pages/management/messages.html",
+    .when("/requests",{
+        templateUrl: "../../app/views/pages/management/requests.html",
+        controller: "reqCtrl",
+        controllerAs: "requests",
         authenticated: true,
         permission: ["admin"]
     })
@@ -70,9 +72,10 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         permission: ["admin"]
     })
     .when("/spices",{
-        templateUrl: "../../app/views/pages/users/spices.html",
+        templateUrl: "./app/views/pages/users/spices.html",
         controller: "spicesCtrl",
-        controllerAs: "spicesCtrl"
+        controllerAs: "spicesCtrl",
+        authenticated: false
     })
     .otherwise({redirectTo: "/"});
 
@@ -99,8 +102,7 @@ app.run(['$rootScope', 'Auth', '$location', 'User', function($rootScope, Auth, $
                 }
             } else if (next.$$route.authenticated === false) {
                 if (Auth.isLoggedIn()) {
-                    event.preventDefault(); 
-                    $location.path('/profile'); 
+         
                 }
             }
         }

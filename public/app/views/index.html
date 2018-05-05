@@ -21,7 +21,7 @@
   <!-- Angular Controllers -->
   <script src="../../app/controllers/userController.js"></script>
   <script src="../../app/controllers/main.js"></script>
-  <script src="../../app/controllers/email.js"></script>
+  <script src="../../app/controllers/requestsController.js"></script>
   <script src="../../app/controllers/management.js"></script>
   <script src="../../app/controllers/contact.js"></script>
   <script src="../../app/controllers/clientInquiry.js"></script>
@@ -73,7 +73,7 @@ you can code around them and move them, but do not delete -Melissa  -->
           <a class="nav-link" ng-show="main.isLoggedIn" href="#!/order">Orders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/messages"></a>
+          <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/requests">requests</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/admin">Admin</a>
@@ -91,6 +91,7 @@ you can code around them and move them, but do not delete -Melissa  -->
           </li>
           <li>
             <a ng-show="main.isLoggedIn" href="#!/profile"> {{main.username}}</a>
+            {{console.log(main)}}
           </li>
       </ul>
     </div>

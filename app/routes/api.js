@@ -36,7 +36,7 @@ module.exports = function(router){
         }else{
             user.save(function(err){
                 if (err){
-                    res.json({success: false, message: "An account under that username or email already exists"});
+                    res.json({success: false, message: "Cannot create account"});
                 }else{
                     res.json({success: true, message: "Account created!"});
                 }
@@ -148,11 +148,16 @@ module.exports = function(router){
         const range = (req.query.paginate || 'A-Z').split('-')
         const left = range[0].toUpperCase()
         const right = alphabet[range[1] === 'Z' ? alphabet.indexOf('Z') : alphabet.indexOf(range[1].toUpperCase()) + 1]
-        Spice.find({productName: { $gte: left, $lte: right }}, (err, document)=> {
-            res.json(document)   
-        });
-    });
+        const params = right === 'Z' ? { '$gt': left } : { '$gte': left, '$lte': right }
+        const isLoggedIn = jwt.verify(req.body.token || req.headers["x-access-token"], secret, (err, decoded)=> err ? false : true)
+        const projections = {productName: 1, productSize: 1, weightType: 1, _id: 0}
+        if(isLoggedIn)
+            projections.basePrice = 1
 
+        Spice.find({productName: params}, projections, (err, document)=> {
+            res.json(document)   
+        })
+    })
 
 //loging user out
 //decoded takes the token combines it with the secret, once verified it sends it back decoded as username and email.
@@ -209,7 +214,50 @@ router.get("/management", function(req,res){
     });
 });
 
+router.get("/requests", function(req,res){
+    User.find({}, function(err,users){
+        if(err) throw err;
+        User.findOne({ username: req.decoded.username}, function(err,mainUser){
+            if (err) throw err;
+                if(!mainUser){
+                    res.json({success: false, message: "no user found"});
+                    }else{
+                    if (mainUser.permission === "admin"){
+                        if (!users){
+                            res.json({success:false, message:"you have to be admin"})
+                        }else{
+                            res.json({success:true, users:users, permission: mainUser.permission})
+                        }
+                    }else{
+                        res.json({success: false, message:"you have to be admin"});
+                    }
+                }
+        });
+    });
+});
 
+
+// router.get("/requests", function(req,res){
+//     User.find({}, function(err,users){
+//         if(err) throw err;
+//         User.findOne({ username: req.decoded.username}, function(err,mainUser){
+//             if (err) throw err;
+//                 if(!mainUser){
+//                     res.json({success: false, message: "no user found"});
+//                     }else{
+//                     if (mainUser.permission === "admin"){
+//                         if (!users){
+//                             res.json({success:false, message:"you have to be admin"})
+//                         }else{
+//                             res.json({success:true, users:users, permission: mainUser.permission})
+//                         }
+//                     }else{
+//                         res.json({success: false, message:"you have to be admin"});
+//                     }
+//                 }
+//         });
+//     });
+// });
 
 
     return router;
