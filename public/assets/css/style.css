@@ -124,7 +124,7 @@ textarea {
 }
 
 #contactbutton{
-    margin-left: 43%;
+    margin-left: 42%;
 }
 
 
@@ -393,8 +393,6 @@ td{
     border-color: #FA3905; 
     font-family : arial;
     font-size: 1em;
-    box-shadow:none;
-    outline: none;
   
 }
 .btn:hover{
