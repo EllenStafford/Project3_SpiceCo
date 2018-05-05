@@ -45,21 +45,19 @@
         <label for="exampleFormControlTextarea1">Message</label>
         <textarea class="form-control" id="inputMessage" rows="6" ng-model="contact.regCon.message"></textarea>
         </div>
-
-    <div class="form-group">
-    </div>
     <button class="btn btn-primary" id= "contactbutton" type="submit">SEND MESSAGE</button>
+    <br>
+    <br>
     </form>
     <div id="alertMessages3">
     <div class "row show-hide-message" ng-show="contact.successMessage">
         <div class="alert alert-success" size="100%">{{contact.successMessage}}</div>
     </div>
+
     <div class "row show-hide-message" ng-show="contact.errorMessage">
         <div class="alert alert-danger" size="100%">{{contact.errorMessage}}</div>
     </div>
 </form>
-<br>
-<br>
 <br>
 <br>
 <br>
