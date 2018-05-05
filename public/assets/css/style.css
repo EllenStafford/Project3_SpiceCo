@@ -13,6 +13,7 @@
 }
 
 .footer {
+    position: fixed;
     text-align: center;
     border-top: #FBE104;
     border-top-style: solid;
