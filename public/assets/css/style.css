@@ -115,7 +115,7 @@ textarea {
 }
 
 #alertMessages {
-    width: 75%;
+    width: 60%;
     padding-right: 50%;
 }
 
@@ -128,8 +128,7 @@ textarea {
     margin: auto;
     /* padding: 10%; */
     text-align: center;
-    
-    
+       
 }
 
 
@@ -390,7 +389,8 @@ p {
 .heading{
     color: #000000;
     font-size: 2.5em;
-    font-weight: bold;  
+    font-weight: bold;
+    margin-top: 30%;  
 }
 
 
@@ -400,17 +400,22 @@ p {
 }
 
 th{
-    color:#FA3905;
+    color:#000000;
     font-size: 1.5em;
-    font-weight: normal; 
+    font-weight: bold; 
 }
 
 td{
-    color:#000000;
+    color:#FA3905;
     font-size: 1.5em;
-    font-weight: bold;  
+    font-weight: normal;  
 }
 
+/* All buttons */
+.btn{
+    background-color: #FA3905;
+    border: solid 3px #000000;
 
+}
 
 

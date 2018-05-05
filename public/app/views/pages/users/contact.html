@@ -5,27 +5,29 @@
 
 
 
-<div class="container">
+<div class="contactContainer">
 
     <form id="gcontactbodyform" ng-submit="contact.regContact(regCon);">
-        <div class="form-group">
-            <label for="CompanyName">Company Name</label>
-            <input type="text" class="form-control-sm" size="81%" id="CompanyName" placeholder="Company Name" ng-model="contact.regCon.companyName">
-        </div>
+        <!-- <div class="contactRow">       
+                <div class="form-group">
+                     <label for="CompanyName">Company Name</label>
+                    <input type="text" class="form-control-sm" size="80%" id="CompanyName" placeholder="Company Name" ng-model="contact.regCon.companyName">
+                 </div>
+         </div>
         <div class="contactRow">
             <div class="form-group">
-                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
-                <label for="ContactName"> Contact Name</label>
+                <div class="col-sm-offset-2 col-sm-10"> 
+               <label for="ContactName"> Contact Name</label>
                 <input type="text" class="form-control-sm" size="83%" id="ContactName" placeholder="Contact Name" ng-model="contact.regCon.contactName">
-                <!-- </div> -->
+                </div>
             </div>
         </div>
         <div class="contactRow">
             <div class="form-group">
-                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <div class="col-sm-offset-2 col-sm-10">
                 <label for="StreetAddress">Street Address</label>
                 <input type="text" class="form-control-sm" size="83%" id="StreetAddress" placeholder="Street Address" ng-model="contact.regCon.streetAddress">
-                <!-- </div> -->
+                </div>
             </div>
         </div>
         <div class="contactRow row">
@@ -47,16 +49,16 @@
 
         <div class="contactRow">
             <div class="form-group">
-                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <div class="col-sm-offset-2 col-sm-10">
                 <label for="Phone">Phone</label>
                 <input type="text" class="form-control-sm" size="30" id="Phone" placeholder="Phone" ng-model="contact.regCon.phone">
                 <label for="Email">Email Address</label>
                 <input type="email" class="form-control-sm" size="37" id="Email" aria-describedby="emailHelp" placeholder="Enter email" ng-model="contact.regCon.email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                <!-- </div> -->
+                </div> 
             </div>
         </div>
-        <!-- <div class="contactRow">
+        <div class="contactRow">
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <label for="Email">Email Address</label>
@@ -64,14 +66,14 @@
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                     </div>
-                </div> -->
+                </div>
         <div class="contactRow">
             <div class="form-group">
-                <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+                <div class="col-sm-offset-2 col-sm-10"> 
                 <label class="Questions" for="Questions">Questions/Comments</label>
                 <br>
                 <textarea class="form-control-md" id="Questions" placeholder="Enter questions or comments here" rows="4" size="25" ng-model="contact.regCon.message"></textarea>
-                <!-- </div> -->
+                </div>
             </div>
         </div>
 
@@ -85,5 +87,54 @@
         <div class "row show-hide-message" ng-show="contact.errorMessage">
             <div class="alert alert-danger" size="100%">{{contact.errorMessage}}</div>
         </div>
-    </div>
+    </div> -->
+
+    <form>
+            <div class="form-group">
+                    <label for="inputCompany">Company Name</label>
+                    <input type="text" class="form-control" id="inputCompany" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+                    <label for="inputCompany">Contact Name</label>
+                    <input type="text" class="form-control" id="inputCompany" placeholder="Contact Name">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPhone">Phone</label>
+                <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+            </div>
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+
+
+
 </div>
