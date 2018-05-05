@@ -24,6 +24,7 @@
     bottom: 0;
     padding: 10px;
     font-weight: bold;
+    position: fixed;
 }
 
 h6 {
@@ -120,7 +121,7 @@ textarea {
 }
 
 #contactbutton{
-    margin-left: 45%;
+    margin-left: 42%;
 }
 
 
@@ -383,9 +384,16 @@ td{
 
 /* All buttons */
 .btn{
-    background-color: #FA3905;
-    border: solid 3px #000000;
-
+    transition-duration: 0.4s;
+    color: #FFFFFF; 
+    background-color: #FA3905; 
+    border-color: #FA3905; 
+    font-family : inherit;
+    font-size: 1em;
+}
+.btn:hover{
+    background-color: #B32B06; 
+    border-color: #FA3905; 
 }
 
 
