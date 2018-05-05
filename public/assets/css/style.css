@@ -163,9 +163,9 @@ textarea {
     opacity: 1;
 }
 
+    /*About page design 
 
 
-/* New About page design 
 #aboutContainer{
     margin: auto;
     text-align: center;
@@ -277,7 +277,7 @@ body{
 #box1 {
     height: 100vh;
     width: 100%;
-    background-image: url("../imgs/LVS_Truck.jpg");
+    background-image: url("../imgs/TruckTransparency.jpg");
     background-size: cover;
 }
 #box2 {
@@ -292,6 +292,22 @@ body{
     background-image: url("../imgs/LVS_SpiceBoard.jpg");
     background-size: cover;
 }
+
+h1 {
+    color: #FA3905;
+    padding-top: 10%;
+    margin-right: 60%;
+    font-size: 25px;
+}
+
+p {
+    /*font-size: .7em;*/
+    font-size: 15px;
+    color: white;
+    margin-left: 5%;
+    padding-top: 3%;
+}
+
 
 /* Styling for index.html */
 .load{
