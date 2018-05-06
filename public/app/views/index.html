@@ -73,6 +73,15 @@ you can code around them and move them, but do not delete -Melissa  -->
 <li class="nav-item nav-btn">
 <a class="nav-link" ng-show="main.isLoggedIn" href="#!/inquiry" >&ensp;CONTACT&ensp;</a>
 </li>
+
+<!-- admin orders -->
+<li class="nav-item nav-btn">
+<a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/adminorders" >&ensp; ADMIN ORDERS&ensp;</a>
+</li>
+
+<li class="nav-item nav-btn">
+    <a class="nav-link" ng-show="main.isLoggedIn" href="#!/cheforders" >&ensp;CHEF ORDERS&ensp;</a>
+    </li>
   <li class="nav-item">
       <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </li>
