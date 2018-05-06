@@ -404,3 +404,13 @@ td{
     box-shadow: none;
 }
 
+/* SPICES page */
+.spice{
+    font-size: 1.5em;
+}
+
+#all-spices{
+    font-size: 2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
