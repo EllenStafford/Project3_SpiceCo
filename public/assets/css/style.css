@@ -364,7 +364,7 @@ textarea {
 /* PROFILE page */
 #profileContainer{
     margin: auto;
-    padding: 10%;
+    padding: 3%;
     text-align: center;
     background-image: url("../imgs/LVS_heartspicesbanner.jpg");
     background-repeat: repeat-x;
@@ -407,6 +407,7 @@ td{
 .btn:focus {
     box-shadow: none;
 }
+
 
 /* SPICES page */
 #spiceContainer{

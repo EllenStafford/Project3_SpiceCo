@@ -1,26 +1,26 @@
 <div class "contact-header">
-        <img src="../../../../assets/imgs/LVS_spoonsbanner.jpg" alt="Wooden Spoons" class="responsive">
-        <h3>Call Tony at (704) 941-0012 or complete the form below.</h3>
+    <img src="../../../../assets/imgs/LVS_spoonsbanner.jpg" alt="Wooden Spoons" class="responsive">
+    <h3>Call Tony at (704) 941-0012 or complete the form below.</h3>
 </div>
-    
+
 
 <form id="gcontactbodyform" ng-submit="contact.regContact(regCon);">
     <div class="form-group">
-            <label for="inputCompany">Company Name</label>
-            <input type="text" class="form-control" id="inputCompany" placeholder="Company Name" ng-model="contact.regCon.companyName">
+        <label for="inputCompany">Company Name</label>
+        <input type="text" class="form-control" id="inputCompany" placeholder="Company Name" ng-model="contact.regCon.companyName">
     </div>
     <div class="form-group">
-            <label for="inputCompany">Contact Name</label>
-            <input type="text" class="form-control" id="inputCompany" placeholder="Contact Name" ng-model="contact.regCon.contactName">
+        <label for="inputCompany">Contact Name</label>
+        <input type="text" class="form-control" id="inputCompany" placeholder="Contact Name" ng-model="contact.regCon.contactName">
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" ng-model="contact.regCon.email">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" ng-model="contact.regCon.email">
         </div>
         <div class="form-group col-md-6">
-        <label for="inputPhone">Phone</label>
-        <input type="text" class="form-control" id="inputPhone" placeholder="Phone" ng-model="contact.regCon.phone">
+            <label for="inputPhone">Phone</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder="Phone" ng-model="contact.regCon.phone">
         </div>
     </div>
     <div class="form-group">
@@ -30,26 +30,28 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity" ng-model="contact.regCon.city">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" ng-model="contact.regCon.city">
         </div>
         <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <input type="text" class="form-control" id="inputState" ng-model="contact.regCon.state">
-    </div>
+            <label for="inputState">State</label>
+            <input type="text" class="form-control" id="inputState" ng-model="contact.regCon.state">
+        </div>
         <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip" ng-model="contact.regCon.zip">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" ng-model="contact.regCon.zip">
         </div>
         <div class="form-group col-md-12">
-        <label for="exampleFormControlTextarea1">Message</label>
-        <textarea class="form-control" id="inputMessage" rows="6" ng-model="contact.regCon.message"></textarea>
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="inputMessage" rows="6" ng-model="contact.regCon.message"></textarea>
         </div>
-    <button class="btn btn-primary" id= "contactbutton" type="submit">SEND MESSAGE</button>
-    <br>
-    <br>
-    </form>
-    <div id="alertMessages3">
+        <button class="btn btn-primary" id="contactbutton" type="submit">SEND MESSAGE</button>
+        <br>
+        <br>
+        <br>
+        <br>
+</form>
+<div id="alertMessages3">
     <div class "row show-hide-message" ng-show="contact.successMessage">
         <div class="alert alert-success" size="100%">{{contact.successMessage}}</div>
     </div>
@@ -57,8 +59,8 @@
     <div class "row show-hide-message" ng-show="contact.errorMessage">
         <div class="alert alert-danger" size="100%">{{contact.errorMessage}}</div>
     </div>
-</form>
-<br>
-<br>
-<br>
-<br>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
