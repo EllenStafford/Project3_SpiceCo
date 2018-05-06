@@ -22,15 +22,6 @@
      position:relative;
      left:10%;
 } 
-
-/* .logo {
-    position: absolute;
-    left: 10%;
-    /* display: block; */
-    /* pointer-events:none;
-
-}  */
-
 .footer {
     position: fixed;
     text-align: center;
@@ -92,22 +83,6 @@ p{
     margin-left: 15%;
     margin-right:15%;
     width: 70%;
-}
-
-
-/* Contact Page (contact.html) */
-
-.container {
-    /* margin: auto; */
-    text-align: left;
-    /* width: 40%; */
-    /* background-color: aqua; */
-    /* padding-right: 15%; */
-    padding-top: 5%;
-    padding-bottom: 5%;
-    /* padding-left: 12.5%;
-    padding-right: 12.5%; */
-    margin-left: 23%;
 }
 
 input {
