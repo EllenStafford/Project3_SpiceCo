@@ -405,12 +405,27 @@ td{
 }
 
 /* SPICES page */
+#spiceContainer{
+    margin: left;
+    padding: 1%;
+    text-align: center;
+}
+
+
 .spice{
+    text-align: center;
     font-size: 1.5em;
 }
 
 #all-spices{
+    text-align: center;
     font-size: 2em;
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+.container{
+    text-align:center;
+}
+
+
