@@ -129,7 +129,7 @@ module.exports = function(router){
 
 //user login 
     router.post('/authenticate', function (req,res){
-        User.findOne({ username: req.body.username}).select("username email password business phone address message")
+        User.findOne({ username: req.body.username}).select("username email password business phone address usercity userstate userzip")
         .exec(function(err,user){
             if (err) throw err;
 //comparing data to db to see if account exists
@@ -145,7 +145,10 @@ module.exports = function(router){
                if(!validPassword){
                    res.json({success: false, message: "Invalid Password"});
                }else {
-                var token = jwt.sign({ username: user.username, email: user.email, password: user.password, business: user.business, phone: user.phone, address: user.address}, secret, { expiresIn: "24h" });
+                var token = jwt.sign({ username: user.username, email: user.email, 
+                    password: user.password, business: user.business, phone: user.phone, 
+                    address: user.address, usercity: user.usercity, userstate: user.userstate, 
+                    userzip: user.userzip }, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
                }
             }
@@ -244,29 +247,6 @@ router.get("/requests", function(req,res){
         });
     });
 });
-
-
-// router.get("/requests", function(req,res){
-//     User.find({}, function(err,users){
-//         if(err) throw err;
-//         User.findOne({ username: req.decoded.username}, function(err,mainUser){
-//             if (err) throw err;
-//                 if(!mainUser){
-//                     res.json({success: false, message: "no user found"});
-//                     }else{
-//                     if (mainUser.permission === "admin"){
-//                         if (!users){
-//                             res.json({success:false, message:"you have to be admin"})
-//                         }else{
-//                             res.json({success:true, users:users, permission: mainUser.permission})
-//                         }
-//                     }else{
-//                         res.json({success: false, message:"you have to be admin"});
-//                     }
-//                 }
-//         });
-//     });
-// });
 
 router.delete("/management/:username", function(req,res){
     var deleteUser = req.params.username;
