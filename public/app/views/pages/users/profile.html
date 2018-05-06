@@ -1,44 +1,67 @@
 <div id="profileContainer" class="responsive">
   <div class="profileWrapper">
-    <div class="heading">
+    <div class="profileheading">
 
         <h1>Welcome back {{main.username}}!</h1>
 
     </div>
-
-
-
     <table class="pTable">
-        <tr>
+        <tr class="hrtag">
             <th>Business:</th>
             <td>{{ main.business }}</td>
         </tr>
-        <tr>
+        <tr class="hrtag">
             <th>Email:</th>
             <td>{{ main.email}}</td>
         </tr>
-        <tr>
+        <tr class="hrtag">
             <th>Phone:</th>
             <td>{{ main.phone }}</td>
         </tr>
-        <tr>
-            <th>Address:</th>
-            <td>{{ main.address }}</td>
-        </tr>
-        <tr>
-                <th>City:</th>
-                <td>{{ main.city }}</td>
-        </tr>
-        <tr>
-                <th>State:</th>
-                <td>{{ main.state }}</td>
-        </tr>
-        <tr>
-                <th>Zip:</th>
-                <td>{{ main.zip }}</td>
-        </tr>
     </table>   
 </div>
+<div class="profileWrapper">
+        <div class="profileheading">
+    
+            <h1>View Your Past Orders</h1>
+    
+        </div>
+        <table class="pTable">
+            <tr class="hrtag">
+                <th>TESTING:</th>
+                <td>UNDER CONSTRUCTION</td>
+            </tr>
+            <tr class="hrtag">
+                <th>TESTING:</th>
+                <td>UNDER CONSTRUCTION</td>
+            </tr>
+            <tr class="hrtag">
+                <th>TESTING:</th>
+                <td>UNDER CONSTRUCTION</td>
+            </tr>
+        </table>   
+    </div>
+    <div class="profileWrapper">
+            <div class="profileheading">
+        
+                <h1>Questions?</h1>
+        
+            </div>
+            <table class="pTable">
+                <tr class="hrtag">
+                    <th>Call Tony at (704) 941-0012</th>
+                </tr>
+                <tr class="hrtag">
+                    <th> &ensp;&ensp;or send us a message</th>
+                </tr>
+                <tr></tr>
+                <th><input type="button" class= "inqbtn" onclick="location.href='http://localhost:8080/#!/inquiry';" value="MESSAGE" />
+                </th>
+                </tr>
+            </table>   
+        </div>
+
+    
 <br>
 <br>
 <br>
