@@ -85,6 +85,7 @@ p{
 .responsive {
     width: 100%;
     height: auto;
+    word-wrap: break-word;
 }
 
 #gcontactbodyform { 
@@ -147,6 +148,9 @@ textarea {
     height: 10%;
 }
 
+#registerbutton{
+    margin-left: 40%;
+}
 /* LOGIN page */
 #loginContainer{
     margin: auto;
@@ -368,6 +372,7 @@ textarea {
     text-align: center;
     background-image: url("../imgs/LVS_heartspicesbanner.jpg");
     background-repeat: repeat-x;
+    word-wrap: break-word;
 }
 
 .profileWrapper{
@@ -377,6 +382,7 @@ textarea {
     padding: 2%;
     background-color:#FFFFFF;
     width: 60%;
+    word-wrap: break-word; 
 }
 
 .heading{
@@ -389,10 +395,12 @@ textarea {
     border-spacing: 0 1em;
     margin: auto;
     text-align: left;
+    word-wrap: break-word;
 }
 
 
-th{
+
+/* th{
     color:#000000;
     font-size: 1em;
     font-weight: bold;
@@ -410,7 +418,18 @@ tr{
     width: 100%;
     white-space: normal;
     overflow: hidden;
+} */
+.clientManagement{
+    text-align: center;
+    font-family : arial;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    font-size: 30px;
 }
+
 
 
 .btn{
@@ -420,6 +439,7 @@ tr{
     border-color: #FA3905; 
     font-family : arial;
     font-size: 1em;
+
   
 }
 .btn:hover{
