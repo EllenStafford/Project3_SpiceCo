@@ -20,8 +20,17 @@
 }
 .justified {
      position:relative;
-     left:10%;
+     left:35%;
 } 
+
+/* .logo {
+    position: absolute;
+    left: 10%;
+    /* display: block; */
+    /* pointer-events:none;
+
+}  */
+
 .footer {
     position: fixed;
     text-align: center;
@@ -85,6 +94,22 @@ p{
     width: 70%;
 }
 
+
+/* Contact Page (contact.html) */
+
+.container {
+    /* margin: auto; */
+    text-align: left;
+    /* width: 40%; */
+    /* background-color: aqua; */
+    /* padding-right: 15%; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* padding-left: 12.5%;
+    padding-right: 12.5%; */
+    margin-left: 23%;
+}
+
 input {
     padding: 15px;
     align-self: center;
@@ -119,11 +144,6 @@ textarea {
 
 #contactbutton{
     margin-left: 42%;
-    height: 10%;
-}
-
-#registerbutton{
-    margin-left: 38%;
     height: 10%;
 }
 
@@ -353,7 +373,7 @@ textarea {
 .profileWrapper{
     border: solid 1px #000000;
     margin:auto;
-    margin-top: 5%;
+    margin-top: 3%;
     padding: 2%;
     background-color:#FFFFFF;
     width: 60%;
@@ -361,10 +381,12 @@ textarea {
 
 .heading{
     color: #000000;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold; 
 }
 .pTable{
+    border-collapse: separate;
+    border-spacing: 0 1em;
     margin: auto;
     text-align: left;
 }
@@ -372,17 +394,25 @@ textarea {
 
 th{
     color:#000000;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
-    white-space: normal; 
+    width: 25%;
 }
 
 td{
     color:#FA3905;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: normal;
-    white-space: normal;  
+    width: 100%;
 }
+
+tr{
+    width: 100%;
+    white-space: normal;
+    overflow: hidden;
+}
+
+
 .btn{
     transition-duration: 0.4s;
     color: #FFFFFF; 
