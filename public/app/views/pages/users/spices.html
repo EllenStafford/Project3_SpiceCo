@@ -1,24 +1,49 @@
 <div class = "page-header">
-</div>
-
-</div>
-<div align="center" class="containter">
-    <div id="js--listTop"></div>
-    <h2 id="all-spices">Spices A-Z</h2>
-
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-C')">A-C</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('D-F')">D-F</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('G-I')">G-I</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('J-L')">J-L</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('M-O')">M-O</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
-<button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
-<div>
-<br>
-    <div class="spiceWrapper" ng-repeat="spice in spicesCtrl.spiceData">
-        <p class='spice'>{{spice.productName}} {{spice.productSize}}{{spice.weightType}} {{spice.basePrice}}</p>
-    </div>
-</div>
-</div>
-</div>
+        <!--  <h1>Hello {{main.username}} from spices</h1> -->
+      </div>
+      
+      </div>
+      <div align="center" class="containter">
+          <div id="js--listTop"></div>
+          <h2 id="all-spices">Spices A-Z</h2>
+      
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-C')">A-C</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('D-F')">D-F</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('G-I')">G-I</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('J-L')">J-L</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('M-O')">M-O</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
+      <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
+      <div>
+      <br>
+          <div class="spiceWrapper" ng-repeat="spice in spicesCtrl.spiceData">
+              <p class='spice'>{{spice.productName}} {{spice.productSize}}{{spice.weightType}} {{spice.basePrice}}</p>
+          </div>
+      </div>
+      </div>
+      </div>
+      
+  
+  <!--
+  <div class="spiceContainer">
+      <div align="center" class="container">
+          <div id="js--listTop"></div>
+          <h2 id="all-spices">Spices A-Z</h2>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-C')">A-C</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('D-F')">D-F</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('G-I')">G-I</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('J-L')">J-L</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('M-O')">M-O</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
+          <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
+          <div>
+              <br>
+              <div class="spiceWrapper" ng-repeat="spice in spicesCtrl.spiceData">
+                  <p class='spice'>{{spice.productName}} {{spice.productSize}}{{spice.weightType}} {{spice.basePrice}}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  -->
