@@ -2,6 +2,8 @@
     <img src="../../../../assets/imgs/LVS_spoonsbanner.jpg" alt="Wooden Spoons" class="responsive">
     <h3>Call Tony at (704) 941-0012 or complete the form below.</h3>
 </div>
+<br>
+<br>
 
 <form id="gcontactbodyform" ng-submit="inquiry.inqUser(inqData);">
 
@@ -22,7 +24,7 @@
     </div>
     <div class="form-group col-md-12">
         <label for="inquiryMessage">Message</label>
-        <textarea class="form-control" id="inquiryMessage" rows="6" ng-model="inquiry.inqData.inquiryMessage"></textarea>
+        <textarea class="form-control" id="inquiryMessage" rows="6" placeholder="Message" ng-model="inquiry.inqData.inquiryMessage"></textarea>
     </div>
 </div>
     <button class="btn btn-primary" id="contactbutton" type="submit">SEND MESSAGE</button>
