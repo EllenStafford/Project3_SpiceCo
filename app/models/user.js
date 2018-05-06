@@ -10,7 +10,10 @@ var UserSchema =new Schema({
     address: {type: String, required: true, lowercase: true},
     password: {type: String, required:true},
     email: {type: String, required: true, lowercase: true, unique:true},
-    permission: {type: String, required: true, default: "user"}
+    permission: {type: String, required: true, default: "user"},
+    usercity: {type: String,required: true, lowercase: true},
+    userstate: {type: String,lowercase: true, lowercase: true},
+    userzip: {type: String,lowercase: true, lowercase: true}
 });
 
 

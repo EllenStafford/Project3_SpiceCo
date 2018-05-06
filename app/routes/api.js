@@ -20,6 +20,9 @@ module.exports = function(router){
         user.address = req.body.address;
         user.password = req.body.password;
         user.email = req.body.email;
+        user.usercity = req.body.usercity;
+        user.userstate = req.body.userstate;
+        user.userzip = req.body.userzip;
 
         if (req.body.business === null || req.body.business === ""){
             res.json({success: false, message: "A business name is required'"});
@@ -33,6 +36,12 @@ module.exports = function(router){
             res.json({success: false, message: "A password is required"});
         }else if (req.body.email === null || req.body.email === ""){
             res.json({success: false, message: "An email is required"});
+        }else if (req.body.usercity === null || req.body.usercity === ""){
+            res.json({success: false, message: "A city is required"});
+        }else if (req.body.userstate === null || req.body.userstate === ""){
+            res.json({success: false, message: "A state is required"});
+        }else if (req.body.userzip === null || req.body.userzip === ""){
+            res.json({success: false, message: "A zip is required"});
         }else{
             user.save(function(err){
                 if (err){

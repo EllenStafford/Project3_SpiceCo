@@ -1,42 +1,11 @@
-<!-- <div class="row">
-
-    <div class="card text-center mx-auto border border-dark" id="inquiryCard" style="width: 24rem; padding: 4%;">
-        <div class="card-body">
-            <form ng-submit="register.regUser(regData);">
-                <label><b>Business Name:</b></label>
-                <input type="text" name="business" ng-model="register.regData.business">
-                <br>
-                <label><b>Username:</b></label>
-                <input type="text" name="username" ng-model="register.regData.username">
-                <br>
-                <label><b>Phone Number:</b></label>
-                <input type="text" name="phone" ng-model="register.regData.phone">
-                <br>
-                <label><b>Address:</b></label>
-                <input type="text" name="address" ng-model="register.regData.address">
-                <br>
-                <label><b>Email Address:</b></label>
-                <input type="text" name="email" ng-model="register.regData.email">
-                <br>
-                <label><b>Password:</b></label>
-                <input type="password" name="password" ng-model="register.regData.password">
-                <hr>
-                <button type="submit"><b>Register a New Client</b></button>
-            </form>
-
-            <div class "row show-hide-message" ng-show="register.successMsg">
-                <div class="alert alert-success">{{register.successMsg}}</div>
-            </div>
-            <div class "row show-hide-message" ng-show="register.errorMsg">
-                <div class="alert alert-danger">{{register.errorMsg}}</div>
-            </div>
-
-        </div>
+<div class "contact-header">
+        <img src="../../../../assets/imgs/LVS_spoonsbanner.jpg" alt="Wooden Spoons" class="responsive">
+        <h3>Register a new client</h3>
     </div>
-</div>  -->
-
-
-<form id="registerform" ng-submit="register.regUser(regData);">
+<br>
+<br>
+<br>
+<form id="gcontactbodyform" ng-submit="register.regUser(regData);">
         <div class="form-row">
         <div class="form-group col-md-6">
             <label for="business">Business Name</label>
@@ -50,29 +19,45 @@
         <div class="form-row">
         <div class="form-group col-md-4">
             <label for="phone">Phone</label>
-            <input type="text" class="form-control" id="phone" ng-model="register.regData.phone">
+            <input type="text" class="form-control" id="phone" placeholder="client's phone here" ng-model="register.regData.phone">
         </div>
         <div class="form-group col-md-4">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" ng-model="register.regData.email">
+            <input type="email" class="form-control" id="email" placeholder="client's email here" ng-model="register.regData.email">
         </div>
         <div class="form-group col-md-4">
             <label for="password">Password</label>
-            <input type="text" class="form-control" id="password" ng-model="register.regData.password">
+            <input type="text" class="form-control" id="password" placeholder="client's password here" ng-model="register.regData.password">
         </div>
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label for="address">Address</label>
-            <textarea class="form-control" id="address" rows="6" placeholder="Message" ng-model="inquiry.inqData.inquiryMessage"></textarea>
+            <input type="text" class="form-control" id="address" placeholder="Client's address here" ng-model="register.regData.address">
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="usercity">City</label>
+            <input type="text" class="form-control" id="usercity" ng-model="register.regData.usercity">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="userstate">State</label>
+            <input type="text" class="form-control" id="userstate" ng-model="register.regData.userstate">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="userzip">Zip</label>
+            <input type="text" class="form-control" id="userzip" ng-model="register.regData.userzip">
         </div>
     </div>
-        <button class="btn btn-primary" id="contactbutton" type="submit">SEND MESSAGE</button>
-        <div class "row show-hide-message" ng-show="inquiry.successMessages">
-                <div class="alert alert-success">{{inquiry.successMessages}}</div>
-            </div>
-            <div class "row show-hide-message" ng-show="inquiry.errorMessages">
-                <div class="alert alert-danger">{{inquiry.errorMessages}}</div>
-            </div>
+        <button class="btn btn-primary" id="registerbutton" type="submit">REGISTER NEW CLIENT</button>
+        <div class "row show-hide-message" ng-show="register.successMsg">
+            <div class="alert alert-success">{{register.successMsg}}</div>
+        </div>
+        <div class "row show-hide-message" ng-show="register.errorMsg">
+                <div class="alert alert-danger">{{register.errorMsg}}</div>
+        </div>
+
+        
     </form>
     <br>
     <br>

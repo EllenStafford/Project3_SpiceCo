@@ -147,6 +147,11 @@ textarea {
     height: 10%;
 }
 
+#registerbutton{
+    margin-left: 38%;
+    height: 10%;
+}
+
 /* LOGIN page */
 #loginContainer{
     margin: auto;
