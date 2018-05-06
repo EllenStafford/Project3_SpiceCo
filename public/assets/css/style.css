@@ -369,26 +369,39 @@ textarea {
     background-image: url("../imgs/LVS_heartspicesbanner.jpg");
     background-repeat: repeat-x;
 }
+
+.profileWrapper{
+    border: solid 1px #000000;
+    margin:auto;
+    margin-top: 5%;
+    padding: 2%;
+    background-color:#FFFFFF;
+    width: 60%;
+}
+
 .heading{
     color: #000000;
     font-size: 2.5em;
-    font-weight: bold;
-    margin-top: 30%;  
+    font-weight: bold; 
 }
 .pTable{
     margin: auto;
     text-align: left;
 }
+
+
 th{
     color:#000000;
     font-size: 1.5em;
-    font-weight: bold; 
+    font-weight: bold;
+    white-space: normal; 
 }
 
 td{
     color:#FA3905;
     font-size: 1.5em;
-    font-weight: normal;  
+    font-weight: normal;
+    white-space: normal;  
 }
 .btn{
     transition-duration: 0.4s;
