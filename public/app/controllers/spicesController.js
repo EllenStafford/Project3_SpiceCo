@@ -2,6 +2,8 @@ angular.module("spicesCtrl", ["authServices"])
 
 .controller("spicesCtrl", function(Auth, $scope, $http, $location, $timeout){
     var app= this;
+    app.totalPrice = 0;
+
     $scope.fetchSpices = query=> {
         const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
         const range = (query || 'A-Z').split('-')
@@ -23,6 +25,9 @@ angular.module("spicesCtrl", ["authServices"])
             })
         })
     }
+
+    $scope.total = price=> app.totalPrice += parseFloat(price.substring(1))
+
 
    
     
