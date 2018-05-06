@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 
 
-  <title>This is a test</title>
+  <title>Love Valley Spices</title>
 
   <!-- Angular Files -->
   <script src="../../assets/js/angular.js"></script>
@@ -35,71 +35,76 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
-
+    
+   
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
-
-
+  <!-- <span class="logo img-responsive">
+      <img src="../../assets/imgs/logo.jpg" id="logo"> </span> -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <!-- front end team... DO NOT delete these next TWO lines of code
 you can code around them and move them, but do not delete -Melissa  -->
 
+<!-- not logged in navbar -->
 <body ng-app="angularUser" ng-controller="mainCtrl as main">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top ">
-
-    <a class="navbar-brand" href="#">LOVE VALLEY WHOLESALE SPICE COMPANY</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#!/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/spices">Spices</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/inquiry">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/order">Orders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/requests">requests</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/admin">Admin</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">Log in</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#!/register"></a>
-          <li class="nav-item active">
-            <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">Log out</a>
-
-
-            <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/management"></a>
-          </li>
-          <li>
-            <a ng-show="main.isLoggedIn" href="#!/profile"> {{main.username}}</a>
-            {{console.log(main)}}
-          </li>
-      </ul>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+  <a class="navbar-brand" href="#" >LOVE VALLEY WHOLESALE SPICE COMPANY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+  aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav justified">
+  <li class="nav-item">
+    <a class="nav-link" href="#!/">&ensp;HOME&ensp;</a>
+  </li>
+  <li class="nav-item" >
+    <a class="nav-link" href="#!/about">&ensp;ABOUT&ensp;</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#!/spices">&ensp;SPICE&ensp;</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/contact">&ensp;CONTACT&ensp;</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </li>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/admin">&ensp;ADMIN&ensp;</a>
+    </li>
+    <li>
+      <a class="nav-link" ng-show="main.isLoggedIn" href="#!/profile">&ensp;PROFILE&ensp;</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </ul>
+  </div>
 
   </nav>
 
-  <div ng-view></div>
+  <!-- <li class="nav-item nav-btn">
+      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/requests"></a>
+    </li>
+      <li class="nav-item nav-btn">
+      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/register"></a>
+    </li>   
+      <li class="nav-item nav-btn">
+      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/management"></a>
+      </li> 
+            <li class="nav-item nav-btn">
+          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/order">ORDERS</a>
+        </li>
+              <li class="nav-item nav-btn">
+          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/inquiry" >CONTACT</a>
+        </li>
+      
+      -->
 
+  <div ng-view></div>
 
   <div class="footer">
     <div class="row">
@@ -135,6 +140,7 @@ you can code around them and move them, but do not delete -Melissa  -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../../assets/css/style.css">
+
 
 
 </html>

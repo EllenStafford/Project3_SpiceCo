@@ -1,18 +1,38 @@
 /* Styling for index.html */
+/* .logo{
+    margin: -10px 0 -30px 180px; 
+    position:absolute;
+    z-index:100;
+} */
 .navbar{
-    font-size: .7em;
+    background-color: #333;
+    height:70px !important;
 }
 
-.navbar-brand{
-    font-size: 1.2em;
+.navbar a{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
 }
 
-.navbar:hover {
-    color: white;
-    background-color: black;  
+.navbar a:hover{
+    background-color: #FBE104;
 }
+.justified {
+     position:relative;
+     left:35%;
+} 
+
+/* .logo {
+    position: absolute;
+    left: 10%;
+    /* display: block; */
+    /* pointer-events:none;
+
+}  */
 
 .footer {
+    position: fixed;
     text-align: center;
     border-top: #FBE104;
     border-top-style: solid;
@@ -28,7 +48,7 @@
 }
 
 h6 {
-    font-size: .7em;
+    font-size: .8em;
     margin-bottom: .1em;
 }
 
@@ -74,6 +94,8 @@ p{
     width: 70%;
 }
 
+
+/* Contact Page (contact.html) */
 
 .container {
     /* margin: auto; */
@@ -373,3 +395,13 @@ td{
     box-shadow: none;
 }
 
+/* SPICES page */
+.spice{
+    font-size: 1.5em;
+}
+
+#all-spices{
+    font-size: 2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
