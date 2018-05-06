@@ -125,28 +125,6 @@ textarea {
     height: 10%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* LOGIN page */
 #loginContainer{
     margin: auto;
@@ -348,7 +326,6 @@ textarea {
     }
 
 }
-
 /* PROFILE page */
 #profileContainer{
     margin: auto;
@@ -357,20 +334,16 @@ textarea {
     background-image: url("../imgs/LVS_heartspicesbanner.jpg");
     background-repeat: repeat-x;
 }
-
 .heading{
     color: #000000;
     font-size: 2.5em;
     font-weight: bold;
     margin-top: 30%;  
 }
-
-
 .pTable{
     margin: auto;
     text-align: left;
 }
-
 th{
     color:#000000;
     font-size: 1.5em;
@@ -382,8 +355,6 @@ td{
     font-size: 1.5em;
     font-weight: normal;  
 }
-
-/* All buttons */
 .btn{
     transition-duration: 0.4s;
     color: #FFFFFF; 
@@ -399,7 +370,6 @@ td{
 }
 
 .btn:focus {
-    utline: none !important;
     box-shadow: none;
 }
 
