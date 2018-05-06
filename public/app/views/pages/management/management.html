@@ -17,11 +17,8 @@
         <td>{{ person.address }}</td>
         <td>{{ person.email }}</td>
         <td>
-            <a href="#">
-                <button type="button">Edit</button>
-            </a>
-            <a href="#">
-                <button type="button">Delete</button>
+            <a href="#!/management">
+                <button type="button" ng-click ="management.deleteUser(person.username);" ng-show="management.editAccess">Deactivate</button>
             </a>
         </td>
     </tr>

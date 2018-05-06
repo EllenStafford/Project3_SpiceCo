@@ -268,6 +268,24 @@ router.get("/requests", function(req,res){
 //     });
 // });
 
+router.delete("/management/:username", function(req,res){
+    var deleteUser = req.params.username;
+    User.findOne({username: req.decoded.username}, function (err,mainUser){
+        if (err) throw err;
+       if (!mainUser){
+           res.json({success:false, message: "no user found"})
+       }else{
+        if (mainUser.permission !== "admin"){
+            res.json({success:false, message: "only admin can delete a user"})
+        }else{
+            User.findOneAndRemove({username: deleteUser}, function(err,user){
+                if (err) throw err;
+                res.json({success:true})
+            })
+        }
+       }
+    })
+});
 
     return router;
 };
