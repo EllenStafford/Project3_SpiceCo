@@ -258,7 +258,7 @@ textarea {
     text-align: left;
 }*/
 
-/* Styling for index.html */
+Styling for index.html
 .load{
     animation: slide 2s;
 }
@@ -527,7 +527,7 @@ body{
   .order-button:hover,
   .trash-button:hover {
   
-      color: #000000;
+      color: red;
   
       -webkit-transition: color 2s;
       -moz-transition: color 2s;
