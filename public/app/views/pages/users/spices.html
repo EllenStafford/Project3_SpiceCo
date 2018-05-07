@@ -18,7 +18,7 @@
     <div class="spiceWrapper" ng-repeat="spice in spicesCtrl.spiceData">
     <p class='spice'>
         {{spice.productName}} {{spice.productSize}}{{spice.weightType}} {{spice.basePrice}}   
-        <button type="submit" value="Submit" ng-click="total(spice.basePrice)">Add to order</button>
+        <button type="submit" value="Submit" ng-show="main.isLoggedIn" ng-click="total(spice.basePrice)">Add to order</button>
     </p>
     </div>
 </div>

@@ -38,18 +38,21 @@ var app = angular.module("angularRoutes", ["ngRoute"])
 
     .when("/profile",{
         templateUrl: "../../app/views/pages/users/profile.html",
-        authenticated: true
+        authenticated: true,
+        permission: ["user"]
     })
     .when("/inquiry",{
         templateUrl: "../../app/views/pages/users/inquiry.html",
         controller: "reqInq",
         controllerAs: "inquiry",
-        authenticated: true
+        authenticated: true,
+        permission: ["user"]
     })
     //this is the admin order
     .when("/adminorders",{
         templateUrl: "../../app/views/pages/management/adminorders.html",
-        authenticated: true
+        authenticated: true,
+        permission: ["admin"]
     })
     //this is the chef order
     .when("/cheforders",{
@@ -68,7 +71,8 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         templateUrl: "../../app/views/pages/users/contact.html",
         controller: "conCtrl",
         controllerAs: "contact",
-        authenticated: false
+        authenticated: false,
+        permission: ["user"]
     })
     .when("/management",{
         templateUrl: "../../app/views/pages/management/management.html",

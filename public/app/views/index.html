@@ -72,27 +72,15 @@ you can code around them and move them, but do not delete -Melissa  -->
     <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/contact">&ensp;CONTACT&ensp;</a>
   </li>
 </li>
-<li class="nav-item nav-btn">
-<a class="nav-link" ng-show="main.isLoggedIn" href="#!/inquiry" >&ensp;CONTACT&ensp;</a>
-</li>
-
-<!-- admin orders -->
-<li class="nav-item nav-btn">
-<a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/adminorders" >&ensp; ADMIN ORDERS&ensp;</a>
-</li>
-
-<li class="nav-item nav-btn">
-    <a class="nav-link" ng-show="main.isLoggedIn" href="#!/cheforders" >&ensp;CHEF ORDERS&ensp;</a>
-    </li>
   <li class="nav-item">
-      <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </li>
   </li>
   <li class="nav-item">
       <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/admin">&ensp;ADMIN&ensp;</a>
     </li>
     <li>
-      <a class="nav-link" ng-show="main.isLoggedIn && !main.isLoggedIn" href="#!/profile">&ensp;PROFILE&ensp;</a>
+      <a class="nav-link" ng-show="main.isLoggedIn" href="#!/profile">&ensp;PROFILE&ensp;</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -100,20 +88,6 @@ you can code around them and move them, but do not delete -Melissa  -->
   </div>
 
   </nav>
-
-  <!-- <li class="nav-item nav-btn">
-      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/requests"></a>
-    </li>
-      <li class="nav-item nav-btn">
-      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/register"></a>
-    </li>   
-      <li class="nav-item nav-btn">
-      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/management"></a>
-      </li> 
-            <li class="nav-item nav-btn">
-          <a class="nav-link" ng-show="main.isLoggedIn" href="#!/order">ORDERS</a>
-      
-      -->
 
   <div ng-view></div>
 
