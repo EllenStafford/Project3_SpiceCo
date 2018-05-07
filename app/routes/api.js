@@ -150,6 +150,7 @@ module.exports = function(router){
                     address: user.address, usercity: user.usercity, userstate: user.userstate, 
                     userzip: user.userzip }, secret, { expiresIn: "24h" });
                    res.json({ success: true, message: "Logged in", token: token});
+                   
                }
             }
         })

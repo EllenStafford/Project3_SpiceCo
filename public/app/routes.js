@@ -28,7 +28,7 @@ var app = angular.module("angularRoutes", ["ngRoute"])
 
     .when("/login",{
         templateUrl: "../../app/views/pages/users/login.html",
-        authenticate: false
+        authenticate: false 
     })
 
     .when("/logout",{
