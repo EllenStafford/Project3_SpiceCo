@@ -20,7 +20,7 @@
 }
 .justified {
      position:relative;
-     left:35%;
+     left:30%;
 } 
 .footer {
     position: fixed;
@@ -90,15 +90,9 @@ p{
 /* Contact Page (contact.html) */
 
 .container {
-    /* margin: auto; */
     text-align: left;
-    /* width: 40%; */
-    /* background-color: aqua; */
-    /* padding-right: 15%; */
     padding-top: 5%;
     padding-bottom: 5%;
-    /* padding-left: 12.5%;
-    padding-right: 12.5%; */
     margin-left: 23%;
 }
 
@@ -430,7 +424,6 @@ textarea {
     word-wrap: break-word;
     white-space: normal;
 }
-
 .btn{
     transition-duration: 0.4s;
     color: #FFFFFF; 
@@ -450,7 +443,6 @@ textarea {
 
 /* SPICES page */
 #spiceContainer{
-    margin: left;
     padding: 1%;
     text-align: center;
 }
