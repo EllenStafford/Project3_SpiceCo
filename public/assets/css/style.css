@@ -149,6 +149,11 @@ textarea {
     height: 10%;
 }
 
+#loginbutton{
+    margin-left: 0%;
+    height: 10%;
+}
+
 #registerbutton{
     margin-left: 40%;
 }
@@ -172,9 +177,10 @@ textarea {
 }
 
 .username, .password{
-    font-weight:bold;
-    font-size: 1.5em;
-    color: #FA3905;
+    font-size: 1.2em;
+    font-family : arial;
+    letter-spacing: 3px;
+
 }
 
 .placeholder{
