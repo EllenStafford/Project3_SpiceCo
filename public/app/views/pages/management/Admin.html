@@ -1,14 +1,32 @@
-<h1> Hello {{main.username}}, welcome to admin!</h1>
+<div id="profileContainer2" class="responsive">
+        <div class="profileWrapper">
+          <div class="profileheading">
+                <h1> Hello {{main.username}}, welcome to admin!</h1>
+          </div>
+          <table class="pTable">
+              <tr class="hrtag">
+                  <th>Register a new user</th>
+                  <td><input type="button" onclick="location.href='http://localhost:8080/#!/register';" value="Register" /></td>
+              </tr>
 
-<p>Register a new user</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/register';" value="Register" />
+              <tr class="hrtag">
+                  <th>User Management</th>
+                  <td><input type="button" onclick="location.href='http://localhost:8080/#!/management';" value="Users" />
+                  </td>
+              </tr>
 
+              <tr class="hrtag">
+                  <th>View Messages</th>
+                  <td><input type="button" onclick="location.href='http://localhost:8080/#!/requests';" value="Messages" />
+                </td>
+              </tr>
 
-<p>Edit users</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/management';" value="Users" />
+              <tr class="hrtag">
+                    <th>View Orders</th>
+                    <td><input type="button" onclick="location.href='http://localhost:8080/#!/adminorders';" value="Orders" />
 
-<p>View messages</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/requests';" value="Messages" />
-
-<p>View orders</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/adminorders';" value="Orders" />
+                    </td>
+                </tr>
+          </table>   
+       </div>
+    

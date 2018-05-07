@@ -196,7 +196,7 @@ textarea {
 
 
 
-/* New About page design */
+/* New About page design 
 #aboutContainer{
     margin: auto;
     text-align: center;
@@ -234,7 +234,7 @@ textarea {
     padding-bottom: 3%;
     background-image: url("../imgs/UseTruck3.jpg");
     /* width: 100%;
-    height: 950px; */
+    height: 950px;
 }
 
 .accordionWrapper{
@@ -266,7 +266,7 @@ textarea {
 
 #accordionText{
     text-align: left;
-}
+}*/
 
 /* Styling for index.html */
 .load{
@@ -360,7 +360,15 @@ textarea {
     margin: auto;
     padding: 3%;
     text-align: center;
-    background-image: url("../imgs/LVS_heartspicesbanner.jpg");
+    background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
+    background-repeat: repeat-x;
+
+}
+#profileContainer2{
+    margin: auto;
+    padding: 3%;
+    text-align: center;
+    background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
     background-repeat: repeat-x;
 
 }
@@ -408,26 +416,6 @@ textarea {
 .inqbtn:focus {
     box-shadow: none;
 }
-
-/* th{
-    color:#000000;
-    font-size: 1em;
-    font-weight: bold;
-    width: 25%;
-}
-
-td{
-    color:#FA3905;
-    font-size: 1em;
-    font-weight: normal;
-    width: 100%;
- }
-
-hr{
-    width: 100%;
-    white-space: normal;
-    overflow: hidden;
-}  */
 .clientManagement{
     text-align: center;
     font-family : arial;
@@ -438,13 +426,13 @@ hr{
     padding-left: 80px;
     font-size: 30px;
 }
-
 .table{
     border-collapse: separate;
     border-spacing: 0 1em;
     margin: auto;
     text-align: left;
     word-wrap: break-word;
+    white-space: normal;
 }
 
 .btn{
@@ -453,9 +441,7 @@ hr{
     background-color: #FA3905; 
     border-color: #FA3905; 
     font-family : arial;
-    font-size: 1em;
-
-  
+    font-size: 1em; 
 }
 .btn:hover{
     background-color: #B32B06; 
@@ -465,7 +451,6 @@ hr{
 .btn:focus {
     box-shadow: none;
 }
-
 
 /* SPICES page */
 #spiceContainer{
@@ -490,5 +475,63 @@ hr{
 .container{
     text-align:center;
 }
+
+
+/* About page design */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#abouttitle1{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_Truck.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#abouttitle2{
+    height: 75vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_spiceBottles.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#abouttitle3{
+    height: 75vh;
+    width: 100%;
+    background-image: url(../imgs/UseSpiceVariety.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#abouttitle4{
+    height: 75vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_spiceWooden.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
+#abouttitle1 h1, #abouttitle2 h1, #abouttitle3 h1, #abouttitle4 h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow:4px 4px #000000;
+}
+
+.abouttext{
+    padding: 25px;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+    font-size: 1.5em;
+  }
 
 
