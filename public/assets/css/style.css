@@ -258,7 +258,7 @@ textarea {
     text-align: left;
 }*/
 
-/* Styling for index.html */
+Styling for index.html
 .load{
     animation: slide 2s;
 }
@@ -441,6 +441,14 @@ textarea {
 .spiceContainer{
     text-align: center;
 }
+
+.spiceheader{
+    font-size: 1.2em;
+    font-family : arial;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
 .btn{
     transition-duration: 0.4s;
     color: #FFFFFF; 
@@ -542,7 +550,7 @@ body{
   .order-button:hover,
   .trash-button:hover {
   
-      color: #000000;
+      color: red;
   
       -webkit-transition: color 2s;
       -moz-transition: color 2s;
