@@ -2,128 +2,138 @@
 <html lang="en-us">
 
 <head>
-  <!-- <base href="/"> -->
-  <meta charset="UTF-8">
+    <!-- <base href="/"> -->
+    <meta charset="UTF-8">
 
 
-  <title>Love Valley Spices</title>
+    <title>Love Valley Spices</title>
 
-  <!-- Angular Files -->
-  <script src="../../assets/js/angular.js"></script>
-  <script src="../../assets/js/angular-route.js"></script>
-  <script src="../../assets/js/angular-animate.js"></script>
+    <!-- Angular Files -->
+    <script src="../../assets/js/angular.js"></script>
+    <script src="../../assets/js/angular-route.js"></script>
+    <script src="../../assets/js/angular-animate.js"></script>
 
-  <!-- Angular Routes -->
-  <script src="../../app/app.js"></script>
-  <script src="../../app/routes.js"></script>
-
-
-  <!-- Angular Controllers -->
-  <script src="../../app/controllers/userController.js"></script>
-  <script src="../../app/controllers/main.js"></script>
-  <script src="../../app/controllers/requestsController.js"></script>
-  <script src="../../app/controllers/management.js"></script>
-  <script src="../../app/controllers/contact.js"></script>
-  <script src="../../app/controllers/clientInquiry.js"></script>
-  <script src="../../app/controllers/spicesController.js"></script>
-
-  <!-- Angular Services -->
-  <script src="../../app/services/user.js"></script>
-  <script src="../../app/services/auth.js"></script>
+    <!-- Angular Routes -->
+    <script src="../../app/app.js"></script>
+    <script src="../../app/routes.js"></script>
 
 
+    <!-- Angular Controllers -->
+    <script src="../../app/controllers/userController.js"></script>
+    <script src="../../app/controllers/main.js"></script>
+    <script src="../../app/controllers/requestsController.js"></script>
+    <script src="../../app/controllers/management.js"></script>
+    <script src="../../app/controllers/contact.js"></script>
+    <script src="../../app/controllers/clientInquiry.js"></script>
+    <script src="../../app/controllers/chefordersController.js"></script>
+    <script src="../../app/controllers/spicesController.js"></script>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-    crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-    
-   
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <!-- Angular Services -->
+    <script src="../../app/services/cart.js"></script>
+    <script src="../../app/services/user.js"></script>
+    <script src="../../app/services/auth.js"></script>
 
-  <!-- <span class="logo img-responsive">
-      <img src="../../assets/imgs/logo.jpg" id="logo"> </span> -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+
+    <script src="../../assets/js/toastr.js"></script>
+
 </head>
 <!-- front end team... DO NOT delete these next TWO lines of code
 you can code around them and move them, but do not delete -Melissa  -->
 
 <!-- not logged in navbar -->
 <body ng-app="angularUser" ng-controller="mainCtrl as main">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-  <a class="navbar-brand" href="#" >LOVE VALLEY WHOLESALE SPICE COMPANY</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-  aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-  <ul class="navbar-nav justified">
-  <li class="nav-item">
-    <a class="nav-link" href="#!/">&ensp;HOME&ensp;</a>
-  </li>
-  <li class="nav-item" >
-    <a class="nav-link" href="#!/about">&ensp;ABOUT&ensp;</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#!/spices">&ensp;SPICE&ensp;</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/contact">&ensp;CONTACT&ensp;</a>
-  </li>
-</li>
-  <li class="nav-item">
-      <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-  </li>
-  </li>
-  <li class="nav-item">
-      <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/admin">&ensp;ADMIN&ensp;</a>
-    </li>
-    <li>
-      <a class="nav-link" ng-show="main.isLoggedIn" href="#!/profile">&ensp;PROFILE&ensp;</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-  </ul>
-  </div>
 
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <a class="navbar-brand" href="#">LOVE VALLEY WHOLESALE SPICE COMPANY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justified">
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/">&ensp;HOME&ensp;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/about">&ensp;ABOUT&ensp;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/spices">&ensp;SPICE&ensp;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/contact">&ensp;CONTACT&ensp;</a>
+                </li>
+                <li class="nav-item nav-btn">
+                    <a class="nav-link" ng-show="main.isLoggedIn" href="#!/inquiry">&ensp;CONTACT&ensp;</a>
+                </li>
 
-  <div ng-view></div>
+                <!-- admin orders -->
+                <li class="nav-item nav-btn">
+                    <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/adminorders">&ensp; ADMIN
+                        ORDERS&ensp;</a>
+                </li>
 
-  <div class="footer">
-    <div class="row">
-      <div class="col-md-4">
+                <li class="nav-item nav-btn">
+                    <a class="nav-link" ng-show="main.isLoggedIn" href="#!/cheforders">&ensp;CHEF ORDERS&ensp;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-show="!main.isLoggedIn" href="#!/login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-show="main.authorized && main.isLoggedIn" href="#!/admin">&ensp;ADMIN&ensp;</a>
+                </li>
+                <li>
+                    <a class="nav-link" ng-show="main.isLoggedIn" href="#!/profile">&ensp;PROFILE&ensp;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </ul>
+        </div>
+    </nav>
 
-        <h6> No Fuel Charge!</h6>
-        <h6> PO Box 808 Cornelius, NC 28031 </h6>
-      </div>
+    <div ng-view></div>
 
-      <div class="col-md-4">
-        <h6> No Minimum Order!</h6>
-        <h6> Call Tony (704) 941-0012</h6>
-      </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-4">
 
-      <div class="col-md-4">
-        <h6> No Delivery Charge!</h6>
-        <h6> Email:
-          <a class="email" href="mailto:Tony@LoveValleySpices.com">Tony@LoveValleySpices.com</a>
-        </h6>
-      </div>
+                <h6> No Fuel Charge!</h6>
+                <h6> PO Box 808 Cornelius, NC 28031 </h6>
+            </div>
+
+            <div class="col-md-4">
+                <h6> No Minimum Order!</h6>
+                <h6> Call Tony (704) 941-0012</h6>
+            </div>
+
+            <div class="col-md-4">
+                <h6> No Delivery Charge!</h6>
+                <h6> Email:
+                    <a class="email" href="mailto:Tony@LoveValleySpices.com">Tony@LoveValleySpices.com</a>
+                </h6>
+            </div>
+        </div>
     </div>
-  </div>
 
-  </footer>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
-
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-
-
-
+</body>
 </html>

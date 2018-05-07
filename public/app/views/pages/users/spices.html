@@ -1,9 +1,10 @@
-<div class = "page-header">
-</div>
-<div align="center" class="containter">
+
+<div class="page-header"></div>
+<div align="center" class="container">
+
     <div id="js--listTop"></div>
-        <h2 id="all-spices">Spices A-Z</h2>
-    
+    <h2 id="all-spices">Spices A-Z</h2>
+
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-C')">A-C</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('D-F')">D-F</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('G-I')">G-I</button>
@@ -12,13 +13,27 @@
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
+
     <div>
-    <br>
-    <h1>{{spicesCtrl.totalPrice.toFixed(2)}}</h1>
-    <div class="spiceWrapper" ng-repeat="spice in spicesCtrl.spiceData">
-    <p class='spice'>
-        {{spice.productName}} {{spice.productSize}}{{spice.weightType}} {{spice.basePrice}}   
-        <button type="submit" value="Submit" ng-show="main.isLoggedIn" ng-click="total(spice.basePrice)">Add to order</button>
-    </p>
+        <br>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Product Name</td>
+                    <td>Produce Size</td>
+                    <td>Base Price</td>
+                    <td>Add to Cart</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="spice in spicesCtrl.spiceData">
+                    <td>{{spice.productName}}</td>
+                    <td>{{spice.productSize}}{{spice.weightType}}</td>
+                    <td>${{spice.prettyBasePrice}}</td>
+                    <td><i class="fa fa-cart-plus order-button" ng-click="addToCart(spice)"></i></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
