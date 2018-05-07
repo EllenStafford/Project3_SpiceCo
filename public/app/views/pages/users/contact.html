@@ -1,6 +1,9 @@
 <div class "contact-header">
     <img src="../../../../assets/imgs/LVS_spoonsbanner.jpg" alt="Wooden Spoons" class="responsive">
     <h3>Call Tony at (704) 941-0012 or complete the form below.</h3>
+    <br>
+    <br>
+
 </div>
 
 
@@ -33,19 +36,19 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" ng-model="contact.regCon.city">
+            <input type="text" class="form-control" id="inputCity" placeholder="City" ng-model="contact.regCon.city">
         </div>
         <div class="form-group col-md-4">
             <label for="inputState">State</label>
-            <input type="text" class="form-control" id="inputState" ng-model="contact.regCon.state">
+            <input type="text" class="form-control" id="inputState" placeholder="State" ng-model="contact.regCon.state">
         </div>
         <div class="form-group col-md-2">
             <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip" ng-model="contact.regCon.zip">
+            <input type="text" class="form-control" id="inputZip" placeholder="Zipcode" ng-model="contact.regCon.zip">
         </div>
         <div class="form-group col-md-12">
             <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control" id="inputMessage" rows="6" ng-model="contact.regCon.message"></textarea>
+            <textarea class="form-control" id="inputMessage" rows="6"  placeholder="Your message here" ng-model="contact.regCon.message"></textarea>
         </div>
         <button class="btn btn-primary" id="contactbutton" type="submit">SEND MESSAGE</button>
         <br>
