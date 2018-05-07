@@ -1,48 +1,41 @@
-
-
-<div id="inquiryContainer" class="responsive">
+<div class "contact-header">
+    <img src="../../../../assets/imgs/LVS_spoonsbanner.jpg" alt="Wooden Spoons" class="responsive">
+    <h3>Call Tony at (704) 941-0012 or complete the form below.</h3>
+</div>
+<br>
 <br>
 
-<div class="row">
+<form id="gcontactbodyform" ng-submit="inquiry.inqUser(inqData);">
 
-    <div class="card text-center mx-auto border border-dark" id="inquiryCard" style="width: 24rem; padding: 4%;">
-        <div class="card-body">
-            <form ng-submit="inquiry.inqUser();">
-                <label>
-                    <b>Name:</b>
-                </label>
-                <input type="text" name="name" placeholder="Please enter name" ng-model="inquiry.inqData.inquiryName">
-                <br>
-                <label>
-                    <b>Email:</b>
-                </label>
-                <input type="text" name="email" placeholder="Please enter email" ng-model="inquiry.inqData.inquiryEmail">
-                <br>
-                <label>
-                    <b>Message:</b>
-                </label>
-                <input type="text" name="message" placeholder="Please enter message" ng-model="inquiry.inqData.inquiryMessage">
-                <hr>
-                <button type="submit">
-                    <b>Send Message</b>
-                </button>
-
-            </form>
-        </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="inquiryName">Name</label>
+        <input type="text" class="form-control" id="inquiryName" placeholder="Please enter your name here" ng-model="inquiry.inqData.inquiryName">
     </div>
-
-</div> <!-- End of Row-->
+    <div class="form-group col-md-6">
+        <label for="inquiryEmail">Email</label>
+        <input type="email" class="form-control" id="inquiryEmail" placeholder="Please enter your email here" ng-model="inquiry.inqData.inquiryEmail">
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="inquirySubject">Subject</label>
+        <input type="text" class="form-control" id="inquirySubject" placeholder="Subject" ng-model="inquiry.inqData.inquirySubject">
+    </div>
+    <div class="form-group col-md-12">
+        <label for="inquiryMessage">Message</label>
+        <textarea class="form-control" id="inquiryMessage" rows="6" placeholder="Message" ng-model="inquiry.inqData.inquiryMessage"></textarea>
+    </div>
+</div>
+    <button class="btn btn-primary" id="contactbutton" type="submit">SEND MESSAGE</button>
+    <div class "row show-hide-message" ng-show="inquiry.successMessages">
+            <div class="alert alert-success">{{inquiry.successMessages}}</div>
+        </div>
+        <div class "row show-hide-message" ng-show="inquiry.errorMessages">
+            <div class="alert alert-danger">{{inquiry.errorMessages}}</div>
+        </div>
+</form>
 <br>
-
-</div>  <!-- End of Container -->
-
-
-
-
-
-<div class "row show-hide-message" ng-show="inquiry.successMessages">
-    <div class="alert alert-success">{{inquiry.successMessages}}</div>
-</div>
-<div class "row show-hide-message" ng-show="inquiry.errorMessages">
-    <div class="alert alert-danger">{{inquiry.errorMessages}}</div>
-</div>
+<br>
+<br>
+<br>

@@ -1,11 +1,27 @@
-<h1> Hello {{main.username}}, welcome to admin!</h1>
+<div id="profileContainer2" class="responsive">
+        <div class="profileWrapper">
+          <div class="profileheading">
+                <h1> Hello {{main.username}}, welcome to admin!</h1>
+          </div>
+          <table class="pTable">
+              <tr class="hrtag">
+                  <th>Register a new user</th>
+                  <td><input type="button" onclick="location.href='http://localhost:8080/#!/register';" value="&ensp;Register&ensp;" /></td>
+              </tr>
 
-<p>Register a new user</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/register';" value="Register" />
+              <tr class="hrtag">
+                  <th>User Management</th>
+                  <td><input type="button" onclick="location.href='http://localhost:8080/#!/management';" value="&ensp;&ensp;Users&ensp;&ensp;" />
+                  </td>
+              </tr>
 
-
-<p>Edit users</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/management';" value="Users" />
-
-<p>View messages</p>
-<input type="button" onclick="location.href='http://localhost:8080/#!/requests';" value="Messages" />
+              <tr class="hrtag">
+                  <th>View Messages</th>
+                  <td><input type="button" onclick="location.href='http://localhost:8080/#!/requests';" value="Messages" />
+                </td>
+              </tr>
+          </table>   
+       </div>
+    <br>
+    <br>
+    

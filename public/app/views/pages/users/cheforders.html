@@ -1,0 +1,72 @@
+<!-- TODO Remove Bootstrap link for final push -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+
+<div class "page-header">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h2>
+                    <bold> Review Order</bold>
+                </h2>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h3 class="col-md-8 offset-md-2 text-center"> Current Order </h3>
+            <br>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Spice Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="order-table">
+                    <tr ng-repeat="spice in chefordersCtrl.cart track by $index" data-id="{{spice.index}}">
+                        <td>{{spice.productName}}</td>
+                        <td>
+                            <i class="fa fa-minus-square" ng-click="decrementQuantity(spice)"></i>
+                            {{spice.quantity}}
+                            <i class="fa fa-plus-square" ng-click="incrementQuantity(spice)"></i>
+                        </td>
+                        <td>${{spice.prettyCurrentAmount}}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td style="padding-top: 80px;">Total: ${{chefordersCtrl.total}}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="row justify-content-between">
+
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row justify-content-between">
+
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-dark">Place Order</button>
+            </div>
+            <div class="col-sm"></div>
+
+        </div>
+
+    </div>
+</div>
+</div>

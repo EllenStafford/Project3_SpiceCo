@@ -1,29 +1,83 @@
-
 <div id="profileContainer" class="responsive">
-    <div class= "heading">
+  <div class="profileWrapper">
+    <div class="profileheading">
 
         <h1>Welcome back {{main.username}}!</h1>
 
     </div>
-
     <table class="pTable">
-        <tr>
-            <th>Business Name:</th>
+        <tr class="hrtag">
+            <th>Business:</th>
             <td>{{ main.business }}</td>
         </tr>
-        <tr>
-            <th>Email Address:</th>
-            <td>{{ main.email }}</td>
+        <tr class="hrtag">
+            <th>Email:</th>
+            <td>{{ main.email}}</td>
         </tr>
-        <tr>
+        <tr class="hrtag">
             <th>Phone:</th>
             <td>{{ main.phone }}</td>
         </tr>
-        <tr>
-            <th>Address:</th>
-            <td>{{ main.address }}</td>
-        </tr>
-        </tr>
-    </table>
+    </table>   
+ </div>
+ <div class="profileWrapper">
+        <div class="profileheading">
+    
+            <h1>View Your Past Orders</h1>
+    
+        </div>
+        <table class="pTable">
+            <tr class="hrtag">
+                <th>TESTING:</th>
+                <td>UNDER CONSTRUCTION</td>
+            </tr>
+            <tr class="hrtag">
+                <th>TESTING:</th>
+                <td>UNDER CONSTRUCTION</td>
+            </tr>
+            <tr class="hrtag">
+                <th>TESTING:</th>
+                <td>UNDER CONSTRUCTION</td>
+            </tr>
+        </table>   
     </div>
+    <div class="profileWrapper">
+            <div class="profileheading">
+        
+                <h1>Questions?</h1>
+        
+            </div>
+            <table class="pTable">
+                <tr class="hrtag">
+                    <th>Call Tony at (704) 941-0012</th>
+                </tr>
+                <tr class="hrtag">
+                    <th> &ensp;&ensp;or send us a message</th>
+                </tr>
+                <tr></tr>
+                <th><input type="button" class= "inqbtn"  onclick="location.href='http://localhost:8080/#!/inquiry';" value="MESSAGE" />
+                </th>
+                </tr>
+                <tr class="hrtag">
+                        <th>temporary button for KT</th>
+                        <td><input type="button" onclick="location.href='http://localhost:8080/#!/adminorders';" value=" Admin Order Page" />
+    
+                    </td>
+                    </tr>
+                    <tr class="hrtag">
+                            <th>temporary button for KT</th>
+                            <td><input type="button" onclick="location.href='http://localhost:8080/#!/cheforders';" value="Chef Order Page" />
+                          </td>
+                        </tr>
+            </table>   
+        </div>
+
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
 </div>

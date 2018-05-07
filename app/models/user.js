@@ -6,11 +6,14 @@ var bcrypt = require('bcrypt-nodejs');
 var UserSchema =new Schema({
     business: {type: String, required: true, lowercase: true},
     username: {type: String, lowercase: true, required: true, unique:true},
+    email: {type: String, required: true, lowercase: true, unique:true},
     phone: {type: String, required: true, lowercase: true},
     address: {type: String, required: true, lowercase: true},
     password: {type: String, required:true},
-    email: {type: String, required: true, lowercase: true, unique:true},
-    permission: {type: String, required: true, default: "user"}
+    permission: {type: String, required: true, default: "user"},
+    usercity: {type: String,required: true, lowercase: true},
+    userstate: {type: String,lowercase: true, lowercase: true},
+    userzip: {type: String,lowercase: true, lowercase: true}
 });
 
 

@@ -46,8 +46,16 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         controllerAs: "inquiry",
         authenticated: true
     })
-    .when("/order",{
-        templateUrl: "../../app/views/pages/users/order.html",
+    //this is the admin order
+    .when("/adminorders",{
+        templateUrl: "../../app/views/pages/management/adminorders.html",
+        authenticated: true
+    })
+    //this is the chef order
+    .when("/cheforders",{
+        templateUrl: "../../app/views/pages/users/cheforders.html",
+        controller: "chefordersCtrl",
+        controllerAs: "chefordersCtrl",
         authenticated: true
     })
     .when("/requests",{

@@ -1,30 +1,37 @@
-<div class="panel panel-primary">
-<div class="panel-heading">
-    <strong>User Management</strong>
+
+
+<div class="clientManagement">
+CLIENT MANAGEMENT
 </div>
+<div class ="managementUser">
 <table class="table">
-    <tr>
-        <th>Business Name</th>
-        <th>Username</th>
-        <th>Phone</th>
-        <th>Address</th>
-        <th>Email</th>
-    </tr>
-    <tr ng-repeat = "person in management.users">
+<tr class = "bg-warning">
+        <th scope="col">#</th>
+        <th scope="col">Business</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zip</th>
+        <th scope="col"></th>
+</tr>
+<tr ng-repeat="person in management.users">
+        <td>{{$index + 1}}</td>
         <td>{{ person.business }}</td>
         <td>{{ person.username }}</td>
+        <td>{{ person.email }}</td>
         <td>{{ person.phone }}</td>
         <td>{{ person.address }}</td>
-        <td>{{ person.email }}</td>
-        <td>
-            <a href="#">
-                <button type="button">Edit</button>
-            </a>
-            <a href="#">
-                <button type="button">Delete</button>
-            </a>
+        <td>{{ person.usercity }}</td>
+        <td>{{ person.userstate }}</td>
+        <td>{{ person.userzip }}</td>
+        <td><a href="#!/management">
+            <button type="button" ng-click ="management.deleteUser(person.username);" ng-show="management.editAccess">Deactivate</button>
+        </a>
         </td>
-    </tr>
+</tr>
+
 </table>
 </div>
-

@@ -1,24 +1,33 @@
 /* Styling for index.html */
+/* .logo{
+    margin: -10px 0 -30px 180px; 
+    position:absolute;
+    z-index:100;
+} */
 .navbar{
-    font-size: 1em;
+    background-color: #333;
+    height:70px !important;
 }
 
-.navbar-brand{
-    font-size: 1.2em;
+.navbar a{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
 }
 
-.navbar:hover {
-    color: white;
-    background-color: black;  
+.navbar a:hover{
+    background-color: #FBE104;
 }
-
+.justified {
+     position:relative;
+     left:30%;
+} 
 .footer {
     position: fixed;
     text-align: center;
     border-top: #FBE104;
     border-top-style: solid;
     border-top-width: 10px;
-    background-color: #FA3905;
     color: #000000;
     width: 100%;
     left: 0;
@@ -26,6 +35,7 @@
     padding: 10px;
     font-weight: bold;
     position: fixed;
+    background: linear-gradient(to bottom right, red, yellow);
 }
 
 h6 {
@@ -66,6 +76,7 @@ p{
 .responsive {
     width: 100%;
     height: auto;
+    overflow:hidden;
 }
 
 #gcontactbodyform { 
@@ -79,15 +90,9 @@ p{
 /* Contact Page (contact.html) */
 
 .container {
-    /* margin: auto; */
     text-align: left;
-    /* width: 40%; */
-    /* background-color: aqua; */
-    /* padding-right: 15%; */
     padding-top: 5%;
     padding-bottom: 5%;
-    /* padding-left: 12.5%;
-    padding-right: 12.5%; */
     margin-left: 23%;
 }
 
@@ -128,28 +133,14 @@ textarea {
     height: 10%;
 }
 
+#loginbutton{
+    margin-left: 0%;
+    height: 10%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#registerbutton{
+    margin-left: 40%;
+}
 /* LOGIN page */
 #loginContainer{
     margin: auto;
@@ -162,16 +153,18 @@ textarea {
 
 .formbkgd{
     margin: auto;
-    margin-top: 15%;
+    margin-top: 3%;
     background-color: #000000;
-    width: 70%;
+    width: 60%;
     padding: 5%;
     border: solid 4px #ffffff;
 }
 
 .username, .password{
-    color: #FA3905;
-    opacity: 1;
+    font-size: 1.2em;
+    font-family : arial;
+    letter-spacing: 3px;
+
 }
 
 .placeholder{
@@ -372,50 +365,119 @@ p {
     }
 
 }
-
 /* PROFILE page */
 #profileContainer{
     margin: auto;
-    padding: 10%;
+    padding: 3%;
     text-align: center;
-    background-image: url("../imgs/LVS_heartspicesbanner.jpg");
+    background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
     background-repeat: repeat-x;
+
 }
-
-.heading{
-    color: #000000;
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-top: 30%;  
-}
-
-
-.pTable{
+#profileContainer2{
     margin: auto;
-    text-align: left;
+    padding: 3%;
+    text-align: center;
+    background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
+    background-repeat: repeat-x;
+
 }
 
-th{
-    color:#000000;
-    font-size: 1.5em;
+.profileWrapper{
+    border: solid 1px #000000;
+    margin:auto;
+    margin-top: 3%;
+    padding: 2%;
+    background-color:#FFFFFF;
+    width: 60%;
+    overflow:hidden;
+}
+
+.profileheading{
+    color: #000000;
+    font-size: 2em;
     font-weight: bold; 
 }
-
-td{
-    color:#FA3905;
-    font-size: 1.5em;
-    font-weight: normal;  
+.pTable{
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    margin: auto;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-line;
 }
 
-/* All buttons */
-.btn{
+.inqbtn{
+    margin-left: 24%;
     transition-duration: 0.4s;
     color: #FFFFFF; 
     background-color: #FA3905; 
     border-color: #FA3905; 
     font-family : arial;
     font-size: 1em;
-  
+    border-radius: 4px;
+}
+
+.inqbtn:hover{
+    background-color: #B32B06; 
+    border-color: #FA3905; 
+}
+
+.inqbtn:focus {
+    box-shadow: none;
+}
+.clientManagement{
+    text-align: center;
+    font-family : arial;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    font-size: 30px;
+}
+/* .table{
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    margin: auto;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+} */
+
+.stable{
+    border-collapse: separate;
+    border-style: solid;
+    box-sizing: content-box;    
+    width: 50%;
+    height: 100px;
+    border-spacing: 0 1em;
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+
+}
+
+.spiceContainer{
+    text-align: center;
+}
+
+.spiceheader{
+    font-size: 2em;
+    color:#FA3905;
+    font-family : arial;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+.btn{
+    transition-duration: 0.4s;
+    color: #FFFFFF; 
+    background-color: #FA3905; 
+    border-color: #FA3905; 
+    font-family : arial;
+    font-size: 1em; 
 }
 .btn:hover{
     background-color: #B32B06; 
@@ -427,12 +489,98 @@ td{
 }
 
 /* SPICES page */
+/* #spiceContainer{
+    padding: 1%;
+    text-align: center;
+} */
+
+
 .spice{
+    text-align: center;
     font-size: 1.5em;
 }
 
 #all-spices{
+    text-align: center;
     font-size: 2em;
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+.container{
+    text-align:center;
+}
+
+
+/* About page design */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#abouttitle1{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_Truck.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#abouttitle2{
+    height: 75vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_spiceBottles.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#abouttitle3{
+    height: 75vh;
+    width: 100%;
+    background-image: url(../imgs/UseSpiceVariety.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#abouttitle4{
+    height: 75vh;
+    width: 100%;
+    background-image: url(../imgs/LVS_spiceWooden.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
+#abouttitle1 h1, #abouttitle2 h1, #abouttitle3 h1, #abouttitle4 h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow:4px 4px #000000;
+}
+
+.abouttext{
+    padding: 25px;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+    font-size: 1.5em;
+  }
+
+  .order-button:hover,
+  .trash-button:hover {
+  
+      color: red;
+  
+      -webkit-transition: color 1s;
+      -moz-transition: color 1s;
+      -o-transition: color 1s;
+      transition: color 1s;
+      text-align: center;
+      font-size: 2em;
+
+  
+  }
+  
