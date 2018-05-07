@@ -1,8 +1,3 @@
-/**
- * A collection of order services for maintaining a shopper's cart.
- *
- * @author Kenyatta Tillman
- */
 angular.module("orderServices", [])
 
     // Returns a cart service that allows for the CRUD operations against a shopper's cart.
