@@ -149,6 +149,11 @@ textarea {
     height: 10%;
 }
 
+#loginbutton{
+    margin-left: 0%;
+    height: 10%;
+}
+
 #registerbutton{
     margin-left: 40%;
 }
@@ -172,9 +177,10 @@ textarea {
 }
 
 .username, .password{
-    font-weight:bold;
-    font-size: 1.5em;
-    color: #FA3905;
+    font-size: 1.2em;
+    font-family : arial;
+    letter-spacing: 3px;
+
 }
 
 .placeholder{
@@ -360,7 +366,15 @@ textarea {
     margin: auto;
     padding: 3%;
     text-align: center;
-    background-image: url("../imgs/LVS_heartspicesbanner.jpg");
+    background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
+    background-repeat: repeat-x;
+
+}
+#profileContainer2{
+    margin: auto;
+    padding: 3%;
+    text-align: center;
+    background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
     background-repeat: repeat-x;
 
 }
@@ -408,26 +422,6 @@ textarea {
 .inqbtn:focus {
     box-shadow: none;
 }
-
-/* th{
-    color:#000000;
-    font-size: 1em;
-    font-weight: bold;
-    width: 25%;
-}
-
-td{
-    color:#FA3905;
-    font-size: 1em;
-    font-weight: normal;
-    width: 100%;
- }
-
-hr{
-    width: 100%;
-    white-space: normal;
-    overflow: hidden;
-}  */
 .clientManagement{
     text-align: center;
     font-family : arial;
@@ -438,8 +432,6 @@ hr{
     padding-left: 80px;
     font-size: 30px;
 }
-
-
 .table{
     border-collapse: separate;
     border-spacing: 0 1em;
@@ -449,17 +441,13 @@ hr{
     white-space: normal;
 }
 
-
-
 .btn{
     transition-duration: 0.4s;
     color: #FFFFFF; 
     background-color: #FA3905; 
     border-color: #FA3905; 
     font-family : arial;
-    font-size: 1em;
-
-  
+    font-size: 1em; 
 }
 .btn:hover{
     background-color: #B32B06; 
@@ -469,7 +457,6 @@ hr{
 .btn:focus {
     box-shadow: none;
 }
-
 
 /* SPICES page */
 #spiceContainer{

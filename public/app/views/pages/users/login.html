@@ -1,25 +1,24 @@
-<div id="loginContainer" class="responsive">
-<div class ="formbkgd">
-    <form id= "formbg" ng-submit="main.doLogin(loginData);">
-        <label class = "username">Username:</label>
-        <input type="text" name="username" ng-model="main.loginData.username" placeholder="Enter Username" class="responsive">
-        <br>
-        <br>
-        <label class = "password">Password:</label>
-        <input type="password" name="password" ng-model="main.loginData.password" placeholder="Enter Password" class="responsive">
-        <br>
-        <br>
-        <br>
-        <button type="submit">Log In</button>
-    </form>
-</div>
-
-    <div class "row show-hide-message" ng-show="main.successMsg">
-        <div class="alert alert-success">{{main.successMsg}}</div>
-    </div>
-    <div class "row show-hide-message" ng-show="main.errorMsg">
-        <div class="alert alert-danger">{{main.errorMsg}}</div>
-    </div>
-</div>
-
-<!--  <img src = "./assets/imgs/heartdishspices.jpg" alt="heart dishes of spices">  -->
+<div id="profileContainer" class="responsive">
+        <div class="profileWrapper">
+          <div class="profileheading">
+          </div>
+          <form id= "formbg" ng-submit="main.doLogin(loginData);">
+                <label class = "username">USERNAME</label>
+                <input type="text" name="username" ng-model="main.loginData.username" placeholder="Enter Username" class="responsive">
+                <br>
+                <br>
+                <label class = "password">PASSWORD</label>
+                <input type="password" name="password" ng-model="main.loginData.password" placeholder="Enter Password" class="responsive">
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-primary" id="loginbutton">LOG IN</button>
+            </form>
+          
+          <div class "row show-hide-message" ng-show="main.successMsg">
+                <div class="alert alert-success">{{main.successMsg}}</div>
+            </div>
+            <div class "row show-hide-message" ng-show="main.errorMsg">
+                <div class="alert alert-danger">{{main.errorMsg}}</div>
+            </div>
+       </div>

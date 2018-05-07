@@ -46,7 +46,7 @@ angular.module("mainController", ["authServices"])
         if (data.data.success){
             app.successMsg = data.data.message;
             $timeout(function(){
-                $location.path("/profile");
+                $location.path("/");
                 app.loginData = {};
                 app.successMsg = false;
             }, 1500);
