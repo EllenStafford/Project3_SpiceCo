@@ -1,47 +1,52 @@
 angular.module("spicesCtrl", ["authServices", "orderServices"])
 
-    .controller("spicesCtrl", function (Auth, Cart, $scope, $http) {
+.controller("spicesCtrl", function (Auth, Cart, $scope, $http) {
+    const spicesCtrl = this;
+    var app = this;
 
-        const spicesCtrl = this;
+    // search
 
-        $scope.fetchSpices = query => {
 
-            $http
-                .get(`/api/spices?paginate=${query}`)
-                .then(paginatedSpices => {
+app.searched = function(searchSpice) {
+    if (searchSpice) {
+        if (searchSpice.length > 0) {
+            $scope.spiceFilter = searchSpice;
+        } else {
+            $scope.spiceFilter = undefined; 
+        }
+    } 
+};
 
-                    spicesCtrl.spiceData = paginatedSpices.data.map(spice => {
+//clear
+app.clear = function() {
+    $scope.searchSpice = undefined;
+};
 
-                        const item = {
-                            productName: spice.productName,
-                            productSize: spice.productSize,
-                            weightType: spice.weightType
-                        };
-
-                        if (Auth.isLoggedIn()) {
-
-                            if (isNaN(item.basePrice))
-                                item.basePrice = Number.parseFloat(spice.basePrice.replace("$", ""));
-                            else
-                                item.basePrice = spice.basePrice;
-
-                            item.prettyBasePrice = item.basePrice.toFixed(2);
-
-                        }
-
+    $scope.fetchSpices = query => {
+        $http.get(`/api/spices?paginate=${query}`).then(paginatedSpices => {
+            spicesCtrl.spiceData = paginatedSpices.data.map(spice => {
+            const item = {
+                productName: spice.productName,
+                productSize: spice.productSize,
+                weightType: spice.weightType
+            };
+            if (Auth.isLoggedIn()) {
+                if (isNaN(item.basePrice))
+                    item.basePrice = Number.parseFloat(spice.basePrice.replace("$", ""));
+                else
+                    item.basePrice = spice.basePrice;
+                item.prettyBasePrice = item.basePrice.toFixed(2);
+            }
                         return item;
+            });
+        });
+    };
 
-                    });
+    $scope.addToCart = item => {
 
-                });
+        toastr.success(`Added item '${item.productName}' to your cart`);
+        Cart.add(item);
 
-        };
+    };
 
-        $scope.addToCart = item => {
-
-            toastr.success(`Added item '${item.productName}' to your cart`);
-            Cart.add(item);
-
-        };
-
-    });
+});

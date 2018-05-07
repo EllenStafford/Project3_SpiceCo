@@ -444,6 +444,14 @@ Styling for index.html
     font-family : arial;
     font-size: 1em; 
 }
+.btn3{
+    transition-duration: 0.4s;
+    color: #FFFFFF; 
+    background-color: #ffc300; 
+    border-color: #ffc300; 
+    font-family : arial;
+    font-size: 1em; 
+}
 .btn:hover{
     background-color: #B32B06; 
     border-color: #FA3905; 

@@ -1,9 +1,24 @@
-
-
 <div class="clientManagement">
 CLIENT MANAGEMENT
 </div>
 <div class ="managementUser">
+
+
+
+<nav class="navbar navbar-light bg-light">
+<form class="form-inline">
+        <input class="form-control form-control2 mr-sm-2" type="search" placeholder="Search clients" aria-label="Search" ng-model="searchKeyword">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="management.search(searchKeyword);">Search</button>
+        &nbsp;
+        <button class="btn btn3 btn-outline-success my-2 my-sm-0" type="submit" ng-click="management.clear();">Clear</button>
+        &nbsp;&nbsp;&nbsp;
+        <div ng-show="searchFilter !== undefined">
+        <p><h1>Total results: {{ (management.users | filter: searchFilter).length }}</h1></p>
+        </div>
+</form>
+</nav>
+
+
 <table class="table">
 <tr class = "bg-warning">
         <th scope="col">#</th>
@@ -17,7 +32,7 @@ CLIENT MANAGEMENT
         <th scope="col">Zip</th>
         <th scope="col"></th>
 </tr>
-<tr ng-repeat="person in management.users">
+<tr ng-repeat="person in management.users | filter: searchFilter">
         <td>{{$index + 1}}</td>
         <td>{{ person.business }}</td>
         <td>{{ person.username }}</td>
