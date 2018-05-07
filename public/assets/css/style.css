@@ -545,7 +545,26 @@ body{
       transition: color 1s;
       text-align: center;
       font-size: 2em;
-
-  
   }
   
+
+/* Admin page */
+  .inqbtn{
+    margin-left: 24%;
+    transition-duration: 0.4s;
+    color: #FFFFFF; 
+    background-color: #FA3905; 
+    border-color: #FA3905; 
+    font-family : arial;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.inqbtn:hover{
+    background-color: #B32B06; 
+    border-color: #FA3905; 
+}
+
+.inqbtn:focus {
+    box-shadow: none;
+}
