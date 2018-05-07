@@ -86,21 +86,10 @@ p{
     width: 70%;
 }
 
-
-/* Contact Page (contact.html) */
-
-.container {
-    text-align: left;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-left: 23%;
-}
-
 input {
     padding: 15px;
     align-self: center;
     min-width: 100px;
-    /* max-width: 500px; */
 }
 
 textarea {
