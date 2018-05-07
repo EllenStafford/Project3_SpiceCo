@@ -18,7 +18,9 @@ app.use('/api', appRoutes);
 //making sure we are connected to db
 //reminder*** open a new window after mogod and typing mono
 //capital to know it's mine
-mongoose.connect("mongodb://localhost/users", function(err){
+var dbURI = process.env.MONGODB_URI || "mongodb://localhost/users";
+
+mongoose.connect(dbURI, function(err){
     if (err){
         console.log ('PROBLEM CONNECTING TO DATABASE -MS ' + err);
     }else{
