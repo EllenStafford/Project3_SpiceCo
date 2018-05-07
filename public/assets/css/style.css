@@ -416,13 +416,30 @@ textarea {
     padding-left: 80px;
     font-size: 30px;
 }
-.table{
+/* .table{
     border-collapse: separate;
     border-spacing: 0 1em;
     margin: auto;
     text-align: left;
     word-wrap: break-word;
     white-space: normal;
+} */
+
+.stable{
+    border-collapse: separate;
+    border-style: solid;
+    box-sizing: content-box;    
+    width: 50%;
+    height: 100px;
+    border-spacing: 0 1em;
+    margin: auto;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.spiceContainer{
+    text-align: center;
 }
 .btn{
     transition-duration: 0.4s;
@@ -442,10 +459,10 @@ textarea {
 }
 
 /* SPICES page */
-#spiceContainer{
+/* #spiceContainer{
     padding: 1%;
     text-align: center;
-}
+} */
 
 
 .spice{

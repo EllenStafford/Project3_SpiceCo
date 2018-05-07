@@ -1,9 +1,12 @@
 
-<div class="page-header"></div>
-<div class="spicecontainer">
+<div class="page-header spiceheader">
+    Spice's A-Z
+</div>
 
-    <div id="js--listTop"></div>
-    <h2 id="all-spices">Spices A-Z</h2>
+<div class="spiceContainer">
+    
+
+    <!-- <div id="js--listTop"></div> -->
 
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-C')">A-C</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('D-F')">D-F</button>
@@ -13,11 +16,11 @@
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
-
+</div>
     <div>
         <br>
 
-        <table class="table table-striped">
+        <table class="table table-striped stable">
             <thead>
                 <tr>
                     <td>Product Name</td>
@@ -36,4 +39,3 @@
             </tbody>
         </table>
     </div>
-</div>
