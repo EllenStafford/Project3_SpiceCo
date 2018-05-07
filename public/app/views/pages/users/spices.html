@@ -25,16 +25,16 @@
         <tr>
             <td align = "left">Product Name</td>
             <td>Produce Size</td>
-            <td>Price</td>
-            <td>Add to Cart</td>
+            <td ng-show="main.isLoggedIn">Price</td>
+            <td ng-show="main.isLoggedIn">Add to Cart</td>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="spice in spicesCtrl.spiceData">
             <td align = "left">{{spice.productName}}</td>
             <td>{{spice.productSize}}{{spice.weightType}}</td>
-            <td>${{spice.prettyBasePrice}}</td>
-            <td><i class="fa fa-cart-plus order-button" ng-click="addToCart(spice)"></i></td>
+            <td ng-show="main.isLoggedIn">${{spice.prettyBasePrice}}</td>
+            <td><i class="fa fa-cart-plus order-button" ng-click="addToCart(spice)" ng-show="main.isLoggedIn"></i></td>
         </tr>
     </tbody>
     </table>
