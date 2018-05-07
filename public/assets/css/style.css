@@ -445,10 +445,7 @@ hr{
     margin: auto;
     text-align: left;
     word-wrap: break-word;
-    white-space: pre-line;
 }
-
-
 
 .btn{
     transition-duration: 0.4s;
