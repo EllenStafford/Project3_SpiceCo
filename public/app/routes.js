@@ -51,8 +51,7 @@ var app = angular.module("angularRoutes", ["ngRoute"])
     //this is the admin order
     .when("/adminorders",{
         templateUrl: "../../app/views/pages/management/adminorders.html",
-        authenticated: true,
-        permission: ["admin"]
+        authenticated: true
     })
     //this is the chef order
     .when("/cheforders",{
