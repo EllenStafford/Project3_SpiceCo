@@ -433,9 +433,10 @@ Styling for index.html
     height: 100px;
     border-spacing: 0 1em;
     margin: auto;
-    text-align: left;
+    text-align: center;
     word-wrap: break-word;
     white-space: normal;
+
 }
 
 .spiceContainer{
@@ -443,7 +444,8 @@ Styling for index.html
 }
 
 .spiceheader{
-    font-size: 1.2em;
+    font-size: 2em;
+    color:#FA3905;
     font-family : arial;
     letter-spacing: 3px;
     text-align: center;
@@ -552,10 +554,13 @@ body{
   
       color: red;
   
-      -webkit-transition: color 2s;
-      -moz-transition: color 2s;
-      -o-transition: color 2s;
-      transition: color 2s;
+      -webkit-transition: color 1s;
+      -moz-transition: color 1s;
+      -o-transition: color 1s;
+      transition: color 1s;
+      text-align: center;
+      font-size: 2em;
+
   
   }
   

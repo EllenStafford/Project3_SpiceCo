@@ -9,10 +9,6 @@
 </div>
 
 <div class="spiceContainer">
-    
-
-    <!-- <div id="js--listTop"></div> -->
-
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-C')">A-C</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('D-F')">D-F</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('G-I')">G-I</button>
@@ -22,25 +18,24 @@
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
 </div>
-    <div>
-        <br>
+<br>
+<br>
+    <table class="table table-striped stable">
+    <thead>
+        <tr>
+            <td align = "left">Product Name</td>
+            <td>Produce Size</td>
+            <td>Price</td>
+            <td>Add to Cart</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="spice in spicesCtrl.spiceData">
+            <td align = "left">{{spice.productName}}</td>
+            <td>{{spice.productSize}}{{spice.weightType}}</td>
+            <td>${{spice.prettyBasePrice}}</td>
+            <td><i class="fa fa-cart-plus order-button" ng-click="addToCart(spice)"></i></td>
+        </tr>
+    </tbody>
+    </table>
 
-        <table class="table table-striped stable">
-            <thead>
-                <tr>
-                    <td>Product Name</td>
-                    <td>Produce Size</td>
-                    <td>Price</td>
-                    <td>Add to Cart</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="spice in spicesCtrl.spiceData">
-                    <td>{{spice.productName}}</td>
-                    <td>{{spice.productSize}}{{spice.weightType}}</td>
-                    <td>${{spice.prettyBasePrice}}</td>
-                    <td><i class="fa fa-cart-plus order-button" ng-click="addToCart(spice)"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
