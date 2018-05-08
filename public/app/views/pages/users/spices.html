@@ -21,26 +21,43 @@
 </div>
 <br>
 <br>
+<nav class="navbar2">
+<form class ="form-inline">
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
 
+      <input class="form-control" id="inputdefault" type="search" placeholder="Search a spice" aria-label="Search" ng-model="searchSpice">
 
-
-
-
-<nav class="navbar navbar-light bg-light">
-    <form class="form-inline">
-        <input class="form-control2 form-control mr-sm-2" type="search" placeholder="Search specific" aria-label="Search" ng-model="searchSpice">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.searched(searchSpice);fetchSpices('A-Z')">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.searched(searchSpice);fetchSpices('A-Z')">Search</button>
         &nbsp;
         <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-Z')">All Spices</button>
         &nbsp;
         <button class="btn btn3 btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.clear();">Clear</button>
-
+        &nbsp;
         <div ng-show="spiceFilter !== undefined">
-        <p><h1>&nbsp;&nbsp;&nbsp;&nbsp;Total results: {{ (spicesCtrl.spiceData | filter: spiceFilter).length }}</h1></p>
-        </div>
+        <button class="btn btn-primary" type="text">Total spices:{{ (spicesCtrl.spiceData | filter: spiceFilter).length }}</button>
+    </div>
     </form>
 </nav>
-
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
     <table class="table table-striped stable">
     <thead>
         <tr>

@@ -18,6 +18,9 @@
 .navbar a:hover{
     background-color: #FBE104;
 }
+.navbar2{
+    width: 40%
+}
 .justified {
      position:relative;
      left:40%;
