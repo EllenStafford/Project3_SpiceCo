@@ -13,6 +13,7 @@
 
 .navbar a:hover{
     background-color: #FBE104;
+    color: #333 !important; /*discuss with team*/
 }
 .justified {
      position:relative;
@@ -546,4 +547,7 @@ body{
       text-align: center;
       font-size: 2em;
   }
+   .fa-cart-plus:hover {
+       cursor: pointer;
+   }
   
