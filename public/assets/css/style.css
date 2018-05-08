@@ -13,6 +13,11 @@
 
 .navbar a:hover{
     background-color: #FBE104;
+    color: #333 !important; 
+
+}
+.fa-cart-plus:hover {
+    cursor: pointer;
 }
 .justified {
      position:relative;
@@ -31,6 +36,7 @@
     padding: 10px;
     font-weight: bold;
     position: fixed;
+    z-index: 10;
     background: linear-gradient(to bottom right, red, yellow);
 }
 
@@ -79,6 +85,7 @@ p{
     margin-left: 15%;
     margin-right:15%;
     width: 70%;
+    position: relative;
 }
 
 
@@ -100,7 +107,6 @@ input {
 
 textarea {
     width: 60%;
-    
 }
 
 #alertMessages3 {
@@ -327,8 +333,11 @@ textarea {
     word-wrap: break-word;
     white-space: normal;
 }
-    
-    
+
+.table-striped {
+    height: 500px !important; 
+}
+
 .spiceContainer{
     text-align: center;
 }
@@ -349,6 +358,24 @@ textarea {
     font-family : arial;
     font-size: 1em; 
 }
+
+.btn3{
+    transition-duration: 0.4s;
+    color: #FFFFFF; 
+    background-color: #ffc300; 
+    border-color: #ffc300; 
+    font-family : arial;
+    font-size: 1em; 
+}
+.btn4{
+    transition-duration: 0.4s;
+    color: #FFFFFF; 
+    background-color:#fc7900 ; 
+    border-color:#fc7900 ; 
+    font-family : arial;
+    font-size: 1em; 
+}
+
 .btn:hover{
     background-color: #B32B06; 
     border-color: #FA3905; 

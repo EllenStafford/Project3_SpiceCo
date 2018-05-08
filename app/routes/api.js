@@ -59,11 +59,12 @@ module.exports = function(router){
         var contact = new Contact({
             companyName: req.body.companyName,
             contactName: req.body.contactName,
+            email: req.body.email,
+            phone: req.body.phone,
             streetAddress: req.body.streetAddress,
             city: req.body.city,
             state: req.body.state,
             zip: req.body.zip,
-            email: req.body.email,
             message: req.body.message
         });
         if (req.body.companyName === null || req.body.companyName === "") {

@@ -5,7 +5,6 @@
     SPICES A-Z
     <br>
     <br>
-
 </div>
 
 <div class="spiceContainer">
@@ -17,7 +16,6 @@
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
-
 </div>
 <br>
 <br>
@@ -40,7 +38,8 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;
 
       <input class="form-control" id="inputdefault" type="search" placeholder="Search a spice" aria-label="Search" ng-model="searchSpice">
 
@@ -49,23 +48,30 @@
         <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-Z')">All Spices</button>
         &nbsp;
         <button class="btn btn3 btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.clear();">Clear</button>
-        &nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;
         <div ng-show="spiceFilter !== undefined">
-        <button class="btn btn-primary" type="text">Total spices:{{ (spicesCtrl.spiceData | filter: spiceFilter).length }}</button>
+                <button class="btn btn4 btn-outline-success my-2 my-sm-0" type="text">Total spices: {{(spicesCtrl.spiceData | filter: spiceFilter).length}}</button>
+     
     </div>
     </form>
+
+   
 </nav>
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
     <table class="table table-striped stable">
     <thead>
-        <tr>
             <td align = "left">Product Name</td>
             <td>Produce Size</td>
             <td ng-show="main.isLoggedIn">Price</td>
             <td ng-show="main.isLoggedIn">Add to Cart</td>
-        </tr>
+
     </thead>
     <tbody>
         <tr ng-repeat="spice in spicesCtrl.spiceData | filter: spiceFilter">
@@ -79,6 +85,6 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br>
     <br>
     <!-- spicesCtrl.searched(searchSpice) -->
