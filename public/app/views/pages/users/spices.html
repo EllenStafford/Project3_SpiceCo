@@ -17,7 +17,6 @@
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
-    <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-Z')">All</button>
 
 </div>
 <br>
@@ -32,10 +31,12 @@
         <input class="form-control2 form-control mr-sm-2" type="search" placeholder="Search specific" aria-label="Search" ng-model="searchSpice">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.searched(searchSpice)">Search</button>
         &nbsp;
+        <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-Z')">All Spices</button>
+        &nbsp;
         <button class="btn btn3 btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.clear();">Clear</button>
 
         <div ng-show="spiceFilter !== undefined">
-        <p><h1>Total results: {{ (spicesCtrl.spiceData | filter: spiceFilter).length }}</h1></p>
+        <p><h1>&nbsp;&nbsp;&nbsp;&nbsp;Total results: {{ (spicesCtrl.spiceData | filter: spiceFilter).length }}</h1></p>
         </div>
     </form>
 </nav>
