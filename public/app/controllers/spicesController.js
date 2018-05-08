@@ -6,21 +6,21 @@ angular.module("spicesCtrl", ["authServices", "orderServices"])
 
     // search
 
-
 app.searched = function(searchSpice) {
     if (searchSpice) {
         if (searchSpice.length > 0) {
-            $scope.spiceFilter = searchSpice;
-        } else {
-            $scope.spiceFilter = undefined; 
-        }
+            $scope.searchFilter = searchSpice; 
+        } 
     } 
 };
 
-//clear
 app.clear = function() {
-    $scope.searchSpice = undefined;
+    $scope.searchSpice = undefined; 
+    $scope.searchFilter = undefined; 
 };
+
+
+
 
     $scope.fetchSpices = query => {
         $http.get(`/api/spices?paginate=${query}`).then(paginatedSpices => {

@@ -34,31 +34,17 @@ angular.module("managementController", [])
     })
     }
 
-
-    app.search = function(searchKeyword, number) {
-
-        if (searchKeyword) {
-
-            if (searchKeyword.length > 0) {
-                app.limit = 0; 
-                $scope.searchFilter = searchKeyword; 
-                app.limit = number; 
-            } else {
-                $scope.searchFilter = undefined; 
-                app.limit = 0; 
-            }
-        } else {
-            $scope.searchFilter = undefined; 
-            app.limit = 0; 
-        }
+    app.search = function(searchClient) {
+        if (searchClient) {
+            if (searchClient.length > 0) {
+                $scope.searchFilter = searchClient; 
+            } 
+        } 
     };
 
     app.clear = function() {
-        $scope.number = 'Clear'; 
-        app.limit = 0; 
-        $scope.searchKeyword = undefined; 
+        $scope.searchClient = undefined; 
         $scope.searchFilter = undefined; 
-        app.showMoreError = false; 
     };
 });
 
