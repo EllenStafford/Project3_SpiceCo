@@ -34,32 +34,31 @@ angular.module("managementController", [])
     })
     }
 
-          // Function: Perform a basic search function
+
     app.search = function(searchKeyword, number) {
-        // Check if a search keyword was provided
+
         if (searchKeyword) {
-            // Check if the search keyword actually exists
+
             if (searchKeyword.length > 0) {
-                app.limit = 0; // Reset the limit number while processing
-                $scope.searchFilter = searchKeyword; // Set the search filter to the word provided by the user
-                app.limit = number; // Set the number displayed to the number entered by the user
+                app.limit = 0; 
+                $scope.searchFilter = searchKeyword; 
+                app.limit = number; 
             } else {
-                $scope.searchFilter = undefined; // Remove any keywords from filter
-                app.limit = 0; // Reset search limit
+                $scope.searchFilter = undefined; 
+                app.limit = 0; 
             }
         } else {
-            $scope.searchFilter = undefined; // Reset search limit
-            app.limit = 0; // Set search limit to zero
+            $scope.searchFilter = undefined; 
+            app.limit = 0; 
         }
     };
 
-    // Function: Clear all fields
     app.clear = function() {
-        $scope.number = 'Clear'; // Set the filter box to 'Clear'
-        app.limit = 0; // Clear all results
-        $scope.searchKeyword = undefined; // Clear the search word
-        $scope.searchFilter = undefined; // Clear the search filter
-        app.showMoreError = false; // Clear any errors
+        $scope.number = 'Clear'; 
+        app.limit = 0; 
+        $scope.searchKeyword = undefined; 
+        $scope.searchFilter = undefined; 
+        app.showMoreError = false; 
     };
 });
 
