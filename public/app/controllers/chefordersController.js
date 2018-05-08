@@ -19,6 +19,11 @@ angular.module("chefordersCtrl", ["orderServices"])
             chefordersCtrl.total = Cart.prettyTotal;
         };
 
+        $scope.submitOrder = function orderSubmit() {
+
+            toastr.success("You've been spice, Thank you for your order");
+    
+        };
 
     });
 
