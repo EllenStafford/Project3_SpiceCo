@@ -1,14 +1,10 @@
 /* Styling for index.html */
-/* .logo{
-    margin: -10px 0 -30px 180px; 
-    position:absolute;
-    z-index:100;
-} */
-.nav-link{
-    font-size: 1em;
-    font-family : arial;
-    letter-spacing: 2px;
+
+.navbar{
+    background-color: #333;
+    height:70px !important;
 }
+
 .navbar a{
     color: #ffffff;
     text-align: center;
@@ -18,12 +14,9 @@
 .navbar a:hover{
     background-color: #FBE104;
 }
-.navbar2{
-    width: 40%
-}
 .justified {
      position:relative;
-     left:40%;
+     left:30%;
 } 
 .footer {
     position: fixed;
@@ -39,11 +32,6 @@
     font-weight: bold;
     position: fixed;
     background: linear-gradient(to bottom right, red, yellow);
-}
-
-h6 {
-    font-size: .8em;
-    margin-bottom: .1em;
 }
 
 .email{
@@ -71,6 +59,11 @@ h3 {
     padding-top: 35px;
 }
 
+h6 {
+    font-size: .8em;
+    margin-bottom: .1em;
+}
+
 p{
     font-size: .7em;
 }
@@ -83,16 +76,26 @@ p{
 }
 
 #gcontactbodyform { 
-
     margin-left: 15%;
     margin-right:15%;
     width: 70%;
+}
+
+
+/* Contact Page (contact.html) */
+
+.container {
+    text-align: left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 23%;
 }
 
 input {
     padding: 15px;
     align-self: center;
     min-width: 100px;
+    
 }
 
 textarea {
@@ -100,9 +103,9 @@ textarea {
     
 }
 
-.Questions {
+/*.Questions {
     text-align: center;
-}
+}*/
 
 #alertMessages3 {
     width: 100%;
@@ -110,14 +113,11 @@ textarea {
 
 #inquirycard {
     border: thick 10px black;
-   
 }
 
 #inquiryContainer{
     margin: auto;
-    /* padding: 10%; */
     text-align: center;
-       
 }
 
 #contactbutton{
@@ -156,7 +156,6 @@ textarea {
     font-size: 1.2em;
     font-family : arial;
     letter-spacing: 3px;
-
 }
 
 .placeholder{
@@ -164,93 +163,48 @@ textarea {
     opacity: 1;
 }
 
-.show-hide-message{
-    margin: auto;
+  
+/*New Style for About page*/
+body{
+    margin: 0;
+    padding: 0;
 }
-
-.alert-success, .alert-danger{
-    margin:auto;
-    width: 60%;
-    margin-top: 2%;
-}
-
-
-
-
-
-/* New About page design 
-#aboutContainer{
-    margin: auto;
-    text-align: center;
+#box1 {
+    height: 100vh;
     width: 100%;
+    background-image: url("../imgs/TruckTransparency.jpg");
+    background-size: cover;
+}
+#box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../imgs/LVS_metalspoons.jpg");
+    background-size: cover;
+}
+#box3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../imgs/LVS_SpiceBoard.jpg");
+    background-size: cover;
 }
 
-
-
-.LVSTitle1{
-    color:#FA3905;
-    font-size: 1.5em;
-}
-
-.LVSTitle2{
+.abouttile1, .abouttitle2, .abouttitle3 {
     color: #FA3905;
-    font-size: 1.2em;
+    padding-top: 10%;
+    margin-right: 60%;
+    font-size: 25px;
+    text-shadow:4px 4px #000000;
 }
 
-.LVSTitle3{
-    color:#FFFFFF;
-    text-shadow:2px 2px #000000;
-    font-size: 1.5em;
-    padding: 1%;
-}
-
-.LVSText{
-    margin:auto;
-    margin-bottom: 1%;
-    text-align: left;
-    width: 50%;
-}
-
-#truck{
-    background-color: #888888;
-    padding-bottom: 3%;
-    background-image: url("../imgs/UseTruck3.jpg");
-    /* width: 100%;
-    height: 950px;
-}
-
-.accordionWrapper{
+p {
+    font-size: 15px;
+    color: black;
     margin-left: 5%;
-    background-color: #000000;
-    opacity: .9;
-    width: 40%;
-    padding: 2%;
+    padding-top: 3%;
 }
 
-.card-header{
-    background-color: #FFFFFF;
-}
 
-.card-body{
-    background-color: #FFFFFF;
-}
-
-#one, #two, #three{
-    text-decoration: none;
-}
-
-#accordionTitle{
-    color: #FA3905;
-    opacity: 1;
-    text-align: center;
-    white-space: normal;
-}
-
-#accordionText{
-    text-align: left;
-}*/
-
-Styling for index.html
+/* Styling for home.html */
 .load{
     animation: slide 2s;
 }
@@ -451,14 +405,6 @@ Styling for index.html
     font-family : arial;
     font-size: 1em; 
 }
-.btn3{
-    transition-duration: 0.4s;
-    color: #FFFFFF; 
-    background-color: #ffc300; 
-    border-color: #ffc300; 
-    font-family : arial;
-    font-size: 1em; 
-}
 .btn:hover{
     background-color: #B32B06; 
     border-color: #FA3905; 
@@ -560,5 +506,7 @@ body{
       transition: color 1s;
       text-align: center;
       font-size: 2em;
+
+  
   }
   
