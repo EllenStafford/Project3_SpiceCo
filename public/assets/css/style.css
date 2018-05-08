@@ -4,7 +4,11 @@
     position:absolute;
     z-index:100;
 } */
-
+.nav-link{
+    font-size: 1em;
+    font-family : arial;
+    letter-spacing: 2px;
+}
 .navbar a{
     color: #ffffff;
     text-align: center;
@@ -16,7 +20,7 @@
 }
 .justified {
      position:relative;
-     left:30%;
+     left:40%;
 } 
 .footer {
     position: fixed;
