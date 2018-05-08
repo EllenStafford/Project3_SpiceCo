@@ -5,7 +5,6 @@
     SPICES A-Z
     <br>
     <br>
-
 </div>
 
 <div class="spiceContainer">
@@ -17,13 +16,14 @@
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('P-R')">P-R</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('S-U')">S-U</button>
     <button class="btn btn-primary" type="submit" ng-click="fetchSpices('V-Z')">V-Z</button>
-
 </div>
 <br>
 <br>
 <nav class="navbar2">
 <form class ="form-inline">
     <div class="form-group">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,10 +50,32 @@
         &nbsp;
         <button class="btn btn3 btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.clear();">Clear</button>
         &nbsp;
-        <div ng-show="spiceFilter !== undefined">
-        <button class="btn btn-primary" type="text">Total spices:{{ (spicesCtrl.spiceData | filter: spiceFilter).length }}</button>
     </div>
     </form>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    
+    <button class="btn btn4 btn-outline-success my-2 my-sm-0" type="text">Total spices:</button>
+        &nbsp;
+        <div ng-show="spiceFilter !== undefined">
+        <button class="btn btn4 btn-outline-success my-2 my-sm-0" type="text">{{(spicesCtrl.spiceData | filter: spiceFilter).length}}</button>
 </nav>
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
