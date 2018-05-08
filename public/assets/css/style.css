@@ -17,6 +17,8 @@
 
 .navbar a:hover{
     background-color: #FBE104;
+    color: #333 !important; 
+
 }
 .navbar2{
     width: 40%
