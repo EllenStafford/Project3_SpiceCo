@@ -6,18 +6,19 @@ angular.module("spicesCtrl", ["authServices", "orderServices"])
 
     // search
 
-app.searched = function(searchSpice) {
-    if (searchSpice) {
-        if (searchSpice.length > 0) {
-            $scope.searchFilter = searchSpice; 
-        } 
-    } 
-};
 
-app.clear = function() {
-    $scope.searchSpice = undefined; 
-    $scope.searchFilter = undefined; 
-};
+app.searched = function(searchSpice) {
+        if (searchSpice) {
+            if (searchSpice.length > 0) {
+                $scope.spiceFilter = searchSpice; 
+            } 
+        } 
+    };
+
+    app.clear = function() {
+        $scope.searchSpice = undefined; 
+        $scope.spiceFilter = undefined; 
+    };
 
 
 
