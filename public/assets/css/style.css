@@ -103,10 +103,6 @@ textarea {
     
 }
 
-/*.Questions {
-    text-align: center;
-}*/
-
 #alertMessages3 {
     width: 100%;
 }
@@ -164,46 +160,6 @@ textarea {
 }
 
   
-/*New Style for About page*/
-body{
-    margin: 0;
-    padding: 0;
-}
-#box1 {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../imgs/TruckTransparency.jpg");
-    background-size: cover;
-}
-#box2 {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../imgs/LVS_metalspoons.jpg");
-    background-size: cover;
-}
-#box3 {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../imgs/LVS_SpiceBoard.jpg");
-    background-size: cover;
-}
-
-.abouttile1, .abouttitle2, .abouttitle3 {
-    color: #FA3905;
-    padding-top: 10%;
-    margin-right: 60%;
-    font-size: 25px;
-    text-shadow:4px 4px #000000;
-}
-
-p {
-    font-size: 15px;
-    color: black;
-    margin-left: 5%;
-    padding-top: 3%;
-}
-
-
 /* Styling for home.html */
 .load{
     animation: slide 2s;
@@ -306,7 +262,6 @@ p {
     text-align: center;
     background-image: url("../imgs/LVS_woodenspoonsbanner.jpg");
     background-repeat: repeat-x;
-
 }
 
 .profileWrapper{
@@ -362,29 +317,18 @@ p {
     padding-left: 80px;
     font-size: 30px;
 }
-/* .table{
-    border-collapse: separate;
-    border-spacing: 0 1em;
-    margin: auto;
-    text-align: left;
-    word-wrap: break-word;
-    white-space: normal;
-} */
 
 .stable{
     border-collapse: separate;
     border-style: solid;
-    box-sizing: content-box;    
     width: 50%;
-    height: 100px;
-    border-spacing: 0 1em;
     margin: auto;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
-
 }
-
+    
+    
 .spiceContainer{
     text-align: center;
 }
@@ -415,11 +359,6 @@ p {
 }
 
 /* SPICES page */
-/* #spiceContainer{
-    padding: 1%;
-    text-align: center;
-} */
-
 
 .spice{
     text-align: center;
@@ -489,6 +428,7 @@ body{
 
 .abouttext{
     padding: 25px;
+    color: black;
     margin: auto;
     text-align: left;
     width: 80%;
