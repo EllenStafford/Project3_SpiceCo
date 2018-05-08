@@ -38,8 +38,6 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;
 
       <input class="form-control" id="inputdefault" type="search" placeholder="Search a spice" aria-label="Search" ng-model="searchSpice">
@@ -49,33 +47,19 @@
         <button class="btn btn-primary" type="submit" ng-click="fetchSpices('A-Z')">All Spices</button>
         &nbsp;
         <button class="btn btn3 btn-outline-success my-2 my-sm-0" type="submit" ng-click="spicesCtrl.clear();">Clear</button>
-        &nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <div ng-show="spiceFilter !== undefined">
+                <button class="btn btn4 btn-outline-success my-2 my-sm-0" type="text">Total spices: {{(spicesCtrl.spiceData | filter: spiceFilter).length}}</button>
+     
     </div>
     </form>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    
-    
-    <button class="btn btn4 btn-outline-success my-2 my-sm-0" type="text">Total spices:</button>
-        &nbsp;
-        <div ng-show="spiceFilter !== undefined">
-        <button class="btn btn4 btn-outline-success my-2 my-sm-0" type="text">{{(spicesCtrl.spiceData | filter: spiceFilter).length}}</button>
+
+   
 </nav>
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
