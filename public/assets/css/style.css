@@ -425,10 +425,7 @@ Styling for index.html
 .stable{
     border-collapse: separate;
     border-style: solid;
-    box-sizing: content-box;    
     width: 50%;
-    height: 100px;
-    border-spacing: 0 1em;
     margin: auto;
     text-align: center;
     word-wrap: break-word;
@@ -436,6 +433,9 @@ Styling for index.html
 
 }
 
+.table-striped {
+    height: 500px !important; 
+}
 .spiceContainer{
     text-align: center;
 }

@@ -67,12 +67,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
     <table class="table table-striped stable">
     <thead>
-        <tr>
             <td align = "left">Product Name</td>
             <td>Produce Size</td>
             <td ng-show="main.isLoggedIn">Price</td>
             <td ng-show="main.isLoggedIn">Add to Cart</td>
-        </tr>
+
     </thead>
     <tbody>
         <tr ng-repeat="spice in spicesCtrl.spiceData | filter: spiceFilter">
@@ -86,6 +85,6 @@
     <br>
     <br>
     <br>
-    <br>    <br>
+    <br>
     <br>
     <!-- spicesCtrl.searched(searchSpice) -->
