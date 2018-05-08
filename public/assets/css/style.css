@@ -23,7 +23,7 @@
 }
 .justified {
      position:relative;
-     left:40%;
+     left:35%;
 } 
 .footer {
     position: fixed;
@@ -38,6 +38,7 @@
     padding: 10px;
     font-weight: bold;
     position: fixed;
+    z-index: 10;
     background: linear-gradient(to bottom right, red, yellow);
 }
 
@@ -86,6 +87,7 @@ p{
     margin-left: 15%;
     margin-right:15%;
     width: 70%;
+    position: relative;
 }
 
 input {
@@ -96,7 +98,6 @@ input {
 
 textarea {
     width: 60%;
-    
 }
 
 .Questions {
