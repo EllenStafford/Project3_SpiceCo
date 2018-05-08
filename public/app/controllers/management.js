@@ -5,6 +5,12 @@ angular.module("managementController", [])
     app.accessDenied = true;
     app.errorMsg =false;
     app.deleteAccess = false;
+    app.accessDenied = true;
+    app.errorMsg = false;
+    app.editAccess = false;
+    app.deleteAccess = false; 
+
+
 
     function getUsers(){
         User.getUsers().then(function(data){
@@ -24,15 +30,18 @@ angular.module("managementController", [])
     getUsers();
 
 
-    app.deleteUser = function(username){
-    User.deleteUser(username).then(function(data){
-    if(data.data.success){
-    getUsers();
-    }else{
-        app.errorMsg = data.data.message;
-    }
-    })
-    }
+    // Function: Delete a user
+    app.deleteUser = function(username) {
+        // Run function to delete a user
+        User.deleteUser(username).then(function(data) {
+            // Check if able to delete user
+            if (data.data.success) {
+                getUsers(); // Reset users on page
+            } else {
+                app.showMoreError = data.data.message; // Set error message
+            }
+        });
+    };
 
     app.search = function(searchClient) {
         if (searchClient) {

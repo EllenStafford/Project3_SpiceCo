@@ -43,7 +43,7 @@ CLIENT MANAGEMENT
         <td>{{ person.userstate }}</td>
         <td>{{ person.userzip }}</td>
         <td><a href="#!/management">
-            <button type="button" ng-click ="management.deleteUser(person.username);" ng-show="management.editAccess">Deactivate</button>
+            <button type="button" ng-click ="management.deleteUser(person.username);" ng-click="management.editAccess">Deactivate</button>
         </a>
         </td>
 </tr>
