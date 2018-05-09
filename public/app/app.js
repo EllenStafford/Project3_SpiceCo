@@ -4,7 +4,7 @@ angular.module("angularUser", [
     "authServices", "orderServices", "inquiryControllers",
     "contactController", "managementController",
     "userServices", "chefordersCtrl", "spicesCtrl", "requestsController",
-    "requestServices"]
+    "requestServices", "messageController", "messageServices"]
 )
 
     .config(function ($httpProvider) {

@@ -59,6 +59,12 @@ var app = angular.module("angularRoutes", ["ngRoute"])
         controllerAs: "chefordersCtrl",
         authenticated: true
     })
+    .when("/message",{
+        templateUrl: "../../app/views/pages/users/message.html",
+        controller: "messageCtrl",
+        controllerAs: "message",
+        authenticated: true
+    })
     .when("/requests",{
         templateUrl: "../../app/views/pages/management/requests.html",
         controller: "reqCtrl",

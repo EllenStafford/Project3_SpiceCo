@@ -3,6 +3,7 @@ var jwt = require("jsonwebtoken");
 var Contact = require('../models/contact');
 var Inquiry = require('../models/inquiry');
 var Spice = require('../models/spices');
+var Inquiry = require('../models/inquiry');
 //extra security for the token
 var secret = "spongebob"
 
@@ -232,6 +233,13 @@ router.get("/management", function(req,res){
 router.get("/requests", function(req,res){
     Contact.find({}, function(err, contacts){
         res.json({success:true, contacts:contacts})
+    })
+});
+
+
+router.get("/message", function(req,res){
+    Inquiry.find({}, function(err, messages){
+        res.json({success:true, messages:messages})
     })
 });
 

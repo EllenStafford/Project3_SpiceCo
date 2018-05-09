@@ -1,0 +1,22 @@
+<div class="clientManagement">
+        USER MESSAGES
+        </div>
+        <div class ="managementUser">
+        
+  <table class= "table">
+        <tr class = "bg-warning">
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Message</th>
+        </tr>
+        <tr ng-repeat="creep in message.messages">
+            <td>{{$index + 1}}</td>
+            <td>{{creep.inquiryName}}</td>
+            <td>{{creep.inquiryEmail}}</td>
+            <td>{{creep.inquirySubject}}</td>
+            <td>{{creep.inquiryMessage}}</td>
+        </tr>
+    </table>
+</div>
