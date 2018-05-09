@@ -21,7 +21,7 @@ angular.module("chefordersCtrl", ["orderServices"])
 
         $scope.submitOrder = function orderSubmit() {
 
-            toastr.success("You've been spice, Thank you for your order");
+            toastr.success("You've been spiced, Thank you for your order");
     
         };
 

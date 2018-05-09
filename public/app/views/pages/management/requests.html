@@ -1,5 +1,11 @@
+<div class="clientManagement">
+        NEW REQUESTS
+        </div>
+        <div class ="managementUser">
+        
   <table class= "table">
         <tr class = "bg-warning">
+            <th scope="col">#</th>
             <th scope="col">Company Name</th>
             <th scope="col">Contact Name</th>
             <th scope="col">Street Address</th>
@@ -10,17 +16,17 @@
             <th scope="col">Email</th>
             <th scope="col">Message</th>
         </tr>
-        <tr ng-repeat="message in reqCtrl.contacts">
+        <tr ng-repeat="ninja in requests.contacts">
             <td>{{$index + 1}}</td>
-            <td>{{message.companyName}}</td>
-            <td>{{message.contactName}}</td>
-            <td>{{message.streetAddress}}</td>
-            <td>{{message.city}}</td>
-            <td>{{message.state}}</td>
-            <td>{{message.zip}}</td>
-            <td>{{message.phone}}</td>
-            <td>{{message.email}}</td>
-            <td>{{message.message}}</td>
+            <td>{{ninja.companyName}}</td>
+            <td>{{ninja.contactName}}</td>
+            <td>{{ninja.streetAddress}}</td>
+            <td>{{ninja.city}}</td>
+            <td>{{ninja.state}}</td>
+            <td>{{ninja.zip}}</td>
+            <td>{{ninja.phone}}</td>
+            <td>{{ninja.email}}</td>
+            <td>{{ninja.message}}</td>
         </tr>
     </table>
 </div>

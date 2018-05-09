@@ -191,6 +191,7 @@ router.use(function(req,res,next){
         res.json({success: false, message: "no token"})
     };
 });
+
 router.post("/me", function(req,res){
     res.send(req.decoded);
 });
@@ -230,24 +231,7 @@ router.get("/management", function(req,res){
 
 router.get("/requests", function(req,res){
     Contact.find({}, function(err, contacts){
-        if (err) throw err;
-        User.findOne({ username: req.decoded.username}, function(err,mainUser){
-            if (err) throw err;
-                if(!mainUser){
-                    res.json({success: false, message: "no requests found"});
-                    }else{
-                    if (mainUser.permission === "admin"){
-                        if (!contacts){
-                            res.json({success:false, message:"you have to be admin"})
-                        }else{
-                            res.json({success:true, contacts:contacts})
-                        }
-                    }else
-                    {
-                        res.json({success: false, message:"you have to be admin"});
-                    }
-                }
-        });
+        res.json({success:true, contacts:contacts})
     })
 });
 
