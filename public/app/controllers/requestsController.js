@@ -6,13 +6,23 @@ angular.module("requestsController", [])
     app.accessDeny = true;
     app.erroMg = false;
 
-    Contact.getRequests().then(function(data){
-        if(data.data.success){
+    function getRequests(){
+        Contact.getRequests().then(function(data){
 
-        }else{
-            app.erroMg = data.data.message;
-        }
-        console.log(data)
-    });
+            if(data.data.success){
+                if (data.data.permission === "admin"){
+                    app.contacts = data.data.contacts
+       
+                    app.accessDeny = false;
+                }else{
+                    app.erroMg = "Access Denied"
+                }
+            }
+            console.log(data)
+        });
+
+    }
+
+    getRequests();
     
 });
