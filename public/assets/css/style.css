@@ -16,6 +16,11 @@
     color: #333 !important; 
 
 }
+
+#navbarNav{
+    background-color: gray;
+}
+
 .fa-cart-plus:hover {
     cursor: pointer;
 }
