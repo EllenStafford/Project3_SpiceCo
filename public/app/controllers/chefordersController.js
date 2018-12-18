@@ -2,7 +2,6 @@ angular.module("chefordersCtrl", ["orderServices"])
 
     .controller("chefordersCtrl", function (Cart, $scope) {
 
-        // Reference the application context
         const chefordersCtrl = this;
 
         chefordersCtrl.cart = Cart.findAll();
